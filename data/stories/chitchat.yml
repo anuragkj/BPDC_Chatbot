@@ -1,0 +1,20 @@
+version: "3.0"
+stories:
+- story: chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+- story: more chitchat
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: chitchat
+  - action: utter_chitchat
+- story: greet chitchat
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: chitchat
+  - action: utter_chitchat

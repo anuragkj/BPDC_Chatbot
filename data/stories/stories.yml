@@ -1,0 +1,98 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  # - action: utter_Attendance
+
+- story: club_designations_story
+  steps:
+  - intent: club_desgignations
+  - action: utter_designations_reply
+
+- story: total_club_story
+  steps:
+  - intent: total_clubs
+  - action: utter_total_club_join
+  - action: utter_button_for_club_info
+
+# - story: choice_yes_for _club_info
+#   steps:
+#   - intent: yes_club_info
+#     entities:
+#       - club_info_choice: "yes"
+#   - slot_was_set:
+#       - club_info_choice: "yes"
+#   - action: utter_club_name_details
+#   - intent: club_choice
+#     entities:
+#       - club_name
+#   - slot_was_set:
+#       - club_name
+#   - action: action_tell_club_info
+
+- story: choice_yes_for_club_info
+  steps:
+  - intent: yes_club_info
+  - action: utter_club_name_details
+  - intent: club_choice
+    entities:
+      - club_name
+  - slot_was_set:
+      - club_name
+  - action: action_tell_club_info
+
+# - story: choice_no_for _club_info
+#   steps:
+#   - intent: no_club_info
+#     entities:
+#       - club_info_choice: "no"
+#   - slot_was_set:
+#       - club_info_choice: "no"
+#   - action: utter_fine    
+
+- story: choice_no_for_club_info
+  steps:
+  - intent: no_club_info
+  - action: utter_fine  
+
+- story: create_club_story
+  steps:
+  - intent: create_club
+  - action: utter_how_to_create_clubs_reply
+
+- story: asking_about_clubs
+  steps:
+  - intent: ask_clubs
+  - action: utter_club_name_details
+  - intent: club_choice
+    entities:
+      - club_name
+  - slot_was_set:
+      - club_name
+  - action: action_tell_club_info

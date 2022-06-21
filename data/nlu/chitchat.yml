@@ -1,0 +1,149 @@
+version: "3.0"
+nlu:
+- intent: chitchat/ask_howbuilt
+  examples: |
+    - By what means were you made?
+    - By what method were you fashioned?
+    - Can you explain how you were created?
+    - Can you give me an idea as to how you were created?
+    - Can you say how you were constructed?
+    - Do you know how you were built?
+    - Do you know how you were made?
+    - How did they build you?
+    - How did they create you?
+    - How did they make you?
+    - How did you come into being?
+    - How did you come to be?
+    - How exactly were you devised?
+    - How exactly were you made?
+    - How were you built?
+    - How were you conceived?
+    - How were you constructed?
+    - How were you devised?
+    - How were you formed?
+    - How were you made into who you are?
+    - How were you made?
+    - How were you materialized?
+    - How were you set up?
+    - I want to know how you were formed
+    - I'd like to know how you were created
+    - I'd like to know how you were put together?
+    - In what manner were you built?
+    - In what manner were you constructed?
+    - In what manner were you formed?
+    - In what way were you created?
+    - In what way were you formed?
+    - In what way were you made?
+    - In what way were you shaped?
+    - In which manner were you devised?
+    - Let me know how you were made exactly
+    - Specify how you were created?
+    - Tell me how you were made?
+    - What process was used to build you?
+    - What process was used to create you?
+    - What was the process for making you?
+    - You originated through what means?
+    - how have you been built?
+    - how were you made?
+    - in what way were you made?
+    - so how were you made?
+    - what are you made of
+    - Are you built using rasa?
+    - Are u developed in rasa
+    - are you build with rasa ?
+
+- intent: chitchat/ask_howdoing
+  examples: |
+    - Ahoy matey how are you?
+    - Are you ok?
+    - Do you feel good?
+    - Do you have a great day?
+    - HI Sara, what are you up to?
+    - Hi Sara! How are you?
+    - How are You?
+    - How are things?
+    - How are you
+    - How are you men?
+    - How are you today?
+    - How are you?
+    - How was your day?
+    - How you doing?
+    - How's it going
+    - How's it hanging?
+    - How's life treating you friend?
+    - How've you been?
+    - Hows it going
+    - I'm fine and you
+    - Is everything ok?
+    - What's going on?
+    - What's new?
+    - What's up
+    - What's up man
+    - and you
+    - are you alright
+    - are you happy
+    - are you having a good day
+    - are you ok
+    - are you okay
+    - h r u ?
+    - hello, how are you?
+    - hey how are you?
+    - hi how are you?
+    - hi how u doing
+    - hi sara, how are you?
+    - how ?
+    - how are things going
+    - how are things with you?
+    - how are u
+    - how are u?
+    - how are xou
+    - how are you
+    - how are you ?
+    - how are you doing
+    - how are you doing this morning
+    - how are you doing today my sweet friend
+    - how are you doing today?
+    - how are you doing?
+    - how are you feeling
+    - how are you today
+    - how are you'
+    - how are you?
+    - how are you????
+    - how are yuo
+    - how do you do?
+    - how have you been
+    - how is it going
+    - how is your day
+    - how is your day going
+    - how is your evening
+    - how r u
+    - how r u ?
+    - how r u>
+    - how you doing
+    - how you doing?
+    - how's it going?
+    - how's life
+    - how's life been treating you?
+    - how's your day going
+    - howareyou
+    - hw r u?
+    - is everything all right
+    - is everything okay
+    - nah, I'm good - how are you doing?
+    - okay hi how are you?
+    - wassup>
+    - what about your day
+    - what are you up to?
+    - what's good
+    - what's up
+    - what's up sara
+    - what's up?
+    - whatchcha doing
+    - whatchya upto ?
+    - whats goin on
+    - whats new
+    - whatsapp
+    - yow are you
+    - how are you Rasa
+    - Hey Sara, how's it going
+    - are you cool

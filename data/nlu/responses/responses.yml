@@ -1,0 +1,14 @@
+version: "3.0"
+responses:
+  utter_chitchat/ask_howbuilt:
+  - text: "I was built with a lot of love and patience."
+  - text: "Well, when two chatbots love each other very much..."
+  - text: "They always ask how I was built, but never how I am..."
+  - text: "I was made by software engineers, but hard work is what built me."
+  - text: "I'm building myself every day. I've been working out, did you notice?"
+
+  utter_chitchat/ask_howdoing:
+  - text: "I'm great! Thanks for asking."
+  - text: "I'm good, thanks!"
+  - text: "A little bit too warm, otherwise fine."
+  - text: "A little bit cold, otherwise fine."

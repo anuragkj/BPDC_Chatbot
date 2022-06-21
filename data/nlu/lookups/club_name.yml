@@ -1,0 +1,9 @@
+version: "3.0"
+nlu:
+  - lookup: club_name
+    examples: |
+      - Sports Club
+      - Trebel
+      - ACM
+      - AI
+      - MTC

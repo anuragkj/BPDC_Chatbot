@@ -1,0 +1,34 @@
+Step 1: add intents in nlu.yml
+Step 2: list the added intents in the domain.yml file
+Step 3: Create responses for the listed intents in the domain.yml files
+Step 4: Now join your intents and responses using stories
+
+
+To connect to excel:
+Step 1: add entity in domain.yml;
+Step 2: add the intent with []() and lookup in nlu.yml
+Step 3: Generate a google sheet API https://owaisqureshi.medium.com/access-google-sheets-api-in-python-using-service-account-3a0c6d89d5fc
+Step 4: Also enable Google Drive API
+Step 5: Update the action. Fetch data as list of dictionaries
+Step 6: Update class return of action as actions in domain.yml file
+Step 7: Update config.yaml, credential.yaml and endpoints.yaml
+Step 8: rasa run actions
+Step 9: rasa shell
+
+
+telegram bot
+https://www.youtube.com/watch?v=QuyWEbKMzcA
+
+bot name: BPDC Chatbot
+BPDC_bot
+
+
+To run on telegram: https://github.com/RasaHQ/medicare_locator#-use-telegram-as-chat-platform
+Add Make using https://pakstech.com/blog/make-windows/#:~:text=make%20%3A%20The%20term%20'make',choose%20Path%20and%20click%20Edit.
+Add ngrok
+Add both to env path
+ngrok http 5005
+rasa run
+rasa run actions
+
+for buttons: https://forum.rasa.com/t/how-to-define-buttons-in-forms-in-rasa-3-0/50932/5
