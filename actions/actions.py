@@ -5,9 +5,7 @@ from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 import xlrd
 import pandas as pd
-
-
-
+import os
 
 #locally queries the database for clubs info
 class ActionTellClubInfo(Action):
@@ -20,8 +18,9 @@ class ActionTellClubInfo(Action):
     ) -> List[Dict[Text, Any]]:
         club_name = next(tracker.get_latest_entity_values("club_name"), None)
         
-        loc = ("C:\\Users\\jhaas\\Documents\\GitHub\\BPDC_Chatbot\\actions\\DB.xlsx")
-        data = pd.read_excel(loc, sheet_name="Clubs")  
+        loc = os.path.join(os.getcwd(), os.path.basename("./output_file.json"))
+
+        data = pd.read_json(loc)  
         data = pd.DataFrame(data)
         result_data = data.query("Name == @club_name")
         if not result_data.empty:
@@ -61,7 +60,7 @@ class ActionTellStudGpa(Action):
         stud_id = tracker.get_slot("stud_id")
         stud_pwd = tracker.get_slot("stud_pwd")
         
-        loc = ("C:\\Users\\jhaas\\Documents\\GitHub\\BPDC_Chatbot\\actions\\DB.xlsx")
+        loc = os.path.join(os.getcwd(), os.path.basename("./DB.xlsx"))
         data = pd.read_excel(loc, sheet_name="Auth")  
         data = pd.DataFrame(data)
         result_data = data.query("ID == @stud_id")
@@ -79,7 +78,7 @@ class ActionTellStudGpa(Action):
         else:
             msg = f"The ID does not exist in our database!! Please check it again."
 
-        print(msg)
+        
           
         dispatcher.utter_message(text=msg)
         
