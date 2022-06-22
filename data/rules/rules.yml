@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 
 rules:
 
@@ -16,3 +16,31 @@ rules:
   steps:
   - intent: start
   - action: utter_start_reply
+
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+- rule: respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+
+# - rule: Activate student authentication form
+#   steps:
+#   - intent: request_stud_gpa
+#   - action: stud_auth_form
+#   - active_loop: stud_auth_form
+
+# - rule: Example of an unhappy path for stud auth form
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: stud_auth_form
+#   steps:
+#   # This unhappy path handles the case of an intent `chitchat`.
+#   - intent: chitchat
+#   - action: utter_chitchat
+#   # Return to form after handling the `chitchat` intent
+#   - action: stud_auth_form
+#   - active_loop: stud_auth_form

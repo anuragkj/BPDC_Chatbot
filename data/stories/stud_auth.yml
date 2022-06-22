@@ -1,0 +1,44 @@
+version: "3.1"
+
+stories:
+
+- story: User interrupts the stud auth form and doesn't want to continue
+  steps:
+  - intent: request_stud_gpa
+  - action: utter_ask_stud_id
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: stop
+  - action: utter_fine
+
+- story: stud auth completes successfully
+  steps:
+  - intent: request_stud_gpa
+  - action: utter_ask_stud_id
+  - intent: id_intake
+    entities:
+    - stud_id
+  - slot_was_set:
+    - stud_id
+  - action: utter_ask_stud_pwd
+  - intent: pwd_intake
+    entities:
+    - stud_pwd
+  - slot_was_set:
+    - stud_pwd
+  - action: action_tell_stud_gpa
+
+- story: stud auth stopped at pwd
+  steps:
+  - intent: request_stud_gpa
+  - action: utter_ask_stud_id
+  - intent: id_intake
+    entities:
+    - stud_id
+  - slot_was_set:
+    - stud_id
+  - action: utter_ask_stud_pwd
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: stop
+  - action: utter_fine

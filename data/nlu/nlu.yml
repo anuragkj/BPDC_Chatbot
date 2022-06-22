@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 
 nlu:
 - intent: start
@@ -90,79 +90,9 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: create_club
+- intent: stop
   examples: |
-    - How to create a club
-    - what are the steps to create your own club
-    - I want to create my own club
-    - How do I start a new club
-
-- intent: ask_clubs
-  examples: |
-    - clubs?
-    - what are the clubs in our Uni?
-    - Which clubs can I join?
-    - I want to register for a club
-    - How do I choose a club
-    - Tell me about clubs
-    - I want to join a club
-
-- intent: club_desgignations
-  examples: |
-    - What is a council in a club?
-    - I want to get into a club council
-    - When can I apply for club President
-    - When can I apply for club Vice President
-    - When can I apply for club General Secretary
-    - When can I apply for club Treasurer
-
-- intent: total_clubs
-  examples: |
-    - Total number of clubs I can join
-    - Can I join only one club
-    - can one apply for multiple clubs
-    - I want to join more than one clubs
-    - How many clubs can I join
-    
-- intent: club_choice
-  examples: |
-    - [Sports Club](club_name)
-    - [Trebel](club_name)
-    - [ACM](club_name)
-    - [AI](club_name)
-    - [MTC](club_name)
-# - intent: yes_club_info
-#   examples: |
-#     - [yes](club_info_choice) I would like to know more about the clubs
-#     - [yeah](club_info_choice) that would be cool
-#     - [yes](club_info_choice) please
-#     - yeah
-#     - yes
-
-- intent: yes_club_info
-  examples: |
-    - yes I would like to know more about the clubs
-    - yeah that would be cool
-    - yes please
-    - yeah
-    - yes
-# - intent: no_club_info
-#   examples: |
-#     - [no](club_info_choice) I would not like to know more about the clubs
-#     - [no](club_info_choice) that is not need
-#     - thanks but its [not](club_info_choice) needed
-
-- intent: no_club_info
-  examples: |
-    - no I would not like to know more about the clubs
-    - no that is not need
-    - thanks but its not needed
-    - no
-    - nah
-    - nope
-
-
-    
-
-
-
+    - Actually I don't wan't it
+    - Could you stop this process
+    - I don't remember my password
+    - Sorry, I don't have it

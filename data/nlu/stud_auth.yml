@@ -1,0 +1,21 @@
+version: "3.1"
+
+nlu:
+- intent: id_intake
+  examples: |
+    - [2020A7PS0128U](stud_id)
+    - [2021a5ps0001u](stud_id)
+    - [2015A2PS0100U](stud_id)
+    - [2018a1ps0058u](stud_id)
+
+- intent: pwd_intake
+  examples: |
+    - [@#123](stud_pwd)
+    - [dwjfni*&6a123](stud_pwd)
+    - [?>}12ds34derf](stud_pwd)
+    - [QWE12#$189fgb](stud_pwd)
+
+    
+
+
+

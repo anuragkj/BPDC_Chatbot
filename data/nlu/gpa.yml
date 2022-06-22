@@ -1,0 +1,16 @@
+version: "3.1"
+
+nlu:
+- intent: request_stud_gpa
+  examples: |
+    - what is my gpa
+    - gpa?
+    - how to find out my gpa
+    - i need my gpa
+    - can you please tell me my gpa score
+    - what are my scores
+
+    
+
+
+

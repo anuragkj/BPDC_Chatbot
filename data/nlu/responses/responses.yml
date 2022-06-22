@@ -1,4 +1,4 @@
-version: "3.0"
+version: "3.1"
 responses:
   utter_chitchat/ask_howbuilt:
   - text: "I was built with a lot of love and patience."
@@ -12,3 +12,11 @@ responses:
   - text: "I'm good, thanks!"
   - text: "A little bit too warm, otherwise fine."
   - text: "A little bit cold, otherwise fine."
+
+  utter_faq/address:
+  - text: "BPDC is situated at Dubai Academic City"
+  - text: "Our Uni is located at DIAC(Dubai Academic City)"
+
+  utter_faq/full_form:
+  - text: "BITS Pilani Dubai Campus"
+  - text: "It stands for BITS Pilani Dubai Campus"

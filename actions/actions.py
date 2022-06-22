@@ -20,7 +20,7 @@ class ActionTellClubInfo(Action):
     ) -> List[Dict[Text, Any]]:
         club_name = next(tracker.get_latest_entity_values("club_name"), None)
         
-        loc = ("C:\\Users\\jhaas\\Downloads\\Chatbot_demo_Telegram-20220620T052034Z-001\\Chatbot_demo_Telegram\\actions\\DB.xlsx")
+        loc = ("C:\\Users\\jhaas\\Documents\\GitHub\\BPDC_Chatbot\\actions\\DB.xlsx")
         data = pd.read_excel(loc, sheet_name="Clubs")  
         data = pd.DataFrame(data)
         result_data = data.query("Name == @club_name")
@@ -49,3 +49,38 @@ class ActionTellClubInfo(Action):
 #         dispatcher.utter_message("Would you like to know more about the clubs already present at BPDC?", buttons = buttons)
         
 #         return []
+
+class ActionTellStudGpa(Action):
+
+    def name(self) -> Text:
+        return "action_tell_stud_gpa"
+
+    async def run(
+        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        stud_id = tracker.get_slot("stud_id")
+        stud_pwd = tracker.get_slot("stud_pwd")
+        
+        loc = ("C:\\Users\\jhaas\\Documents\\GitHub\\BPDC_Chatbot\\actions\\DB.xlsx")
+        data = pd.read_excel(loc, sheet_name="Auth")  
+        data = pd.DataFrame(data)
+        result_data = data.query("ID == @stud_id")
+        check_pwd = result_data.iloc[0]["Password"]
+        msg = ""
+        if not result_data.empty:
+            if str(check_pwd) == str(stud_pwd):
+                data1 = pd.read_excel(loc, sheet_name="GPA")  
+                data1 = pd.DataFrame(data1)
+                result_data1 = data1.query("ID == @stud_id")
+                msg = "Your GPA is : "+str(result_data1.iloc[0]["GPA"])
+            else:
+                msg = "Your password does not match. Sorry!!"
+            
+        else:
+            msg = f"The ID does not exist in our database!! Please check it again."
+
+        print(msg)
+          
+        dispatcher.utter_message(text=msg)
+        
+        return []

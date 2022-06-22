@@ -1,4 +1,4 @@
-version: '3.0'
+version: '3.1'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -10,24 +10,70 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
-- chitchat
+- chitchat:
+    use_entities: []
+- faq:
+    use_entities: []
+# - stud_auth
 - create_club
 - ask_clubs
 - club_choice
 - club_desgignations
 - total_clubs
-- yes_club_info
-- no_club_info
+# - yes_club_info
+# - no_club_info
 - start
+- request_stud_gpa
+- id_intake
+- pwd_intake
+- stop
 entities:
 - club_name
+- stud_id
+- stud_pwd
 slots:
   club_name:
     type: text
-    influence_conversation: true
+    influence_conversation: false
     mappings:
     - type: from_entity
       entity: club_name
+  stud_id:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: stud_id
+  stud_pwd:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: stud_pwd
+
+# sales_form:
+#     required_slots:
+#       budget:
+#       - entity: amount-of-money
+#         type: from_entity
+#       - entity: number
+#         type: from_entity
+#       - intent: enter_data
+#         type: from_text
+
+# forms:
+#   stud_auth_form:
+#     required_slots:
+#       stud_id:
+#       - entity: stud_id
+#         type: from_entity
+#       - intent: id_intake
+#         type: from_text
+#       stud_pwd:
+#       - entity: stud_pwd
+#         type: from_entity
+#       - intent: pwd_intake
+#         type: from_text
 responses:
   utter_start_reply:
   - text: Wlecome! I am BPDC bot!!
@@ -74,12 +120,27 @@ responses:
       To know more about a specific club type its name.
   utter_button_for_club_info:
   - buttons:
-    - payload: /yes_club_info
+    - payload: /affirm
       title: I want to know about existing clubs
-    - payload: /no_club_info
+    - payload: /deny
       title: Not needed
     text: Would you like to know more about the clubs already present at BPDC??
+
+  utter_ask_stud_id:
+  - text: |-
+      In order to execute the request I would need authentication.
+      Please enter your student ID
+      Example: 2020A7PS0128U
+
+  utter_ask_stud_pwd:
+  - text: |-
+      Please enter your authentication password
+      Example: 1234
+
+  utter_ask_continue:
+  - text: |-
+      Do you really want to terminate this operation
+      If yes please ask to stop again
 actions:
-- utter_details_thanks
-- utter_greet
+- action_tell_stud_gpa
 - action_tell_club_info

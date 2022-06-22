@@ -1,0 +1,13 @@
+version: "3.1"
+nlu:
+- intent: faq/address
+  examples: |
+    - where is our uni located?
+    - what is the address of BPDC?
+    - what is the locations of our college
+
+
+- intent: faq/full_form
+  examples: |
+    - what does bpdc stand for?
+    - what is the full form of BPDC?
