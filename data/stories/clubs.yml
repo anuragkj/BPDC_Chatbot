@@ -6,6 +6,7 @@ stories:
   steps:
   - intent: club_desgignations
   - action: utter_designations_reply
+  - action: utter_button_for_club_info
 
 - story: total_club_story
   steps:
@@ -57,6 +58,7 @@ stories:
   steps:
   - intent: create_club
   - action: utter_how_to_create_clubs_reply
+  - action: utter_button_for_club_info
 
 - story: asking_about_clubs
   steps:
@@ -67,4 +69,13 @@ stories:
       - club_name
   - slot_was_set:
       - club_name
+  - action: action_tell_club_info
+
+- story: ask_clubs_directlu
+  steps:
+  - intent: ask_clubs
+    entities:
+    - club_name: Shades
+  - slot_was_set:
+    - club_name: Shades
   - action: action_tell_club_info
