@@ -33,6 +33,7 @@ nlu:
     - can one apply for multiple clubs
     - I want to join more than one clubs
     - How many clubs can I join
+    - Can we join more than one club?
 - intent: club_choice
   examples: |
     - [Sports Club](club_name)
