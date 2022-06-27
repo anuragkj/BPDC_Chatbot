@@ -10,6 +10,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(
 client = gspread.authorize(creds)
 sheet = client.open(sheet_to_display).sheet1
 display_record = sheet.get_all_records()
+# print(type(display_record))
 
 with open("output_file.json", "w") as of:
     json.dump(display_record, of)

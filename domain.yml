@@ -25,6 +25,26 @@ intents:
 - request_stud_gpa
 - start
 - stop
+- creative_lab
+- dance_club #neha started working from here onwards
+- music_and_singing_club
+- fashion_club
+- photography_club
+- incubation_centre
+- incubation_centre_exists
+- incubation_centre_managed_by
+- incubation_centre_location
+- creative_lab_location
+- creative_lab_timings
+- club_membership_fee
+- role_treasurer
+- eligibility_treasurer
+- role_general_secretary
+- eligibility_general_secretary
+- role_vice_president
+- eligibility_vice_president
+- role_president
+- eligibility_president
 - total_clubs
 entities:
 - club_name
