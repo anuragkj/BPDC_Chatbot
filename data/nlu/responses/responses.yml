@@ -99,3 +99,8 @@ responses:
   utter_faq/full_form:
   - text: "BITS Pilani Dubai Campus"
   - text: "It stands for BITS Pilani Dubai Campus"
+
+  utter_out_of_scope/non_english:
+  - text: "I only understand English, I'm sorry."
+  utter_out_of_scope/other:
+  - text: "I can't help you with that, I'm sorry."
