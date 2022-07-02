@@ -25,6 +25,9 @@ intents:
 - request_stud_gpa
 - start
 - stop
+- canthelp
+- explain
+- thank
 - creative_lab
 - dance_club #neha started working from here onwards
 - music_and_singing_club
