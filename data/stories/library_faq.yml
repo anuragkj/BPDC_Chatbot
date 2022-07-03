@@ -1,0 +1,6 @@
+version: "3.1"
+stories:
+- story: library_faq
+  steps:
+  - intent: library_faq
+  - action: utter_library_faq

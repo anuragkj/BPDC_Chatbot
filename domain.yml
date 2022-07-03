@@ -16,6 +16,12 @@ intents:
 - faq:
     used_entities: []
     is_retrieval_intent: true
+- library_faq:
+    used_entities: []
+    is_retrieval_intent: true
+- out_of_scope:
+    used_entities: []
+    is_retrieval_intent: true
 - goodbye
 - greet
 - id_intake
