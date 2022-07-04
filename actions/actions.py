@@ -14,6 +14,7 @@ import pandas as pd
 import os
 
 USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
+INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
 
 #locally queries the database for clubs info
 class ActionTellClubInfo(Action):
