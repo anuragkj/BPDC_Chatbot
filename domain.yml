@@ -55,10 +55,16 @@ intents:
 - role_president
 - eligibility_president
 - total_clubs
+- nlu_fallback
+- restart
+- enter_name_data
+- human_handoff
+
 entities:
 - club_name
 - stud_id
 - stud_pwd
+- name
 slots:
   club_name:
     type: text
@@ -78,13 +84,27 @@ slots:
     mappings:
     - type: from_entity
       entity: stud_pwd
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: name
 responses:
   utter_start_reply:
   - text: Wlecome! I am BPDC bot!!
   utter_fine:
   - text: Okay. Anything else I can help with?
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hi, I'm BPDC Chatbot!
+  utter_greet_name:
+  - text: Hi, {name}!
+  - text: Hello, {name}!
+  - text: Hey, {name}!
+  utter_greet_noname:
+  - text: Hey!
+  - text: Hi!
+  - text: Hey there!
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
@@ -159,8 +179,22 @@ responses:
   utter_faq/full_form:
   - text: BITS Pilani Dubai Campus
   - text: It stands for BITS Pilani Dubai Campus
+  utter_restart:
+  - text: Loading... And I've been restarted! 🤯
+  - text: Congrats you've restarted me! 😉
+  utter_restart_with_button:
+  - buttons:
+    - payload: /restart
+      title: Restart
+    text: Click the button below if you want to start over.
+  utter_contact_email:
+  - text: You can’t speak to a human directly in this chat, but you can email us at abc@dubai.bits-pilani.ac.in
 actions:
 - action_tell_club_info
 - action_tell_stud_gpa
 - utter_chitchat
 - utter_faq
+- action_default_fallback
+- action_restart_with_button
+- action_default_ask_affirmation
+- action_greet_user

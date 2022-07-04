@@ -1,11 +1,19 @@
    
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import (
+    SlotSet,
+    UserUtteranceReverted,
+    ConversationPaused,
+    EventType,
+)
+from rasa_sdk.types import DomainDict
 from rasa_sdk.executor import CollectingDispatcher
 import xlrd
 import pandas as pd
 import os
+
+USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 
 #locally queries the database for clubs info
 class ActionTellClubInfo(Action):
@@ -83,3 +91,152 @@ class ActionTellStudGpa(Action):
         dispatcher.utter_message(text=msg)
         
         return []
+
+class ActionGreetUser(Action):
+    """Greets the user with/without privacy policy"""
+
+    def name(self) -> Text:
+        return "action_greet_user"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+        intent = tracker.latest_message["intent"].get("name")
+        shown_privacy = tracker.get_slot("shown_privacy")
+        name_entity = next(tracker.get_latest_entity_values("name"), None)
+        if intent == "greet" or (intent == "enter_data" and name_entity):
+            if shown_privacy and name_entity and name_entity.lower() != "sara":
+                dispatcher.utter_message(response="utter_greet_name", name=name_entity)
+                return []
+            elif shown_privacy:
+                dispatcher.utter_message(response="utter_greet_noname")
+                return []
+            else:
+                dispatcher.utter_message(response="utter_greet")
+                dispatcher.utter_message(response="utter_inform_privacypolicy")
+                return [SlotSet("shown_privacy", True)]
+        return []
+
+class ActionRestartWithButton(Action):
+    def name(self) -> Text:
+        return "action_restart_with_button"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> None:
+
+        dispatcher.utter_message(template="utter_restart_with_button")
+
+class ActionDefaultAskAffirmation(Action):
+    """Asks for an affirmation of the intent if NLU threshold is not met."""
+
+    def name(self) -> Text:
+        return "action_default_ask_affirmation"
+
+    def __init__(self) -> None:
+        import pandas as pd
+
+        self.intent_mappings = pd.read_csv(INTENT_DESCRIPTION_MAPPING_PATH)
+        self.intent_mappings.fillna("", inplace=True)
+        self.intent_mappings.entities = self.intent_mappings.entities.map(
+            lambda entities: {e.strip() for e in entities.split(",")}
+        )
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        intent_ranking = tracker.latest_message.get("intent_ranking", [])
+        if len(intent_ranking) > 1:
+            diff_intent_confidence = intent_ranking[0].get(
+                "confidence"
+            ) - intent_ranking[1].get("confidence")
+            if diff_intent_confidence < 0.2:
+                intent_ranking = intent_ranking[:2]
+            else:
+                intent_ranking = intent_ranking[:1]
+
+        # for the intent name used to retrieve the button title, we either use
+        # the name of the name of the "main" intent, or if it's an intent that triggers
+        # the response selector, we use the full retrieval intent name so that we
+        # can distinguish between the different sub intents
+        first_intent_names = [
+            intent.get("name", "")
+            if intent.get("name", "") not in ["faq", "chitchat"]
+            else tracker.latest_message.get("response_selector")
+            .get(intent.get("name", ""))
+            .get("ranking")[0]
+            .get("intent_response_key")
+            for intent in intent_ranking
+        ]
+        if "nlu_fallback" in first_intent_names:
+            first_intent_names.remove("nlu_fallback")
+        if "/out_of_scope" in first_intent_names:
+            first_intent_names.remove("/out_of_scope")
+        if "out_of_scope" in first_intent_names:
+            first_intent_names.remove("out_of_scope")
+
+        if len(first_intent_names) > 0:
+            message_title = (
+                "Sorry, I'm not sure I've understood you correctly 🤔 Do you mean..."
+            )
+
+            entities = tracker.latest_message.get("entities", [])
+            entities = {e["entity"]: e["value"] for e in entities}
+
+            entities_json = json.dumps(entities)
+
+            buttons = []
+            for intent in first_intent_names:
+                button_title = self.get_button_title(intent, entities)
+                if "/" in intent:
+                    # here we use the button title as the payload as well, because you
+                    # can't force a response selector sub intent, so we need NLU to parse
+                    # that correctly
+                    buttons.append({"title": button_title, "payload": button_title})
+                else:
+                    buttons.append(
+                        {"title": button_title, "payload": f"/{intent}{entities_json}"}
+                    )
+
+            buttons.append({"title": "Something else", "payload": "/out_of_scope"})
+
+            dispatcher.utter_message(text=message_title, buttons=buttons)
+        else:
+            message_title = (
+                "Sorry, I'm not sure I've understood "
+                "you correctly 🤔 Can you please rephrase?"
+            )
+            dispatcher.utter_message(text=message_title)
+
+        return []
+
+class ActionDefaultFallback(Action):
+    def name(self) -> Text:
+        return "action_default_fallback"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        # Fallback caused by TwoStageFallbackPolicy
+        last_intent = tracker.latest_message["intent"]["name"]
+        if last_intent in ["nlu_fallback", USER_INTENT_OUT_OF_SCOPE]:
+            return [SlotSet("feedback_value", "negative")]
+
+        # Fallback caused by Core
+        else:
+            dispatcher.utter_message(template="utter_default")
+            return [UserUtteranceReverted()]
