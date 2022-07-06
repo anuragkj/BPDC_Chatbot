@@ -15,6 +15,7 @@ import os
 
 USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
+ACTION_DEFAULT_ASK_AFFIRMATION_NAME = "action_default_ask_affirmation"
 
 #locally queries the database for clubs info
 class ActionTellClubInfo(Action):
@@ -134,6 +135,8 @@ class ActionRestartWithButton(Action):
 
         dispatcher.utter_message(template="utter_restart_with_button")
 
+
+
 class ActionDefaultAskAffirmation(Action):
     """Asks for an affirmation of the intent if NLU threshold is not met."""
 
@@ -241,3 +244,21 @@ class ActionDefaultFallback(Action):
         else:
             dispatcher.utter_message(template="utter_default")
             return [UserUtteranceReverted()]
+
+class ActionTriggerResponseSelector(Action):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self) -> Text:
+        return "action_trigger_response_selector"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        retrieval_intent = tracker.get_slot("retrieval_intent")
+        if retrieval_intent:
+            dispatcher.utter_message(template=f"utter_{retrieval_intent}")
+
+        return [SlotSet("retrieval_intent", None)]
