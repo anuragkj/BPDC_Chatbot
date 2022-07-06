@@ -262,3 +262,30 @@ class ActionTriggerResponseSelector(Action):
             dispatcher.utter_message(template=f"utter_{retrieval_intent}")
 
         return [SlotSet("retrieval_intent", None)]
+
+# class ActionTagFeedback(Action):
+#     """Tag a conversation in Rasa X as positive or negative feedback"""
+
+#     def name(self):
+#         return "action_tag_feedback"
+
+#     def run(
+#         self,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: DomainDict,
+#     ) -> List[EventType]:
+
+#         feedback = tracker.get_slot("feedback_value")
+
+#         if feedback == "positive":
+#             label = '[{"value":"postive feedback","color":"76af3d"}]'
+#         elif feedback == "negative":
+#             label = '[{"value":"negative feedback","color":"ff0000"}]'
+#         else:
+#             return []
+
+#         rasax = RasaXAPI()
+#         rasax.tag_convo(tracker, label)
+
+#         return []
