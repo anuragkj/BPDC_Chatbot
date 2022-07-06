@@ -1,10 +1,10 @@
 intent,button,entities
 affirm,Yes,
-ask_how_contribute,How can I contribute?,
-ask_question_in_forum,How can I ask a question in the forum?,
-ask_when_next_event,When is the next event?,
-ask_when_next_event,When is the next event in {location}?,location
-ask_which_events,Which community events take place?,
+ask_clubs,What are the clubs at our university?,club_name
+create_club,How to create a club,
+club_designations,What is a council in a club?,
+total_clubs,How many clubs are there in our University?,
+club_choice,I want to join {ACM},club_name
 ask_why_contribute,Why should I contribute?,
 bye,Bye!,
 canthelp,You can't help me.,
@@ -26,19 +26,7 @@ chitchat/ask_whoami,Who are you?,
 chitchat/ask_whoisit,Who are you?,
 chitchat/nicetomeetyou,Nice to meet you.,
 chitchat/telljoke,Tell me a joke!,
-contact_sales,Talk to Sales,
 deny,No,
-enter_data,I want to give you more information,
-enter_data,The language is {language}.,language
-enter_data,{entity},entity
-enter_data,My job is {job_function},job_function
-enter_data,{number},number
-enter_data,{amount-of-money},amount-of-money
-enter_data,My name is {name},name
-enter_data,My company is {company},company
-enter_data,My email is {email},email
-enter_data,Install Rasa Stack with {package_manager},package_manager
-explain,Can you explain that?,
 faq/channels,What channels does Rasa support?,
 faq/community_size,How big is the Rasa community?,
 faq/differencecorenlu,What is the difference between Core and NLU?,
@@ -55,29 +43,9 @@ faq/tutorialnlu,I want a tutorial for Rasa NLU.,
 faq/tutorials,I want to see a Rasa tutorial.,
 faq/voice,Can I build a voice bot with Rasa?,
 faq/what_is_forum,What is the Rasa forum?,
-feedback,I want to give you feedback.,
-feedback,{feedback_value} feedback,feedback_value
 greet,"Say ""Hi!"" ",
 chitchat/handleinsult,You wanted to insult me 😔.,
-how_to_get_started,How to get started with Rasa?,
-how_to_get_started,I am new to Rasa and want to get started.,user_type
-how_to_get_started,How to get started with {product}?,product
-human_handoff,Talk to a human,
-install_rasa,I want to install Rasa.,
-install_rasa,I want to install Rasa with {package_manager}.,package_manager
-nlu_generation_tool_recommendation,I want a recommendation for an NLU data generation tool.,
-nlu_info,I want more information about NLU.,
-nlu_info,I want info on {nlu_part}.,nlu_part
 out_of_scope/other,Out of scope question.,
 out_of_scope/non_english,I'm speaking a non-english language.,
-pipeline_recommendation,I want a pipeline recommendation.,
-react_negative,I'm sad!,
-react_positive,I'm happy!,
-signup_newsletter,Signup for the newsletter,
-signup_newsletter,Signup for the newsletter with {email},email
-source_code,Where can I see your source code.,
-suggestion,A suggestion of how I can improve.,
-switch,I want to migrate.,
-switch,I want to migrate from {current_api}.,current_api
-technical_question,A technical question.,
 thank,Thanks!,
+explain,Elaborate,
