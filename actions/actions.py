@@ -164,7 +164,7 @@ class ActionDefaultAskAffirmation(Action):
             diff_intent_confidence = intent_ranking[0].get(
                 "confidence"
             ) - intent_ranking[1].get("confidence")
-            if diff_intent_confidence < 0.2:
+            if diff_intent_confidence < 0.7:
                 intent_ranking = intent_ranking[:2]
             else:
                 intent_ranking = intent_ranking[:1]
