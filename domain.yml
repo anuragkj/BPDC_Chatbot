@@ -219,6 +219,16 @@ responses:
   - text: I'm afraid I didn't get what you just said. Could you rephrase that?
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
+
+    utter_ask_feedback:
+  - buttons:
+    - payload: '/feedback{{"feedback_value": "positive"}}'
+      title: 👍
+    - payload: '/feedback{{"feedback_value": "negative"}}'
+      title: 👎
+    text: How is this conversation going?
+  utter_ask_feedback_message:
+  - text: I'm sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve.
 actions:
 - action_trigger_response_selector
 - action_tell_club_info
@@ -229,4 +239,3 @@ actions:
 - action_restart_with_button
 - action_default_ask_affirmation
 - action_greet_user
-- action_tag_feedback
