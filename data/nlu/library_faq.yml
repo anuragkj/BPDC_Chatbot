@@ -20,7 +20,7 @@ nlu:
 
 - intent: library_faq/book_search
   examples: |
-    - Where is the book located? 
+    -Where is the book located? 
     -Where can I find books on x topic? 
     -Faster way to search books 
     -How to search for books of a particular subject? 
@@ -32,7 +32,7 @@ nlu:
     -Easy way to search for books 
     -How to search for a book in a quicker way? 
     -Is there a faster way to search for books?
-    - how to find books quickly
+    -how to find books quickly
 
 - intent: library_faq/library_resources
   examples: |
@@ -66,18 +66,18 @@ nlu:
 
 - intent: library_faq/search_books
   examples: |
-    - How are the books arranged in the library? 
+    -How are the books arranged in the library? 
     -How can I find the books in the library? 
     -Book arrangement in the library 
     -Searching for books in libraries 
     -Books codes for different topics 
     -How to find books for a certain topic? 
     -What are the subsections for the different classifications of books?
-    - how are the books classified
+    -how are the books classified
 
 - intent: library_faq/ill
   examples: |
-    - Can we request for books not available in the BPDC library but available in the other library?
+    -Can we request for books not available in the BPDC library but available in the other library?
     -Can we access the libraries of other universities? 
     -Where to find the form for requesting books from other libraries? 
     -Can I request books from other libraries? 
@@ -90,7 +90,7 @@ nlu:
     -What should I do if I want books from other libraries? 
     -How to request books from other libraries? 
     -How to request books from other universities?
-    - inter library loan
+    -inter library loan
 
 - intent: library_faq/course_tb
   examples:
@@ -108,7 +108,7 @@ nlu:
     -Where to find BE textbooks? 
     -Where to find first-degree textbooks? 
     -I want to issue first-degree textbooks
-    - are all textbooks available in the library
+    -are all textbooks available in the library
 
 - intent: library_faq/report_area
   examples: |
@@ -125,12 +125,12 @@ nlu:
     -PS reports library 
     -Project reports library 
     -PhD reports library
-    - where are the dissertations located
-    - where are the PS reports kept
+    -where are the dissertations located
+    -where are the PS reports kept
 
 - intent: library_faq/contact
   examples: |
-    - Who should I contact for queries on the Library? 
+    -Who should I contact for queries on the Library? 
     -What is the library email? 
     -Library contact? 
     -Who will address my queries? 
@@ -140,7 +140,7 @@ nlu:
 
 - intent: library_faq/book_issue_end
   examples: |
-    - Can I issue a book at the end of the semester? 
+    -Can I issue a book at the end of the semester? 
     -How to issue a book end sem? 
     -Issuing books end sem 
     -I want to issue a book but it is the end of the semester 

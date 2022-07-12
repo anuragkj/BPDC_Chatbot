@@ -95,13 +95,20 @@ slots:
     - type: from_entity
       entity: name
   feedback_message:
-    type: any
-  feedback_value:
+    type: text
+    mappings:
+    - type: from_text
+      entity: feedback
     influence_conversation: false
+  feedback_value:
     type: categorical
     values:
     - positive
     - negative
+    mappings:
+    - type: from_entity
+      entity: feedback_value
+    influence_conversation: false
 responses:
   utter_start_reply:
   - text: Wlecome! I am BPDC bot!!
@@ -212,13 +219,15 @@ responses:
   - text: I'm sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve.
   utter_anything_else:
   - text: Is there anything else I can help you with?
-  utter_default:
+  utter_ask_rephrase:
   - text: Sorry, I didn't get that 🤷. Could you please rephrase?
   - text: I didn't understand, could you rephrase that?
   - text: I'm sorry, but I didn't understand you. Could you please rephrase what you just said?
   - text: I'm afraid I didn't get what you just said. Could you rephrase that?
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
+  utter_default:
+  - text: I'm sorry, I can't help you.
 
 actions:
 - action_trigger_response_selector
