@@ -94,14 +94,14 @@ slots:
     mappings:
     - type: from_entity
       entity: name
-  # feedback_message:
-  #   type: any
-  # feedback_value:
-  #   influence_conversation: false
-  #   type: categorical
-  #   values:
-  #   - positive
-  #   - negative
+  feedback_message:
+    type: any
+  feedback_value:
+    influence_conversation: false
+    type: categorical
+    values:
+    - positive
+    - negative
 responses:
   utter_start_reply:
   - text: Wlecome! I am BPDC bot!!
@@ -220,15 +220,6 @@ responses:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
 
-    utter_ask_feedback:
-  - buttons:
-    - payload: '/feedback{{"feedback_value": "positive"}}'
-      title: 👍
-    - payload: '/feedback{{"feedback_value": "negative"}}'
-      title: 👎
-    text: How is this conversation going?
-  utter_ask_feedback_message:
-  - text: I'm sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve.
 actions:
 - action_trigger_response_selector
 - action_tell_club_info
