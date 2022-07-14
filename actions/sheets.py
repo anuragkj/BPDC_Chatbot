@@ -8,7 +8,7 @@ scope = ['https://spreadsheets.google.com/feeds',
 creds = ServiceAccountCredentials.from_json_keyfile_name(
     'creds.json', scope)
 client = gspread.authorize(creds)
-sheet = client.open(sheet_to_display).sheet1
+sheet = client.open(sheet_to_display).worksheet("Clubs")
 display_record = sheet.get_all_records()
 # print(type(display_record))
 
