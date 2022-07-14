@@ -133,7 +133,7 @@ class ActionRestartWithButton(Action):
         domain: DomainDict,
     ) -> None:
 
-        dispatcher.utter_message(template="utter_restart_with_button")
+        dispatcher.utter_message(response="utter_restart_with_button")
 
 
 
@@ -224,6 +224,22 @@ class ActionDefaultAskAffirmation(Action):
 
         return []
 
+    def get_button_title(self, intent: Text, entities: Dict[Text, Text]) -> Text:
+        default_utterance_query = self.intent_mappings.intent == intent
+        utterance_query = (self.intent_mappings.entities == entities.keys()) & (
+            default_utterance_query
+        )
+
+        utterances = self.intent_mappings[utterance_query].button.tolist()
+
+        if len(utterances) > 0:
+            button_title = utterances[0]
+        else:
+            utterances = self.intent_mappings[default_utterance_query].button.tolist()
+            button_title = utterances[0] if len(utterances) > 0 else intent
+
+        return button_title.format(**entities)
+
 class ActionDefaultFallback(Action):
     def name(self) -> Text:
         return "action_default_fallback"
@@ -242,7 +258,7 @@ class ActionDefaultFallback(Action):
 
         # Fallback caused by Core
         else:
-            dispatcher.utter_message(template="utter_default")
+            dispatcher.utter_message(response="utter_default")
             return [UserUtteranceReverted()]
 
 class ActionTriggerResponseSelector(Action):
@@ -259,7 +275,7 @@ class ActionTriggerResponseSelector(Action):
     ) -> List[EventType]:
         retrieval_intent = tracker.get_slot("retrieval_intent")
         if retrieval_intent:
-            dispatcher.utter_message(template=f"utter_{retrieval_intent}")
+            dispatcher.utter_message(response=f"utter_{retrieval_intent}")
 
         return [SlotSet("retrieval_intent", None)]
 
