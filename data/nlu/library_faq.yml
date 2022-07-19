@@ -1,6 +1,6 @@
 version: "3.1"
 nlu:
-- intent: library_faq/sign_in_computers
+- intent: library_faq/sign_in_details
   examples:
     -What are the user id credentials to access the PCs in the library? 
     -How can I access the computers in the library? 
@@ -579,7 +579,7 @@ nlu:
 
 - intent: library_faq/timings
   examples: |
-    -timings -When does the library open? 
+    -When does the library open? 
     -When does the library close? 
     -Is the library open everyday? 
     -What days is the library closed? 

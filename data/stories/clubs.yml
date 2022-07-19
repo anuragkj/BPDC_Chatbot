@@ -32,7 +32,7 @@ stories:
 - story: choice_yes_for_club_info
   steps:
   - intent: affirm
-  - action: utter_club_name_details
+  - action: action_tell_club_choices
   - intent: club_choice
     entities:
       - club_name
@@ -63,7 +63,7 @@ stories:
 - story: asking_about_clubs
   steps:
   - intent: ask_clubs
-  - action: utter_club_name_details
+  - action: action_tell_club_choices
   - intent: club_choice
     entities:
       - club_name
