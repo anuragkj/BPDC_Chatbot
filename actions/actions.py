@@ -135,7 +135,7 @@ class ActionRestartWithButton(Action):
 
         dispatcher.utter_message(response="utter_restart_with_button")
 
-class ActionRestartWithButton(Action):
+class ActionTellClubChoices(Action):
     def name(self) -> Text:
         return "action_tell_club_choices"
 
