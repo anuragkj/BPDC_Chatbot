@@ -211,8 +211,6 @@ actions:
 - action_trigger_response_selector
 - action_tell_club_info
 - action_tell_stud_gpa
-- utter_chitchat
-- utter_faq
 - action_default_fallback
 - action_restart_with_button
 - action_default_ask_affirmation
