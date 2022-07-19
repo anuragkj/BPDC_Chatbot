@@ -146,7 +146,7 @@ class ActionTellClubChoices(Action):
         domain: DomainDict,
     ) -> None:
         buttons = []
-        loc = os.path.join(os.getcwd(), os.path.basename("./output_file.json"))
+        loc = os.path.join(os.getcwd(), os.path.basename("./Resources/club_details.json"))
         data = pd.read_json(loc)  
         data = pd.DataFrame(data)
         entity_name = "club_name"

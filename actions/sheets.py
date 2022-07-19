@@ -8,9 +8,16 @@ scope = ['https://spreadsheets.google.com/feeds',
 creds = ServiceAccountCredentials.from_json_keyfile_name(
     'creds.json', scope)
 client = gspread.authorize(creds)
-sheet = client.open(sheet_to_display).worksheet("Clubs")
-display_record = sheet.get_all_records()
+club_details_sheet = client.open(sheet_to_display).worksheet("Clubs")
+club_details_display_record = club_details_sheet.get_all_records()
 # print(type(display_record))
 
-with open("output_file.json", "w") as of:
-    json.dump(display_record, of)
+with open("Resources/club_details.json", "w") as of:
+    json.dump(club_details_display_record, of)
+
+event_details_sheet = client.open(sheet_to_display).worksheet("Events")
+event_details_display_record = event_details_sheet.get_all_records()
+# print(type(display_record))
+
+with open("Resources/event_details.json", "w") as ef:
+    json.dump(event_details_display_record, ef)      
