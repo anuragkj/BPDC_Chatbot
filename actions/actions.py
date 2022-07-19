@@ -135,7 +135,30 @@ class ActionRestartWithButton(Action):
 
         dispatcher.utter_message(response="utter_restart_with_button")
 
+class ActionRestartWithButton(Action):
+    def name(self) -> Text:
+        return "action_tell_club_choices"
 
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> None:
+        buttons = []
+        loc = os.path.join(os.getcwd(), os.path.basename("./output_file.json"))
+        data = pd.read_json(loc)  
+        data = pd.DataFrame(data)
+        entity_name = "club_name"
+        for i in range(len(data["Name"])):
+            #############################################
+            e_name = "club_name"
+            e_value = data["Name"][i]
+            buttons.append(
+                        {"title": e_value, "payload": "/club_choice "+json.dumps({e_name:e_value})}
+                    )
+            
+        dispatcher.utter_message(response="utter_club_name_details", buttons=buttons)
 
 class ActionDefaultAskAffirmation(Action):
     """Asks for an affirmation of the intent if NLU threshold is not met."""

@@ -36,26 +36,26 @@ intents:
 - canthelp
 - explain
 - thank
-- creative_lab
-- dance_club #neha started working from here onwards
-- music_and_singing_club
-- fashion_club
-- photography_club
-- incubation_centre
-- incubation_centre_exists
-- incubation_centre_managed_by
-- incubation_centre_location
-- creative_lab_location
-- creative_lab_timings
-- club_membership_fee
-- role_treasurer
-- eligibility_treasurer
-- role_general_secretary
-- eligibility_general_secretary
-- role_vice_president
-- eligibility_vice_president
-- role_president
-- eligibility_president
+# - creative_lab
+# - dance_club #neha started working from here onwards
+# - music_and_singing_club
+# - fashion_club
+# - photography_club
+# - incubation_centre
+# - incubation_centre_exists
+# - incubation_centre_managed_by
+# - incubation_centre_location
+# - creative_lab_location
+# - creative_lab_timings
+# - club_membership_fee
+# - role_treasurer
+# - eligibility_treasurer
+# - role_general_secretary
+# - eligibility_general_secretary
+# - role_vice_president
+# - eligibility_vice_president
+# - role_president
+# - eligibility_president
 - total_clubs
 - nlu_fallback
 - restart
@@ -155,12 +155,7 @@ responses:
   utter_club_name_details:
   - text: |-
       There are multiple clubs in our University:
-      Sports Club
-      Trebel
-      ACM
-      AI
-      MTC
-      To know more about a specific club type its name.
+      To know more about a specific club choose the button or type its name.
   utter_button_for_club_info:
   - buttons:
     - payload: /affirm
@@ -181,23 +176,6 @@ responses:
   - text: |-
       Do you really want to terminate this operation
       If yes please ask to stop again
-  utter_chitchat/ask_howbuilt:
-  - text: I was built with a lot of love and patience.
-  - text: Well, when two chatbots love each other very much...
-  - text: They always ask how I was built, but never how I am...
-  - text: I was made by software engineers, but hard work is what built me.
-  - text: I'm building myself every day. I've been working out, did you notice?
-  utter_chitchat/ask_howdoing:
-  - text: I'm great! Thanks for asking.
-  - text: I'm good, thanks!
-  - text: A little bit too warm, otherwise fine.
-  - text: A little bit cold, otherwise fine.
-  utter_faq/address:
-  - text: BPDC is situated at Dubai Academic City
-  - text: Our Uni is located at DIAC(Dubai Academic City)
-  utter_faq/full_form:
-  - text: BITS Pilani Dubai Campus
-  - text: It stands for BITS Pilani Dubai Campus
   utter_restart:
   - text: Loading... And I've been restarted! 🤯
   - text: Congrats you've restarted me! 😉
@@ -239,3 +217,4 @@ actions:
 - action_restart_with_button
 - action_default_ask_affirmation
 - action_greet_user
+- action_tell_club_choices
