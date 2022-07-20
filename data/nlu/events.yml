@@ -1,0 +1,17 @@
+version: "3.1"
+nlu:
+- intent: ask_events
+  examples: |
+    - events?
+    - what are the events in our Uni?
+    - Tell me about events
+    - I want to know about a event
+    - I want to know about [BSF](event_name)
+- intent: event_choice
+  examples: |
+    - [Ice Breaker](event_name)
+    - [BSF](event_name)
+    - [STEM@BITS](event_name)
+    - [Technofest](event_name)
+    - [Recharge](event_name)
+    - I want to more about [BSF](event_name)
