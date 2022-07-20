@@ -28,7 +28,7 @@ class ActionTellClubInfo(Action):
     ) -> List[Dict[Text, Any]]:
         club_name = next(tracker.get_latest_entity_values("club_name"), None)
         
-        loc = os.path.join(os.getcwd(), os.path.basename("./output_file.json"))
+        loc = os.path.join(os.getcwd(), os.path.basename("./Resources/club_details.json"))
 
         data = pd.read_json(loc)  
         data = pd.DataFrame(data)
@@ -42,6 +42,29 @@ class ActionTellClubInfo(Action):
         
         return []
 
+class ActionTellEventInfo(Action):
+
+    def name(self) -> Text:
+        return "action_tell_event_info"
+
+    async def run(
+        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        event_name = next(tracker.get_latest_entity_values("event_name"), None)
+        
+        loc = os.path.join(os.getcwd(), os.path.basename("./Resources/event_details.json"))
+
+        data = pd.read_json(loc)  
+        data = pd.DataFrame(data)
+        result_data = data.query("Event_Name == @event_name")
+        if not result_data.empty:
+            msg = "Event Name : "+event_name+"\nWho to contact : "+result_data["Who_to_contact"].iloc[0]+ "\nEvent Details : "+result_data["What_is_the_event"].iloc[0]
+        else:
+            msg = f"The event you are looking for doesn't seem to exist. Could you please check again"
+          
+        dispatcher.utter_message(text=msg)
+        
+        return []
 # class ActionButtonForClubInfo(Action):
 
 #     def name(self) -> Text:
@@ -159,6 +182,31 @@ class ActionTellClubChoices(Action):
                     )
             
         dispatcher.utter_message(response="utter_club_name_details", buttons=buttons)
+
+class ActionTellEventChoices(Action):
+    def name(self) -> Text:
+        return "action_tell_event_choices"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> None:
+        buttons = []
+        loc = os.path.join(os.getcwd(), os.path.basename("./Resources/event_details.json"))
+        data = pd.read_json(loc)  
+        data = pd.DataFrame(data)
+        entity_name = "event_name"
+        for i in range(len(data["Event_Name"])):
+            #############################################
+            e_name = "event_name"
+            e_value = data["Event_Name"][i]
+            buttons.append(
+                        {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
+                    )
+            
+        dispatcher.utter_message(response="utter_event_name_details", buttons=buttons)
 
 class ActionDefaultAskAffirmation(Action):
     """Asks for an affirmation of the intent if NLU threshold is not met."""
