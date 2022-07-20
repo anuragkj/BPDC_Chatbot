@@ -5,11 +5,13 @@ session_config:
 intents:
 - affirm
 - ask_clubs
+- ask_events
 - bot_challenge
 - chitchat:
     used_entities: []
     is_retrieval_intent: true
 - club_choice
+- event_choice
 - club_desgignations
 - create_club
 - deny
@@ -65,6 +67,7 @@ intents:
 
 entities:
 - club_name
+- event_name
 - stud_id
 - stud_pwd
 - name
@@ -76,6 +79,12 @@ slots:
     mappings:
     - type: from_entity
       entity: club_name
+  event_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: event_name
   stud_id:
     type: text
     influence_conversation: false
@@ -156,6 +165,10 @@ responses:
   - text: |-
       There are multiple clubs in our University:
       To know more about a specific club choose the button or type its name.
+  utter_event_name_details:
+  - text: |-
+      There are multiple events held in our University:
+      To know more about a specific club choose the button or type its name.
   utter_button_for_club_info:
   - buttons:
     - payload: /affirm
@@ -210,9 +223,11 @@ responses:
 actions:
 - action_trigger_response_selector
 - action_tell_club_info
+- action_tell_event_info
 - action_tell_stud_gpa
 - action_default_fallback
 - action_restart_with_button
 - action_default_ask_affirmation
 - action_greet_user
 - action_tell_club_choices
+- action_tell_event_choices
