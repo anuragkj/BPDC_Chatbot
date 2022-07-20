@@ -17,7 +17,7 @@ stories:
   steps:
   - intent: ask_events
     entities:
-    - event_name: Shades
+    - event_name: BSF
   - slot_was_set:
-    - event_name: Shades
+    - event_name: BSF
   - action: action_tell_event_info
