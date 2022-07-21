@@ -28,7 +28,7 @@ class ActionTellClubInfo(Action):
     ) -> List[Dict[Text, Any]]:
         club_name = next(tracker.get_latest_entity_values("club_name"), None)
         
-        loc = os.path.join(os.getcwd(), os.path.basename("./Resources/club_details.json"))
+        loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/club_details.json"))
 
         data = pd.read_json(loc)  
         data = pd.DataFrame(data)
@@ -52,7 +52,7 @@ class ActionTellEventInfo(Action):
     ) -> List[Dict[Text, Any]]:
         event_name = next(tracker.get_latest_entity_values("event_name"), None)
         
-        loc = os.path.join(os.getcwd(), os.path.basename("./Resources/event_details.json"))
+        loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/event_details.json"))
 
         data = pd.read_json(loc)  
         data = pd.DataFrame(data)
@@ -194,7 +194,7 @@ class ActionTellEventChoices(Action):
         domain: DomainDict,
     ) -> None:
         buttons = []
-        loc = os.path.join(os.getcwd(), os.path.basename("./Resources/event_details.json"))
+        loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/event_details.json"))
         data = pd.read_json(loc)  
         data = pd.DataFrame(data)
         entity_name = "event_name"
