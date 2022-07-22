@@ -123,8 +123,6 @@ responses:
   - text: Wlecome! I am BPDC bot!!
   utter_fine:
   - text: Okay. Anything else I can help with?
-  utter_greet:
-  - text: Hi, I'm BPDC Chatbot!
   utter_greet_name:
   - text: Hi, {name}!
   - text: Hello, {name}!
@@ -220,6 +218,40 @@ responses:
   utter_default:
   - text: I'm sorry, I can't help you.
 #From here we set the responses for story tree######################################################################################################
+  utter_greet:
+  - buttons:
+    - payload: '/ask_academics'
+      title: Academics
+    - payload: '/ask_non_academics'
+      title: Non Academics
+    text: Hi😁!! Welcome to the BPDC Chatbot. You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
+
+  utter_ask_academics:
+  - buttons:
+    - payload: '/request_stud_gpa'
+      title: What is my GPA?
+    - payload: '/ask_library'
+      title: Library at BPDC
+    - payload: '/ask_others'
+      title: Other Queries
+    text: BPDC provides world class academic facilities. To know further press a button or type in your query.
+
+  utter_ask_academics:
+  - buttons:
+    - payload: '/ask_events'
+      title: Events
+    - payload: '/ask_clubs'
+      title: Clubs
+    - payload: '/ask_others'
+      title: Other Queries
+    text: Apart from strong academics BPDC has also been known for the range of extra curricular activities hosted. To know further press a button or type in your query.
+
+  utter_ask_library:
+  - text: BPDC has a separate library block at the campus providing access to thousands of different books and journals. Type in your query regarding the library if any.
+
+  utter_ask_others:
+  - text: The chatbot is currently in a development phase. Many more features will be implemented in the future😉. So please keep supporting us by valuable feedbacks.
+  
 #Ends here##########################################################################################################################################
 
 actions:
