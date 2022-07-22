@@ -31,6 +31,8 @@ stories:
   - action: utter_ask_academics
   - intent: ask_library
   - action: utter_ask_library
+  - intent: library_faq
+  - action: utter_library_faq
 
 - story: greet -> academic -> others
   steps:
