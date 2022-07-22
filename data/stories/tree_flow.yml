@@ -1,0 +1,12 @@
+version: "3.1"
+
+stories:
+
+- story: greet -> academic -> marks
+  steps:
+  - intent: greet
+  - action: utter_ask_stud_id
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: stop
+  - action: utter_fine

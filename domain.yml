@@ -64,6 +64,10 @@ intents:
 - enter_name_data
 - human_handoff
 - feedback
+- ask_academics
+- ask_library
+- ask_non_academics
+- ask_others
 
 entities:
 - club_name
