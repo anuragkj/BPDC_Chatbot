@@ -240,7 +240,7 @@ responses:
       title: Other Queries
     text: BPDC provides world class academic facilities. To know further press a button or type in your query.
 
-  utter_ask_academics:
+  utter_ask_non_academics:
   - buttons:
     - payload: '/ask_events'
       title: Events
