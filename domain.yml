@@ -219,6 +219,8 @@ responses:
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_default:
   - text: I'm sorry, I can't help you.
+#From here we set the responses for story tree######################################################################################################
+#Ends here##########################################################################################################################################
 
 actions:
 - action_trigger_response_selector

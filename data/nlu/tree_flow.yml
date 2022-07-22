@@ -1,0 +1,22 @@
+version: "3.1"
+nlu:
+- intent: ask_academics
+  examples: |
+    - Tell me more about the academics of BITS Pilani
+    - What are the academic features of our college
+
+- intent: ask_library
+  examples: |
+    - Is there a library at BPDC
+    - Do we have a library at our college?
+
+- intent: ask_non_academics
+  examples: |
+    - What are the extra curricular activities in our uni
+    - Apart from academics what does BPDC have to offer
+
+- intent: ask_others
+  examples: |
+    - WHat are the other features in this branch
+    - Is that it?
+    - Where are the other options?
