@@ -232,7 +232,7 @@ responses:
       title: Academics
     - payload: '/ask_non_academics'
       title: Non Academics
-    text: Hi😁!! Welcome to the BPDC Chatbot. You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
+    text: You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
 
   utter_ask_academics:
   - buttons:

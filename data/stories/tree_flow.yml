@@ -6,6 +6,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_options
   - intent: ask_academics
   - action: utter_ask_academics
   - intent: request_stud_gpa
@@ -27,6 +30,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_options
   - intent: ask_academics
   - action: utter_ask_academics
   - intent: ask_library
@@ -38,6 +44,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_options
   - intent: ask_academics
   - action: utter_ask_academics
   - intent: ask_others
@@ -47,6 +56,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics
   - intent: ask_others
@@ -56,6 +68,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics
   - intent: ask_events
@@ -71,6 +86,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics
   - intent: ask_clubs
