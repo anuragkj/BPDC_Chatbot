@@ -63,7 +63,6 @@ intents:
 - restart
 - enter_name_data
 - human_handoff
-- feedback
 - ask_academics
 - ask_library
 - ask_non_academics
@@ -224,7 +223,7 @@ responses:
       title: Others
     text: What would you like to give feedback on?
   utter_ask_feedback_message:
-  - text: Please provide the feedback/suugestions you have.
+  - text: Please provide the feedback/suggestions you have.
   utter_anything_else:
   - text: Is there anything else I can help you with?
   utter_ask_rephrase:
@@ -300,3 +299,4 @@ actions:
 - action_greet_user
 - action_tell_club_choices
 - action_tell_event_choices
+- action_get_feedback

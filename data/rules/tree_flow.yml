@@ -12,5 +12,6 @@ rules:
   steps:
   - intent: give_feedback
   - action: utter_ask_feedback_choice
-  - intent: utter_ask_feedback_message
+  - intent: feedback_choice
+  - action: utter_ask_feedback_message
   - action: action_get_feedback
