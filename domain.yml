@@ -247,6 +247,10 @@ responses:
       title: Academics
     - payload: '/ask_non_academics'
       title: Non Academics
+    - payload: '/give_feedback'
+      title: Give Feedback
+    - payload: '/restart'
+      title: Restart
     text: You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
 
   utter_ask_academics:
@@ -257,6 +261,10 @@ responses:
       title: Library at BPDC
     - payload: '/ask_others'
       title: Other Queries
+    - payload: '/give_feedback'
+      title: Give Feedback
+    - payload: '/restart'
+      title: Restart
     text: BPDC provides world class academic facilities. To know further press a button or type in your query.
 
   utter_ask_non_academics:
@@ -267,6 +275,10 @@ responses:
       title: Clubs
     - payload: '/ask_others'
       title: Other Queries
+    - payload: '/give_feedback'
+      title: Give Feedback
+    - payload: '/restart'
+      title: Restart
     text: Apart from strong academics BPDC has also been known for the range of extra curricular activities hosted. To know further press a button or type in your query.
 
   utter_ask_library:
