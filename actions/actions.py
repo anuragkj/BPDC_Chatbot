@@ -1,5 +1,7 @@
 from typing import Any, Text, Dict, List
 import json
+
+from sqlalchemy import true
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import (
     SlotSet,
@@ -130,7 +132,8 @@ class ActionGreetUser(Action):
         domain: DomainDict,
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
-        shown_privacy = tracker.get_slot("shown_privacy")
+        # shown_privacy = tracker.get_slot("shown_privacy")
+        shown_privacy = true
         name_entity = next(tracker.get_latest_entity_values("name"), None)
         if intent == "greet" or (intent == "enter_data" and name_entity):
             if shown_privacy and name_entity and name_entity.lower() != "sara":

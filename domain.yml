@@ -223,6 +223,10 @@ responses:
   - text: I'm sorry, I can't help you.
 #From here we set the responses for story tree######################################################################################################
   utter_greet:
+   - text: Hi😁!! Welcome to the BPDC Chatbot.
+  utter_name:
+  - text: Could you please provide your name?
+  utter_options:
   - buttons:
     - payload: '/ask_academics'
       title: Academics
