@@ -68,6 +68,9 @@ intents:
 - ask_library
 - ask_non_academics
 - ask_others
+- ask_options
+- give_feedback
+- feedback_choice
 
 entities:
 - club_name
@@ -221,7 +224,7 @@ responses:
       title: Others
     text: What would you like to give feedback on?
   utter_ask_feedback_message:
-  - text: I'm sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve.
+  - text: Please provide the feedback/suugestions you have.
   utter_anything_else:
   - text: Is there anything else I can help you with?
   utter_ask_rephrase:

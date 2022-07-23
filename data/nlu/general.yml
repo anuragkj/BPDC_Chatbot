@@ -724,3 +724,8 @@ nlu:
     - yes thanks
     - thanks for your information
     - thanks f
+
+- intent: ask_options
+  examples: |
+    - Can I go back to the options
+    - I need the options again
