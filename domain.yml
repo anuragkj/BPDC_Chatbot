@@ -75,7 +75,7 @@ entities:
 - stud_id
 - stud_pwd
 - name
-- feedback_value
+- feedback_name
 slots:
   club_name:
     type: text
@@ -113,15 +113,12 @@ slots:
     - type: from_text
       entity: feedback
     influence_conversation: false
-  feedback_value:
-    type: categorical
-    values:
-    - positive
-    - negative
+  feedback_name:
+    type: text
+    influence_conversation: false
     mappings:
     - type: from_entity
-      entity: feedback_value
-    influence_conversation: false
+      entity: feedback_name
 responses:
   utter_start_reply:
   - text: Wlecome! I am BPDC bot!!
@@ -201,13 +198,28 @@ responses:
     text: Click the button below if you want to start over.
   utter_contact_email:
   - text: You can’t speak to a human directly in this chat, but you can email us at abc@dubai.bits-pilani.ac.in
-  utter_ask_feedback:
+  # utter_ask_feedback:
+  # - buttons:
+  #   - payload: '/feedback{{"feedback_value": "positive"}}'
+  #     title: 👍
+  #   - payload: '/feedback{{"feedback_value": "negative"}}'
+  #     title: 👎
+  #   text: How is this conversation going?
+  utter_ask_feedback_choice:
   - buttons:
-    - payload: '/feedback{{"feedback_value": "positive"}}'
-      title: 👍
-    - payload: '/feedback{{"feedback_value": "negative"}}'
-      title: 👎
-    text: How is this conversation going?
+    - payload: '/feedback{{"feedback_name": "Chatbot"}}'
+      title: General
+    - payload: '/feedback{{"feedback_value": "College"}}'
+      title: College
+    - payload: '/feedback{{"feedback_value": "Library"}}'
+      title: Library
+    - payload: '/feedback{{"feedback_value": "Clubs"}}'
+      title: Clubs
+    - payload: '/feedback{{"feedback_value": "Events"}}'
+      title: Events
+    - payload: '/feedback{{"feedback_value": "Others"}}'
+      title: Others
+    text: What would you like to give feedback on?
   utter_ask_feedback_message:
   - text: I'm sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve.
   utter_anything_else:

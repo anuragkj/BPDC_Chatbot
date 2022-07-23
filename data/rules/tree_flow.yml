@@ -1,0 +1,23 @@
+#add restart, options and feedback at the end of each branch
+version: "3.1"
+
+rules:
+
+- rule: Restart
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Start the chatbot
+  steps:
+  - intent: start
+  - action: utter_start_reply
+
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+- rule: respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat

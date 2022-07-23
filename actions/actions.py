@@ -18,6 +18,39 @@ import os
 USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
 ACTION_DEFAULT_ASK_AFFIRMATION_NAME = "action_default_ask_affirmation"
+class ActionGetFeedback(Action):
+
+    def name(self) -> Text:
+        return "action_get_feedback"
+    
+    async def run(
+        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        user_name = next(tracker.get_latest_entity_values("name"), None)
+        sheet_name = user_name = next(tracker.get_latest_entity_values("feedback_name"), None)
+        feedback = tracker.latest_message.text
+        
+        excel_name = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/Feedback.xlsx"))
+        data = {"Name":user_name,"Feedback":feedback}
+        with pd.ExcelWriter(excel_name) as writer:
+            columns = []
+            for k, v in data.items():
+                columns.append(k)
+            df = pd.DataFrame(data, index= None)
+            df_source = None
+            if os.path.exists(excel_name):
+                df_source = pd.DataFrame(pd.read_excel(excel_name, sheet_name=sheet_name))
+            if df_source is not None:
+                df_dest = df_source.append(df)
+            else:
+                df_dest = df
+            df_dest.to_excel(writer, sheet_name=sheet_name, index = False, columns=columns)
+        
+          
+        dispatcher.utter_message(text="Thanks for your feedback😊 !!")
+        
+        return []
+    
 
 #locally queries the database for clubs info
 class ActionTellClubInfo(Action):
