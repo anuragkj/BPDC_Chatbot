@@ -14,6 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 import xlrd
 import pandas as pd
 import os
+from openpyxl import Workbook, load_workbook
 
 USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
@@ -26,25 +27,49 @@ class ActionGetFeedback(Action):
     async def run(
         self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        user_name = next(tracker.get_latest_entity_values("name"), None)
-        sheet_name = user_name = next(tracker.get_latest_entity_values("feedback_name"), None)
-        feedback = tracker.latest_message.text
-        
+        user_name = tracker.get_slot('name')
+        print(user_name)
+        sheet_name = user_name = tracker.get_slot("feedback_name")
+        feedback = tracker.latest_message['text']
+        data = {"Name":[user_name],"Feedback":[feedback],"Category":[sheet_name]}
+        print(data)
+        df = pd.DataFrame(data)
+        print(df)
         excel_name = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/Feedback.xlsx"))
-        data = {"Name":user_name,"Feedback":feedback}
-        with pd.ExcelWriter(excel_name) as writer:
-            columns = []
-            for k, v in data.items():
-                columns.append(k)
-            df = pd.DataFrame(data, index= None)
-            df_source = None
-            if os.path.exists(excel_name):
-                df_source = pd.DataFrame(pd.read_excel(excel_name, sheet_name=sheet_name))
-            if df_source is not None:
-                df_dest = df_source.append(df)
-            else:
-                df_dest = df
-            df_dest.to_excel(writer, sheet_name=sheet_name, index = False, columns=columns)
+        
+
+        # wb= Workbook()
+        # ws=wb.active
+        # with pd.ExcelWriter(excel_name, engine="openpyxl") as writer:
+        #     writer.book=wb
+        #     writer.sheets = dict((ws.title, ws) for ws in wb.worksheets)
+        #     #useful code
+        #     df.to_excel(writer, sheet_name= sheet_name, index = False)
+        #     writer.save()
+        
+        book = load_workbook(excel_name)
+        writer = pd.ExcelWriter(excel_name, engine='openpyxl')
+        writer.book = book
+        writer.sheets = {ws.title: ws for ws in book.worksheets}
+
+        for sheetname in writer.sheets:
+            df.to_excel(writer,sheet_name=sheetname, startrow=writer.sheets[sheetname].max_row, index = False,header= False)
+
+        writer.save()
+
+        # with pd.ExcelWriter(excel_name,engine='xlsxwriter') as writer:
+        #     columns = []
+        #     for k, v in data.items():
+        #         columns.append(k)
+        #     df = pd.DataFrame(data, index=[0])
+        #     df_source = None
+        #     if os.path.exists(excel_name):
+        #         df_source = pd.DataFrame(pd.read_excel(excel_name, sheet_name=sheet_name, engine='openpyxl'))
+        #     if df_source is not None:
+        #         df_dest = df_source.append(df)
+        #     else:
+        #         df_dest = df
+        #     df_dest.to_excel(writer, sheet_name=sheet_name, index = False, columns=columns)
         
           
         dispatcher.utter_message(text="Thanks for your feedback😊 !!")
