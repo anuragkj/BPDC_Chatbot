@@ -264,6 +264,8 @@ responses:
       title: Give Feedback
     - payload: '/restart'
       title: Restart
+    - payload: '/ask_options'
+      title: Back to options page
     text: BPDC provides world class academic facilities. To know further press a button or type in your query.
 
   utter_ask_non_academics:
@@ -278,6 +280,8 @@ responses:
       title: Give Feedback
     - payload: '/restart'
       title: Restart
+    - payload: '/ask_options'
+      title: Back to options page
     text: Apart from strong academics BPDC has also been known for the range of extra curricular activities hosted. To know further press a button or type in your query.
 
   utter_ask_library:
