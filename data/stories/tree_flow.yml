@@ -16,7 +16,7 @@ stories:
   - action: utter_greet
   - action: utter_name
   - intent: enter_name_data
-  - action: action_greet_user
+  - action: utter_greet_name
   - action: utter_options
   - intent: ask_academics
   - action: utter_ask_academics
@@ -41,7 +41,7 @@ stories:
   - action: utter_greet
   - action: utter_name
   - intent: enter_name_data
-  - action: action_greet_user
+  - action: utter_greet_name
   - action: utter_options
   - intent: ask_academics
   - action: utter_ask_academics
@@ -56,7 +56,7 @@ stories:
   - action: utter_greet
   - action: utter_name
   - intent: enter_name_data
-  - action: action_greet_user
+  - action: utter_greet_name
   - action: utter_options
   - intent: ask_academics
   - action: utter_ask_academics
@@ -69,7 +69,7 @@ stories:
   - action: utter_greet
   - action: utter_name
   - intent: enter_name_data
-  - action: action_greet_user
+  - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics
@@ -82,7 +82,7 @@ stories:
   - action: utter_greet
   - action: utter_name
   - intent: enter_name_data
-  - action: action_greet_user
+  - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics
@@ -101,7 +101,7 @@ stories:
   - action: utter_greet
   - action: utter_name
   - intent: enter_name_data
-  - action: action_greet_user
+  - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics

@@ -152,34 +152,34 @@ class ActionTellStudGpa(Action):
         
         return []
 
-class ActionGreetUser(Action):
-    """Greets the user with/without privacy policy"""
+# class ActionGreetUser(Action):
+#     """Greets the user with/without privacy policy"""
 
-    def name(self) -> Text:
-        return "action_greet_user"
+#     def name(self) -> Text:
+#         return "action_greet_user"
 
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> List[EventType]:
-        intent = tracker.latest_message["intent"].get("name")
-        # shown_privacy = tracker.get_slot("shown_privacy")
-        shown_privacy = true
-        name_entity = next(tracker.get_latest_entity_values("name"), None)
-        if intent == "greet" or (intent == "enter_data" and name_entity):
-            if shown_privacy and name_entity and name_entity.lower() != "sara":
-                dispatcher.utter_message(response="utter_greet_name", name=name_entity)
-                return []
-            elif shown_privacy:
-                dispatcher.utter_message(response="utter_greet_noname")
-                return []
-            else:
-                dispatcher.utter_message(response="utter_greet")
-                dispatcher.utter_message(response="utter_inform_privacypolicy")
-                return [SlotSet("shown_privacy", True)]
-        return []
+#     def run(
+#         self,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: DomainDict,
+#     ) -> List[EventType]:
+#         intent = tracker.latest_message["intent"].get("name")
+#         # shown_privacy = tracker.get_slot("shown_privacy")
+#         shown_privacy = true
+#         name_entity = next(tracker.get_latest_entity_values("name"), None)
+#         if intent == "greet" or (intent == "enter_data" and name_entity):
+#             if shown_privacy and name_entity and name_entity.lower() != "sara":
+#                 dispatcher.utter_message(response="utter_greet_name", name=name_entity)
+#                 return []
+#             elif shown_privacy:
+#                 dispatcher.utter_message(response="utter_greet_noname")
+#                 return []
+#             else:
+#                 dispatcher.utter_message(response="utter_greet")
+#                 dispatcher.utter_message(response="utter_inform_privacypolicy")
+#                 return [SlotSet("shown_privacy", True)]
+#         return []
 
 class ActionRestartWithButton(Action):
     def name(self) -> Text:

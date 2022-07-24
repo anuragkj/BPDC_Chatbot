@@ -10,7 +10,7 @@ stories:
   - action: utter_greet
   - action: utter_name
   - intent: enter_name_data
-  - action: action_greet_user
+  - action: utter_greet_name
   - action: utter_options
   - intent: chitchat
   - action: utter_chitchat
@@ -22,7 +22,7 @@ stories:
   - action: utter_greet
   - action: utter_name
   - intent: enter_name_data
-  - action: action_greet_user
+  - action: utter_greet_name
   - action: utter_options
   - intent: chitchat
   - action: utter_chitchat
