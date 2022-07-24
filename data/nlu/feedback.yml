@@ -13,4 +13,9 @@ nlu:
     - [Clubs](feedback_name)
     - [Events](feedback_name)
     - [Others](feedback_name)
+- intent: user_feedback
+  examples: |
+    - It was a good expirience
+    - Computer lab should have more computers
+    - There is shortage of Algo books in library
     

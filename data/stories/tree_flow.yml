@@ -7,7 +7,12 @@ stories:
   - intent: give_feedback
   - action: utter_ask_feedback_choice
   - intent: feedback_choice
+    entities:
+    - feedback_name
+  - slot_was_set:
+    - feedback_name
   - action: utter_ask_feedback_message
+  - intent: user_feedback
   - action: action_get_feedback
 
 - story: greet -> academic -> marks

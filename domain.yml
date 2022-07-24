@@ -70,6 +70,7 @@ intents:
 - ask_options
 - give_feedback
 - feedback_choice
+- user_feedback
 
 entities:
 - club_name
@@ -234,7 +235,12 @@ responses:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_default:
-  - text: I'm sorry, I can't help you.
+  - buttons:
+    - payload: '/restart'
+      title: Restart
+    - payload: '/ask_options'
+      title: Back to options page
+    text: I'm sorry, I can't help you.
 #From here we set the responses for story tree######################################################################################################
   utter_greet:
    - text: Hi😁!! Welcome to the BPDC Chatbot.
