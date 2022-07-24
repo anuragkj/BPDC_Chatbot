@@ -11,6 +11,7 @@ stories:
   - action: utter_name
   - intent: enter_name_data
   - action: action_greet_user
+  - action: utter_options
   - intent: chitchat
   - action: utter_chitchat
   - intent: chitchat
@@ -22,5 +23,6 @@ stories:
   - action: utter_name
   - intent: enter_name_data
   - action: action_greet_user
+  - action: utter_options
   - intent: chitchat
   - action: utter_chitchat
