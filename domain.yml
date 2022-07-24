@@ -70,7 +70,6 @@ intents:
 - ask_options
 - give_feedback
 - feedback_choice
-- user_feedback
 
 entities:
 - club_name
