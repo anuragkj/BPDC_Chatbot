@@ -7,6 +7,9 @@ stories:
 - story: greet + handoff
   steps:
   - intent: greet
+  - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
   - action: action_greet_user
   - intent: human_handoff
   - action: utter_contact_email

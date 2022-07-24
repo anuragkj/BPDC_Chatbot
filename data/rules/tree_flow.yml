@@ -8,10 +8,3 @@ rules:
   - intent: ask_options
   - action: utter_options
 
-- rule: Feedback
-  steps:
-  - intent: give_feedback
-  - action: utter_ask_feedback_choice
-  - intent: feedback_choice
-  - action: utter_ask_feedback_message
-  - action: action_get_feedback
