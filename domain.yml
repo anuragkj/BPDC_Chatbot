@@ -223,6 +223,7 @@ responses:
     - payload: '/feedback_choice{{"feedback_name": "Others"}}'
       title: Others
     text: What would you like to give feedback on?
+    button_type: vertical
   utter_ask_feedback_message:
   - text: Please provide the feedback/suggestions you have.
   utter_anything_else:
@@ -274,6 +275,7 @@ responses:
     - payload: '/ask_options'
       title: Back to options page
     text: BPDC provides world class academic facilities. To know further press a button or type in your query.
+    button_type: vertical
 
   utter_ask_non_academics:
   - buttons:
@@ -290,6 +292,7 @@ responses:
     - payload: '/ask_options'
       title: Back to options page
     text: Apart from strong academics BPDC has also been known for the range of extra curricular activities hosted. To know further press a button or type in your query.
+    button_type: vertical
 
   utter_ask_library:
   - text: BPDC has a separate library block at the campus providing access to thousands of different books and journals. Type in your query regarding the library if any.
