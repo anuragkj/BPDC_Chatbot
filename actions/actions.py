@@ -29,7 +29,7 @@ class ActionGetFeedback(Action):
     ) -> List[Dict[Text, Any]]:
         user_name = tracker.get_slot('name')
         print(user_name)
-        sheet_name = user_name = tracker.get_slot("feedback_name")
+        sheet_name = tracker.get_slot("feedback_name")
         feedback = tracker.latest_message['text']
         data = {"Name":[user_name],"Feedback":[feedback],"Category":[sheet_name]}
         print(data)
