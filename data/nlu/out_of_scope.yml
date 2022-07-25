@@ -98,7 +98,6 @@ nlu:
     - Nice name
     - Now?
     - Pizza bot
-    - Recharge
     - SEL ME SOMETHING
     - The Try it out is not working
     - The weather is good
@@ -415,3 +414,6 @@ nlu:
     - sudo reboot
     - asdfgasd
     - asdfgasdas
+    - It was a good expirience
+    - Computer lab should have more computers
+    - There is shortage of Algo books in library

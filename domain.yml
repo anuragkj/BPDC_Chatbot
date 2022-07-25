@@ -5,11 +5,13 @@ session_config:
 intents:
 - affirm
 - ask_clubs
+- ask_events
 - bot_challenge
 - chitchat:
     used_entities: []
     is_retrieval_intent: true
 - club_choice
+- event_choice
 - club_desgignations
 - create_club
 - deny
@@ -36,39 +38,46 @@ intents:
 - canthelp
 - explain
 - thank
-- creative_lab
-- dance_club #neha started working from here onwards
-- music_and_singing_club
-- fashion_club
-- photography_club
-- incubation_centre
-- incubation_centre_exists
-- incubation_centre_managed_by
-- incubation_centre_location
-- creative_lab_location
-- creative_lab_timings
-- club_membership_fee
-- role_treasurer
-- eligibility_treasurer
-- role_general_secretary
-- eligibility_general_secretary
-- role_vice_president
-- eligibility_vice_president
-- role_president
-- eligibility_president
+# - creative_lab
+# - dance_club #neha started working from here onwards
+# - music_and_singing_club
+# - fashion_club
+# - photography_club
+# - incubation_centre
+# - incubation_centre_exists
+# - incubation_centre_managed_by
+# - incubation_centre_location
+# - creative_lab_location
+# - creative_lab_timings
+# - club_membership_fee
+# - role_treasurer
+# - eligibility_treasurer
+# - role_general_secretary
+# - eligibility_general_secretary
+# - role_vice_president
+# - eligibility_vice_president
+# - role_president
+# - eligibility_president
 - total_clubs
 - nlu_fallback
 - restart
 - enter_name_data
 - human_handoff
-- feedback
+- ask_academics
+- ask_library
+- ask_non_academics
+- ask_others
+- ask_options
+- give_feedback
+- feedback_choice
 
 entities:
 - club_name
+- event_name
 - stud_id
 - stud_pwd
 - name
-- feedback_value
+- feedback_name
 slots:
   club_name:
     type: text
@@ -76,6 +85,12 @@ slots:
     mappings:
     - type: from_entity
       entity: club_name
+  event_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: event_name
   stud_id:
     type: text
     influence_conversation: false
@@ -100,22 +115,17 @@ slots:
     - type: from_text
       entity: feedback
     influence_conversation: false
-  feedback_value:
-    type: categorical
-    values:
-    - positive
-    - negative
+  feedback_name:
+    type: text
+    influence_conversation: false
     mappings:
     - type: from_entity
-      entity: feedback_value
-    influence_conversation: false
+      entity: feedback_name
 responses:
   utter_start_reply:
   - text: Wlecome! I am BPDC bot!!
   utter_fine:
   - text: Okay. Anything else I can help with?
-  utter_greet:
-  - text: Hi, I'm BPDC Chatbot!
   utter_greet_name:
   - text: Hi, {name}!
   - text: Hello, {name}!
@@ -155,12 +165,11 @@ responses:
   utter_club_name_details:
   - text: |-
       There are multiple clubs in our University:
-      Sports Club
-      Trebel
-      ACM
-      AI
-      MTC
-      To know more about a specific club type its name.
+      To know more about a specific club choose the button or type its name.
+  utter_event_name_details:
+  - text: |-
+      There are multiple events held in our University:
+      To know more about a specific club choose the button or type its name.
   utter_button_for_club_info:
   - buttons:
     - payload: /affirm
@@ -181,23 +190,6 @@ responses:
   - text: |-
       Do you really want to terminate this operation
       If yes please ask to stop again
-  utter_chitchat/ask_howbuilt:
-  - text: I was built with a lot of love and patience.
-  - text: Well, when two chatbots love each other very much...
-  - text: They always ask how I was built, but never how I am...
-  - text: I was made by software engineers, but hard work is what built me.
-  - text: I'm building myself every day. I've been working out, did you notice?
-  utter_chitchat/ask_howdoing:
-  - text: I'm great! Thanks for asking.
-  - text: I'm good, thanks!
-  - text: A little bit too warm, otherwise fine.
-  - text: A little bit cold, otherwise fine.
-  utter_faq/address:
-  - text: BPDC is situated at Dubai Academic City
-  - text: Our Uni is located at DIAC(Dubai Academic City)
-  utter_faq/full_form:
-  - text: BITS Pilani Dubai Campus
-  - text: It stands for BITS Pilani Dubai Campus
   utter_restart:
   - text: Loading... And I've been restarted! 🤯
   - text: Congrats you've restarted me! 😉
@@ -208,15 +200,30 @@ responses:
     text: Click the button below if you want to start over.
   utter_contact_email:
   - text: You can’t speak to a human directly in this chat, but you can email us at abc@dubai.bits-pilani.ac.in
-  utter_ask_feedback:
+  # utter_ask_feedback:
+  # - buttons:
+  #   - payload: '/feedback{{"feedback_value": "positive"}}'
+  #     title: 👍
+  #   - payload: '/feedback{{"feedback_value": "negative"}}'
+  #     title: 👎
+  #   text: How is this conversation going?
+  utter_ask_feedback_choice:
   - buttons:
-    - payload: '/feedback{{"feedback_value": "positive"}}'
-      title: 👍
-    - payload: '/feedback{{"feedback_value": "negative"}}'
-      title: 👎
-    text: How is this conversation going?
+    - payload: '/feedback_choice{{"feedback_name": "Chatbot"}}'
+      title: General
+    - payload: '/feedback_choice{{"feedback_name": "College"}}'
+      title: College
+    - payload: '/feedback_choice{{"feedback_name": "Library"}}'
+      title: Library
+    - payload: '/feedback_choice{{"feedback_name": "Clubs"}}'
+      title: Clubs
+    - payload: '/feedback_choice{{"feedback_name": "Events"}}'
+      title: Events
+    - payload: '/feedback_choice{{"feedback_name": "Others"}}'
+      title: Others
+    text: What would you like to give feedback on?
   utter_ask_feedback_message:
-  - text: I'm sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve.
+  - text: Please provide the feedback/suggestions you have.
   utter_anything_else:
   - text: Is there anything else I can help you with?
   utter_ask_rephrase:
@@ -227,15 +234,78 @@ responses:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_default:
-  - text: I'm sorry, I can't help you.
+  - buttons:
+    - payload: '/restart'
+      title: Restart
+    - payload: '/ask_options'
+      title: Back to options page
+    text: I'm sorry, I can't help you.
+#From here we set the responses for story tree######################################################################################################
+  utter_greet:
+   - text: Hi😁!! Welcome to the BPDC Chatbot.
+  utter_name:
+  - text: Could you please provide your name?
+  utter_options:
+  - buttons:
+    - payload: '/ask_academics'
+      title: Academics
+    - payload: '/ask_non_academics'
+      title: Non Academics
+    - payload: '/give_feedback'
+      title: Give Feedback
+    - payload: '/restart'
+      title: Restart
+    text: You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
+
+  utter_ask_academics:
+  - buttons:
+    - payload: '/request_stud_gpa'
+      title: What is my GPA?
+    - payload: '/ask_library'
+      title: Library at BPDC
+    - payload: '/ask_others'
+      title: Other Queries
+    - payload: '/give_feedback'
+      title: Give Feedback
+    - payload: '/restart'
+      title: Restart
+    - payload: '/ask_options'
+      title: Back to options page
+    text: BPDC provides world class academic facilities. To know further press a button or type in your query.
+
+  utter_ask_non_academics:
+  - buttons:
+    - payload: '/ask_events'
+      title: Events
+    - payload: '/ask_clubs'
+      title: Clubs
+    - payload: '/ask_others'
+      title: Other Queries
+    - payload: '/give_feedback'
+      title: Give Feedback
+    - payload: '/restart'
+      title: Restart
+    - payload: '/ask_options'
+      title: Back to options page
+    text: Apart from strong academics BPDC has also been known for the range of extra curricular activities hosted. To know further press a button or type in your query.
+
+  utter_ask_library:
+  - text: BPDC has a separate library block at the campus providing access to thousands of different books and journals. Type in your query regarding the library if any.
+
+  utter_ask_others:
+  - text: The chatbot is currently in a development phase. Many more features will be implemented in the future😉. So please keep supporting us by valuable feedbacks.
+  
+#Ends here##########################################################################################################################################
 
 actions:
 - action_trigger_response_selector
 - action_tell_club_info
+- action_tell_event_info
 - action_tell_stud_gpa
-- utter_chitchat
-- utter_faq
 - action_default_fallback
 - action_restart_with_button
 - action_default_ask_affirmation
-- action_greet_user
+# - action_greet_user
+- action_tell_club_choices
+- action_tell_event_choices
+- action_get_feedback

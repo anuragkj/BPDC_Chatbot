@@ -1,5 +1,7 @@
 from typing import Any, Text, Dict, List
 import json
+
+from sqlalchemy import true
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import (
     SlotSet,
@@ -12,6 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa.shared.core.constants import ACTION_DEFAULT_FALLBACK_NAME
 import pandas as pd
 import os
+from openpyxl import Workbook, load_workbook
 
 from .blenderbot import Talker
 
@@ -26,6 +29,63 @@ talker = Talker(
 USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
 ACTION_DEFAULT_ASK_AFFIRMATION_NAME = "action_default_ask_affirmation"
+class ActionGetFeedback(Action):
+
+    def name(self) -> Text:
+        return "action_get_feedback"
+    
+    async def run(
+        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        user_name = tracker.get_slot('name')
+        print(user_name)
+        sheet_name = tracker.get_slot("feedback_name")
+        feedback = tracker.latest_message['text']
+        data = {"Name":[user_name],"Feedback":[feedback],"Category":[sheet_name]}
+        print(data)
+        df = pd.DataFrame(data)
+        print(df)
+        excel_name = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/Feedback.xlsx"))
+        
+
+        # wb= Workbook()
+        # ws=wb.active
+        # with pd.ExcelWriter(excel_name, engine="openpyxl") as writer:
+        #     writer.book=wb
+        #     writer.sheets = dict((ws.title, ws) for ws in wb.worksheets)
+        #     #useful code
+        #     df.to_excel(writer, sheet_name= sheet_name, index = False)
+        #     writer.save()
+        
+        book = load_workbook(excel_name)
+        writer = pd.ExcelWriter(excel_name, engine='openpyxl')
+        writer.book = book
+        writer.sheets = {ws.title: ws for ws in book.worksheets}
+
+        for sheetname in writer.sheets:
+            df.to_excel(writer,sheet_name=sheetname, startrow=writer.sheets[sheetname].max_row, index = False,header= False)
+
+        writer.save()
+
+        # with pd.ExcelWriter(excel_name,engine='xlsxwriter') as writer:
+        #     columns = []
+        #     for k, v in data.items():
+        #         columns.append(k)
+        #     df = pd.DataFrame(data, index=[0])
+        #     df_source = None
+        #     if os.path.exists(excel_name):
+        #         df_source = pd.DataFrame(pd.read_excel(excel_name, sheet_name=sheet_name, engine='openpyxl'))
+        #     if df_source is not None:
+        #         df_dest = df_source.append(df)
+        #     else:
+        #         df_dest = df
+        #     df_dest.to_excel(writer, sheet_name=sheet_name, index = False, columns=columns)
+        
+          
+        dispatcher.utter_message(text="Thanks for your feedback😊 !!")
+        
+        return []
+    
 
 #locally queries the database for clubs info
 class ActionTellClubInfo(Action):
@@ -38,7 +98,7 @@ class ActionTellClubInfo(Action):
     ) -> List[Dict[Text, Any]]:
         club_name = next(tracker.get_latest_entity_values("club_name"), None)
         
-        loc = os.path.join(os.getcwd(), os.path.basename("./output_file.json"))
+        loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/club_details.json"))
 
         data = pd.read_json(loc)  
         data = pd.DataFrame(data)
@@ -52,6 +112,29 @@ class ActionTellClubInfo(Action):
         
         return []
 
+class ActionTellEventInfo(Action):
+
+    def name(self) -> Text:
+        return "action_tell_event_info"
+
+    async def run(
+        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        event_name = next(tracker.get_latest_entity_values("event_name"), None)
+        
+        loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/event_details.json"))
+
+        data = pd.read_json(loc)  
+        data = pd.DataFrame(data)
+        result_data = data.query("Event_Name == @event_name")
+        if not result_data.empty:
+            msg = "Event Name : "+event_name+"\nWho to contact : "+result_data["Who_to_contact"].iloc[0]+ "\nEvent Details : "+result_data["What_is_the_event"].iloc[0]
+        else:
+            msg = f"The event you are looking for doesn't seem to exist. Could you please check again"
+          
+        dispatcher.utter_message(text=msg)
+        
+        return []
 # class ActionButtonForClubInfo(Action):
 
 #     def name(self) -> Text:
@@ -104,33 +187,34 @@ class ActionTellStudGpa(Action):
         
         return []
 
-class ActionGreetUser(Action):
-    """Greets the user with/without privacy policy"""
+# class ActionGreetUser(Action):
+#     """Greets the user with/without privacy policy"""
 
-    def name(self) -> Text:
-        return "action_greet_user"
+#     def name(self) -> Text:
+#         return "action_greet_user"
 
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> List[EventType]:
-        intent = tracker.latest_message["intent"].get("name")
-        shown_privacy = tracker.get_slot("shown_privacy")
-        name_entity = next(tracker.get_latest_entity_values("name"), None)
-        if intent == "greet" or (intent == "enter_data" and name_entity):
-            if shown_privacy and name_entity and name_entity.lower() != "sara":
-                dispatcher.utter_message(response="utter_greet_name", name=name_entity)
-                return []
-            elif shown_privacy:
-                dispatcher.utter_message(response="utter_greet_noname")
-                return []
-            else:
-                dispatcher.utter_message(response="utter_greet")
-                dispatcher.utter_message(response="utter_inform_privacypolicy")
-                return [SlotSet("shown_privacy", True)]
-        return []
+#     def run(
+#         self,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: DomainDict,
+#     ) -> List[EventType]:
+#         intent = tracker.latest_message["intent"].get("name")
+#         # shown_privacy = tracker.get_slot("shown_privacy")
+#         shown_privacy = true
+#         name_entity = next(tracker.get_latest_entity_values("name"), None)
+#         if intent == "greet" or (intent == "enter_data" and name_entity):
+#             if shown_privacy and name_entity and name_entity.lower() != "sara":
+#                 dispatcher.utter_message(response="utter_greet_name", name=name_entity)
+#                 return []
+#             elif shown_privacy:
+#                 dispatcher.utter_message(response="utter_greet_noname")
+#                 return []
+#             else:
+#                 dispatcher.utter_message(response="utter_greet")
+#                 dispatcher.utter_message(response="utter_inform_privacypolicy")
+#                 return [SlotSet("shown_privacy", True)]
+#         return []
 
 class ActionRestartWithButton(Action):
     def name(self) -> Text:
@@ -145,7 +229,55 @@ class ActionRestartWithButton(Action):
 
         dispatcher.utter_message(response="utter_restart_with_button")
 
+class ActionTellClubChoices(Action):
+    def name(self) -> Text:
+        return "action_tell_club_choices"
 
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> None:
+        buttons = []
+        loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/club_details.json"))
+        data = pd.read_json(loc)  
+        data = pd.DataFrame(data)
+        entity_name = "club_name"
+        for i in range(len(data["Name"])):
+            #############################################
+            e_name = "club_name"
+            e_value = data["Name"][i]
+            buttons.append(
+                        {"title": e_value, "payload": "/club_choice "+json.dumps({e_name:e_value})}
+                    )
+            
+        dispatcher.utter_message(response="utter_club_name_details", buttons=buttons)
+
+class ActionTellEventChoices(Action):
+    def name(self) -> Text:
+        return "action_tell_event_choices"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> None:
+        buttons = []
+        loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/event_details.json"))
+        data = pd.read_json(loc)  
+        data = pd.DataFrame(data)
+        entity_name = "event_name"
+        for i in range(len(data["Event_Name"])):
+            #############################################
+            e_name = "event_name"
+            e_value = data["Event_Name"][i]
+            buttons.append(
+                        {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
+                    )
+            
+        dispatcher.utter_message(response="utter_event_name_details", buttons=buttons)
 
 '''class ActionDefaultAskAffirmation(Action):
     """Asks for an affirmation of the intent if NLU threshold is not met."""

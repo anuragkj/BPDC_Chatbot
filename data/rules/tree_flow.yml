@@ -1,0 +1,10 @@
+#add restart, options and feedback at the end of each branch
+version: "3.1"
+
+rules:
+
+- rule: Give options
+  steps:
+  - intent: ask_options
+  - action: utter_options
+

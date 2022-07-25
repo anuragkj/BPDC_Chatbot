@@ -21,7 +21,6 @@ nlu:
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
@@ -53,7 +52,6 @@ nlu:
     - give me a human now
     - human handoff
     - i dont wanna talk to a bot
-    - i want to speak to a [manager](job_function)
     - i want to speak to a real person
     - i want to speak to customer service
     - i want to talk to a human
@@ -141,6 +139,7 @@ nlu:
     - [Michelle Garcia](name)
     - [Michelle Vinion](name)
     - [Mr. Sweney](name)
+    - [Anurag](name)
     - it's [Katie Betz](name)
     - it's [Robert Weir](name)
     - mi name is [Kathy Wright](name)

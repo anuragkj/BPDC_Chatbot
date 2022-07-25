@@ -1,0 +1,120 @@
+version: "3.1"
+
+stories:
+
+- story: Feedback
+  steps:
+  - intent: give_feedback
+  - action: utter_ask_feedback_choice
+  - intent: feedback_choice
+    entities:
+    - feedback_name
+  - slot_was_set:
+    - feedback_name
+  - action: utter_ask_feedback_message
+  - intent: out_of_scope
+  - action: action_get_feedback
+
+- story: greet -> academic -> marks
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_greet_name
+  - action: utter_options
+  - intent: ask_academics
+  - action: utter_ask_academics
+  - intent: request_stud_gpa
+  - action: utter_ask_stud_id
+  - intent: id_intake
+    entities:
+    - stud_id
+  - slot_was_set:
+    - stud_id
+  - action: utter_ask_stud_pwd
+  - intent: pwd_intake
+    entities:
+    - stud_pwd
+  - slot_was_set:
+    - stud_pwd
+  - action: action_tell_stud_gpa
+#can add other stories for login as well
+- story: greet -> academic -> library
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_greet_name
+  - action: utter_options
+  - intent: ask_academics
+  - action: utter_ask_academics
+  - intent: ask_library
+  - action: utter_ask_library
+  - intent: library_faq
+  - action: utter_library_faq
+
+- story: greet -> academic -> others
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_greet_name
+  - action: utter_options
+  - intent: ask_academics
+  - action: utter_ask_academics
+  - intent: ask_others
+  - action: utter_ask_others
+
+- story: greet -> non academic -> others
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_greet_name
+  - action: utter_options
+  - intent: ask_non_academics
+  - action: utter_ask_non_academics
+  - intent: ask_others
+  - action: utter_ask_others
+
+- story: greet -> non academic -> events
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_greet_name
+  - action: utter_options
+  - intent: ask_non_academics
+  - action: utter_ask_non_academics
+  - intent: ask_events
+  - action: action_tell_event_choices
+  - intent: event_choice
+    entities:
+      - event_name
+  - slot_was_set:
+      - event_name
+  - action: action_tell_event_info
+
+- story: greet -> non academic -> clubs
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_greet_name
+  - action: utter_options
+  - intent: ask_non_academics
+  - action: utter_ask_non_academics
+  - intent: ask_clubs
+  - action: action_tell_club_choices
+  - intent: club_choice
+    entities:
+      - club_name
+  - slot_was_set:
+      - club_name
+  - action: action_tell_club_info

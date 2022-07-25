@@ -15,7 +15,6 @@ nlu:
     - How do I choose a club
     - Tell me about clubs
     - I want to join a club
-    - I want to join [ACM](club_name)
     - I want to be a part of [MTC](club_name)
     - How to join [Shades](club_name)
 - intent: club_desgignations

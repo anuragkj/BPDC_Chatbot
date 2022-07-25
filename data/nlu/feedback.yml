@@ -1,0 +1,18 @@
+version: "3.1"
+nlu:
+- intent: give_feedback
+  examples: |
+    - I want to give feedback
+    - I want to tell something
+    - I have a complaint
+- intent: feedback_choice
+  examples: |
+    - [Chatbot](feedback_name)
+    - [College](feedback_name)
+    - [Library](feedback_name)
+    - [Clubs](feedback_name)
+    - [Events](feedback_name)
+    - [Others](feedback_name)
+
+    
+    

@@ -8,6 +8,10 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_greet_name
+  - action: utter_options
   - intent: chitchat
   - action: utter_chitchat
   - intent: chitchat
@@ -16,5 +20,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_name
+  - intent: enter_name_data
+  - action: utter_greet_name
+  - action: utter_options
   - intent: chitchat
   - action: utter_chitchat

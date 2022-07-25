@@ -1,0 +1,23 @@
+version: "3.1"
+
+stories:
+
+- story: asking_about_events
+  steps:
+  - intent: ask_events
+  - action: action_tell_event_choices
+  - intent: event_choice
+    entities:
+      - event_name
+  - slot_was_set:
+      - event_name
+  - action: action_tell_event_info
+
+- story: ask_events_directlu
+  steps:
+  - intent: ask_events
+    entities:
+    - event_name: BSF
+  - slot_was_set:
+    - event_name: BSF
+  - action: action_tell_event_info
