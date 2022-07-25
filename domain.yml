@@ -177,6 +177,7 @@ responses:
     - payload: /deny
       title: Not needed
     text: Would you like to know more about the clubs already present at BPDC??
+    
   utter_ask_stud_id:
   - text: |-
       In order to execute the request I would need authentication.
@@ -256,6 +257,7 @@ responses:
     - payload: '/restart'
       title: Restart
     text: You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
+    button_type: vertical
 
   utter_ask_academics:
   - buttons:
