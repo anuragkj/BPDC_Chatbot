@@ -58,7 +58,7 @@ responses:
   building contextual assistants. You can read more about it here in the docs or on our
   [website](https://rasa.com/)."
   utter_chitchat/ask_whatspossible:
-    text: "You can ask about BPDC stuffs."
+  - text: "You can ask about BPDC stuffs."
   utter_chitchat/ask_wherefrom:
   - text: "I was born in Berlin, but I consider myself a citizen of the world."
   - text: "I was born in the coolest city on Earth, in Berlin."
