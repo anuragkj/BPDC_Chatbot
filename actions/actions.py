@@ -242,7 +242,7 @@ class ActionTellClubChoices(Action):
                         {"title": e_value, "payload": "/club_choice "+json.dumps({e_name:e_value})}
                     )
             
-        dispatcher.utter_message(response="utter_club_name_details", buttons=buttons)
+        dispatcher.utter_message(response="utter_club_name_details", buttons=buttons, button_type = "vertical")
 
 class ActionTellEventChoices(Action):
     def name(self) -> Text:
@@ -267,7 +267,7 @@ class ActionTellEventChoices(Action):
                         {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
                     )
             
-        dispatcher.utter_message(response="utter_event_name_details", buttons=buttons)
+        dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
 
 class ActionDefaultAskAffirmation(Action):
     """Asks for an affirmation of the intent if NLU threshold is not met."""
