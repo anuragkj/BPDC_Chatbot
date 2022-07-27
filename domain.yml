@@ -129,7 +129,7 @@ forms:
     ignored_intents: 
     - chitchat
     required_slots:
-        - name
+    - name
 
 responses:
   utter_start_reply:
