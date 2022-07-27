@@ -1,5 +1,5 @@
 version: "3.1"
-responses:
+#responses:
 #   utter_chitchat/ask_howbuilt:
 #   - text: "I was built with a lot of love and patience."
 #   - text: "Well, when two chatbots love each other very much..."

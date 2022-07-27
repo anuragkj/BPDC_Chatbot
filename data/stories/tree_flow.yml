@@ -12,8 +12,8 @@ stories:
   - slot_was_set:
     - feedback_name
   - action: utter_ask_feedback_message
-  - intent: out_of_scope
-  - action: action_get_feedback
+  # - intent: out_of_scope
+  # - action: action_get_feedback
 
 - story: greet -> academic -> marks
   steps:
