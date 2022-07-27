@@ -16,10 +16,10 @@ rules:
   steps:
   - intent: faq
   - action: utter_faq
-- rule: respond to chitchat
-  steps:
-  - intent: chitchat
-  - action: utter_chitchat
+# - rule: respond to chitchat
+#   steps:
+#   - intent: chitchat
+#   - action: utter_chitchat
 
 
 # - rule: Activate student authentication form

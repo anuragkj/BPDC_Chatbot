@@ -1,28 +1,28 @@
 version: "3.1"
 stories:
-- story: chitchat
-  steps:
-  - intent: chitchat
-  - action: utter_chitchat
-- story: more chitchat
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
-  - action: utter_options
-  - intent: chitchat
-  - action: utter_chitchat
-  - intent: chitchat
-  - action: utter_chitchat
-- story: greet chitchat
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
-  - action: utter_options
-  - intent: chitchat
-  - action: utter_chitchat
+# - story: chitchat
+#   steps:
+#   - intent: chitchat
+#   - action: utter_chitchat
+# - story: more chitchat
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_name
+#   - intent: enter_name_data
+#   - action: utter_greet_name
+#   - action: utter_options
+#   - intent: chitchat
+#   - action: utter_chitchat
+#   - intent: chitchat
+#   - action: utter_chitchat
+# - story: greet chitchat
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_name
+#   - intent: enter_name_data
+#   - action: utter_greet_name
+#   - action: utter_options
+#   - intent: chitchat
+#   - action: utter_chitchat
