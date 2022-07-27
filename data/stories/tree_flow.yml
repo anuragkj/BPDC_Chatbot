@@ -19,7 +19,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_ask_name_form_name
   - action: name_form
   - active_loop: name_form
   - active_loop: null
@@ -46,7 +45,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_ask_name_form_name
   - action: name_form
   - active_loop: name_form
   - active_loop: null
@@ -63,7 +61,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_ask_name_form_name
   - action: name_form
   - active_loop: name_form
   - active_loop: null
@@ -78,7 +75,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_ask_name_form_name
   - action: name_form
   - active_loop: name_form
   - active_loop: null
@@ -93,7 +89,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_ask_name_form_name
   - action: name_form
   - active_loop: name_form
   - active_loop: null
@@ -114,7 +109,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_ask_name_form_name
   - action: name_form
   - active_loop: name_form
   - active_loop: null

@@ -108,7 +108,7 @@ slots:
     type: text
     influence_conversation: false
     mappings:
-    - type: from_entity
+    - type: from_text
       entity: name
       #not used currently
   feedback_message:
