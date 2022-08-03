@@ -79,6 +79,7 @@ entities:
 - stud_pwd
 - name
 - feedback_name
+- feedback_message
 slots:
   club_name:
     type: text
@@ -108,13 +109,14 @@ slots:
     type: text
     influence_conversation: false
     mappings:
-    - type: from_entity
+    - type: from_text
       entity: name
+      #not used currently
   feedback_message:
     type: text
     mappings:
     - type: from_text
-      entity: feedback
+      entity: feedback_message
     influence_conversation: false
   feedback_name:
     type: text
@@ -122,6 +124,14 @@ slots:
     mappings:
     - type: from_entity
       entity: feedback_name
+
+forms:
+  name_form:
+    ignored_intents: 
+    - chitchat
+    required_slots:
+    - name
+
 responses:
   utter_start_reply:
   - text: Wlecome! I am BPDC bot!!
@@ -246,7 +256,7 @@ responses:
 #From here we set the responses for story tree######################################################################################################
   utter_greet:
    - text: Hi😁!! Welcome to the BPDC Chatbot.
-  utter_name:
+  utter_ask_name_form_name:
   - text: Could you please provide your name?
   utter_options:
   - buttons:

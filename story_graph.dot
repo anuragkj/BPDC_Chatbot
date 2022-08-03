@@ -2,7 +2,7 @@ digraph  {
 0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
 1 [class=active, fontsize=12, label=utter_greet];
-2 [class=active, fontsize=12, label=utter_name];
+2 [class=active, fontsize=12, label=utter_ask_name_form_name];
 3 [class=active, fontsize=12, label=utter_greet_name];
 4 [class=active, fontsize=12, label=utter_options];
 5 [class="", fontsize=12, label=utter_chitchat];

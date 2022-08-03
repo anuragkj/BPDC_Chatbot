@@ -1,0 +1,14 @@
+rules:
+- rule: activate name form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - active_loop: name_form
+
+- rule: deactivate name form
+  condition:
+  - active_loop: name_form
+  steps:
+  - active_loop: null
+  - action: utter_greet_name
+  - action: utter_options
