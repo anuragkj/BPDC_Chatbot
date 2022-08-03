@@ -27,15 +27,28 @@ class ActionGetFeedback(Action):
     async def run(
         self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        user_name = tracker.get_slot('name')
-        print(user_name)
-        sheet_name = tracker.get_slot("feedback_name")
-        feedback = tracker.latest_message['text']
-        data = {"Name":[user_name],"Feedback":[feedback],"Category":[sheet_name]}
-        print(data)
-        df = pd.DataFrame(data)
-        print(df)
-        excel_name = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/Feedback.xlsx"))
+        # user_name = tracker.get_slot('name')
+        # print(user_name)
+        cat = tracker.get_slot("feedback_name")
+        if(cat == "General"):
+            dispatcher.utter_message(text="Please fill the form at this [link](https://docs.google.com/forms/d/e/1FAIpQLSf2mX_PTth-HYCHuWuHLWBSiWJZxh5SpLRgPnBI7_OZr5o5uQ/viewform?usp=sf_link). Thanks for your feedback😊 !!")
+        elif(cat == "College"):
+            dispatcher.utter_message(text="Please fill the form at this [link](https://docs.google.com/forms/d/e/1FAIpQLSf2mX_PTth-HYCHuWuHLWBSiWJZxh5SpLRgPnBI7_OZr5o5uQ/viewform?usp=sf_link). Thanks for your feedback😊 !!")
+        elif(cat == "Library"):
+            dispatcher.utter_message(text="Please fill the form at this [link](https://docs.google.com/forms/d/e/1FAIpQLSf2mX_PTth-HYCHuWuHLWBSiWJZxh5SpLRgPnBI7_OZr5o5uQ/viewform?usp=sf_link). Thanks for your feedback😊 !!")
+        elif(cat == "Clubs"):
+            dispatcher.utter_message(text="Please fill the form at this [link](https://docs.google.com/forms/d/e/1FAIpQLSf2mX_PTth-HYCHuWuHLWBSiWJZxh5SpLRgPnBI7_OZr5o5uQ/viewform?usp=sf_link). Thanks for your feedback😊 !!")
+        elif(cat == "Events"):
+            dispatcher.utter_message(text="Please fill the form at this [link](https://docs.google.com/forms/d/e/1FAIpQLSf2mX_PTth-HYCHuWuHLWBSiWJZxh5SpLRgPnBI7_OZr5o5uQ/viewform?usp=sf_link). Thanks for your feedback😊 !!")
+        elif(cat == "Others"):
+            dispatcher.utter_message(text="Please fill the form at this [link](https://docs.google.com/forms/d/e/1FAIpQLSf2mX_PTth-HYCHuWuHLWBSiWJZxh5SpLRgPnBI7_OZr5o5uQ/viewform?usp=sf_link). Thanks for your feedback😊 !!")
+
+        # feedback = tracker.latest_message['text']
+        # data = {"Name":[user_name],"Feedback":[feedback],"Category":[sheet_name]}
+        # print(data)
+        # df = pd.DataFrame(data)
+        # print(df)
+        # excel_name = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/Feedback.xlsx"))
         
 
         # wb= Workbook()
@@ -47,15 +60,15 @@ class ActionGetFeedback(Action):
         #     df.to_excel(writer, sheet_name= sheet_name, index = False)
         #     writer.save()
         
-        book = load_workbook(excel_name)
-        writer = pd.ExcelWriter(excel_name, engine='openpyxl')
-        writer.book = book
-        writer.sheets = {ws.title: ws for ws in book.worksheets}
+        # book = load_workbook(excel_name)
+        # writer = pd.ExcelWriter(excel_name, engine='openpyxl')
+        # writer.book = book
+        # writer.sheets = {ws.title: ws for ws in book.worksheets}
 
-        for sheetname in writer.sheets:
-            df.to_excel(writer,sheet_name=sheetname, startrow=writer.sheets[sheetname].max_row, index = False,header= False)
+        # for sheetname in writer.sheets:
+        #     df.to_excel(writer,sheet_name=sheetname, startrow=writer.sheets[sheetname].max_row, index = False,header= False)
 
-        writer.save()
+        # writer.save()
 
         # with pd.ExcelWriter(excel_name,engine='xlsxwriter') as writer:
         #     columns = []
@@ -72,7 +85,7 @@ class ActionGetFeedback(Action):
         #     df_dest.to_excel(writer, sheet_name=sheet_name, index = False, columns=columns)
         
           
-        dispatcher.utter_message(text="Thanks for your feedback😊 !!")
+        #dispatcher.utter_message(text="Thanks for your feedback😊 !!")
         
         return []
     
