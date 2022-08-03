@@ -4,6 +4,8 @@ rules:
   - intent: greet
   - action: utter_greet
   - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: name
 
 - rule: deactivate name form
   condition:

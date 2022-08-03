@@ -21,6 +21,8 @@ stories:
   - action: utter_greet
   - action: name_form
   - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: name
   - active_loop: null
   - action: utter_greet_name
   - action: utter_options
@@ -47,6 +49,8 @@ stories:
   - action: utter_greet
   - action: name_form
   - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: name
   - active_loop: null
   - action: utter_greet_name
   - action: utter_options
@@ -63,6 +67,8 @@ stories:
   - action: utter_greet
   - action: name_form
   - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: name
   - active_loop: null
   - action: utter_greet_name
   - action: utter_options
@@ -77,6 +83,8 @@ stories:
   - action: utter_greet
   - action: name_form
   - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: name
   - active_loop: null
   - action: utter_greet_name
   - action: utter_options
@@ -91,6 +99,8 @@ stories:
   - action: utter_greet
   - action: name_form
   - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: name
   - active_loop: null
   - action: utter_greet_name
   - action: utter_options
@@ -111,6 +121,8 @@ stories:
   - action: utter_greet
   - action: name_form
   - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: name
   - active_loop: null
   - action: utter_greet_name
   - action: utter_options
