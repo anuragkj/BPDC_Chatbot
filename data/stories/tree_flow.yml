@@ -11,17 +11,16 @@ stories:
     - feedback_name
   - slot_was_set:
     - feedback_name
-  - action: utter_ask_feedback_message
-  - intent: out_of_scope
   - action: action_get_feedback
+  - action: utter_options
 
 - story: greet -> academic -> marks
   steps:
   - intent: greet
   - action: utter_greet
   - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
   - action: utter_options
   - intent: ask_academics
   - action: utter_ask_academics
@@ -45,8 +44,8 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
   - action: utter_options
   - intent: ask_academics
   - action: utter_ask_academics
@@ -60,8 +59,8 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
   - action: utter_options
   - intent: ask_academics
   - action: utter_ask_academics
@@ -73,8 +72,8 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics
@@ -86,8 +85,8 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics
@@ -105,8 +104,8 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics

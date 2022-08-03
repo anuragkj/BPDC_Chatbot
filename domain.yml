@@ -256,7 +256,7 @@ responses:
     - payload: '/ask_non_academics'
       title: Non Academics
     - payload: '/give_feedback'
-      title: Give Feedback
+      title: Give Feedback/Complaint
     - payload: '/restart'
       title: Restart
     text: You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
@@ -271,7 +271,7 @@ responses:
     - payload: '/ask_others'
       title: Other Queries
     - payload: '/give_feedback'
-      title: Give Feedback
+      title: Give Feedback/Complaint
     - payload: '/restart'
       title: Restart
     - payload: '/ask_options'
@@ -288,7 +288,7 @@ responses:
     - payload: '/ask_others'
       title: Other Queries
     - payload: '/give_feedback'
-      title: Give Feedback
+      title: Give Feedback/Complaint
     - payload: '/restart'
       title: Restart
     - payload: '/ask_options'

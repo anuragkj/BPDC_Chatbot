@@ -9,8 +9,8 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
   - action: utter_options
   - intent: chitchat
   - action: utter_chitchat
@@ -21,8 +21,8 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_name
-  - intent: enter_name_data
-  - action: utter_greet_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
   - action: utter_options
   - intent: chitchat
   - action: utter_chitchat
