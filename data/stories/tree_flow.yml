@@ -19,11 +19,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: name_form
-  - active_loop: name_form
-  - slot_was_set:
-    - requested_slot: name
-  - active_loop: null
+  - action: utter_name
+  - intent: enter_name_data
   - action: utter_greet_name
   - action: utter_options
   - intent: ask_academics
@@ -47,11 +44,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: name_form
-  - active_loop: name_form
-  - slot_was_set:
-    - requested_slot: name
-  - active_loop: null
+  - action: utter_name
+  - intent: enter_name_data
   - action: utter_greet_name
   - action: utter_options
   - intent: ask_academics
@@ -65,11 +59,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: name_form
-  - active_loop: name_form
-  - slot_was_set:
-    - requested_slot: name
-  - active_loop: null
+  - action: utter_name
+  - intent: enter_name_data
   - action: utter_greet_name
   - action: utter_options
   - intent: ask_academics
@@ -81,11 +72,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: name_form
-  - active_loop: name_form
-  - slot_was_set:
-    - requested_slot: name
-  - active_loop: null
+  - action: utter_name
+  - intent: enter_name_data
   - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
@@ -97,11 +85,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: name_form
-  - active_loop: name_form
-  - slot_was_set:
-    - requested_slot: name
-  - active_loop: null
+  - action: utter_name
+  - intent: enter_name_data
   - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
@@ -119,11 +104,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: name_form
-  - active_loop: name_form
-  - slot_was_set:
-    - requested_slot: name
-  - active_loop: null
+  - action: utter_name
+  - intent: enter_name_data
   - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
