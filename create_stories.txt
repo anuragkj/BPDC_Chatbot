@@ -32,3 +32,6 @@ rasa run
 rasa run actions
 
 for buttons: https://forum.rasa.com/t/how-to-define-buttons-in-forms-in-rasa-3-0/50932/5
+
+TODO: 
+Add club chitchat
