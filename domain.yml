@@ -233,6 +233,53 @@ responses:
    - text: Hi😁!! Welcome to the BPDC Chatbot.
   utter_name:
   - text: Could you please provide your name?
+
+  utter_clubs_options:
+  - buttons:
+    - payload: '/ask_clubs'
+      title: Club Details
+    - payload: '/ask_faq'
+      title: FAQ
+    - payload: '/give_feedback'
+      title: Give Feedback/Complaint
+    - payload: '/ask_options'
+      title: Back to options page
+    text: You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
+    button_type: vertical
+  
+  utter_events_options:
+  - buttons:
+    - payload: '/ask_events'
+      title: Events Details
+    - payload: '/ask_faq'
+      title: FAQ
+    - payload: '/give_feedback'
+      title: Give Feedback/Complaint
+    - payload: '/ask_options'
+      title: Back to options page
+    text: You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
+    button_type: vertical
+
+  utter_library_options:
+  - buttons:
+    - payload: '/ask_faq'
+      title: FAQ
+    - payload: '/give_feedback'
+      title: Give Feedback/Complaint
+    - payload: '/ask_options'
+      title: Back to options page
+    text: You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
+    button_type: vertical
+
+  utter_basic_options:
+  - buttons:
+    - payload: '/give_feedback'
+      title: Give Feedback/Complaint
+    - payload: '/ask_options'
+      title: Back to options page
+    text: You can select the buttons or type what you want. At any point if you want you can ask for a human handoff or restarting the conversation. 
+    button_type: vertical
+  
   utter_options:
   - buttons:
     - payload: '/ask_academics'
@@ -260,8 +307,9 @@ responses:
       title: Restart
     - payload: '/ask_options'
       title: Back to options page
-    text: BPDC provides world class academic facilities. To know further press a button or type in your query.
     button_type: vertical
+    text: BPDC provides world class academic facilities. To know further press a button or type in your query.
+    
 
   utter_ask_non_academics:
   - buttons:
