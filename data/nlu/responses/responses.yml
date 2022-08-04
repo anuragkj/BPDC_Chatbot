@@ -211,7 +211,7 @@ responses:
 
   utter_clubs_faq/total_clubs:
   - text: You can join multiple clubs. So feel free to join as many clubs as you like
-  utter_clubs_faq/total_clubs:
+  utter_clubs_faq/create_club:
   - text: |-
       For creating your own club:
       a. Criteria: - Uniqueness, written proposal to Dean of Student Welfare. Evaluated based on activities in one semester prior to application of becoming a club. 

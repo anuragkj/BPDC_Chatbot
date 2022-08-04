@@ -22,6 +22,9 @@ intents:
 - library_faq:
     used_entities: []
     is_retrieval_intent: true
+- clubs_faq:
+    used_entities: []
+    is_retrieval_intent: true
 - out_of_scope:
     used_entities: []
     is_retrieval_intent: true
@@ -71,6 +74,9 @@ intents:
 - ask_options
 - give_feedback
 - feedback_choice
+- ask_clubs_choice
+- ask_events_choice
+- ask_faq
 
 entities:
 - club_name

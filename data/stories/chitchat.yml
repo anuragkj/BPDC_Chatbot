@@ -15,6 +15,7 @@ stories:
   - action: utter_options
   - intent: chitchat
   - action: utter_chitchat
+  - action: utter_basic_options
   - intent: chitchat
   - action: utter_chitchat
   - action: utter_basic_options

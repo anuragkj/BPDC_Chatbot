@@ -9,7 +9,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_basic_options
 #  - action: utter_name
 #  - intent: enter_name_data
 #  - action: utter_greet_name
