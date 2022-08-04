@@ -1,11 +1,6 @@
 version: "3.1"
 nlu:
-- intent: create_club
-  examples: |
-    - How to create a club
-    - what are the steps to create your own club
-    - I want to create my own club
-    - How do I start a new club
+
 - intent: ask_clubs
   examples: |
     - clubs?
@@ -17,22 +12,7 @@ nlu:
     - I want to join a club
     - I want to be a part of [MTC](club_name)
     - How to join [Shades](club_name)
-- intent: club_desgignations
-  examples: |
-    - What is a council in a club?
-    - I want to get into a club council
-    - When can I apply for club President
-    - When can I apply for club Vice President
-    - When can I apply for club General Secretary
-    - When can I apply for club Treasurer
-- intent: total_clubs
-  examples: |
-    - Total number of clubs I can join
-    - Can I join only one club
-    - can one apply for multiple clubs
-    - I want to join more than one clubs
-    - How many clubs can I join
-    - Can we join more than one club?
+
 - intent: club_choice
   examples: |
     - [Sports Club](club_name)

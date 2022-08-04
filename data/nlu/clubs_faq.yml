@@ -1,0 +1,26 @@
+version: "3.1"
+nlu:
+- intent: clubs_faq/create_club
+  examples: |
+    - How to create a club
+    - what are the steps to create your own club
+    - I want to create my own club
+    - How do I start a new club
+
+- intent: clubs_faq/club_desgignations
+  examples: |
+    - What is a council in a club?
+    - I want to get into a club council
+    - When can I apply for club President
+    - When can I apply for club Vice President
+    - When can I apply for club General Secretary
+    - When can I apply for club Treasurer
+
+- intent: clubs_faq/total_clubs
+  examples: |
+    - Total number of clubs I can join
+    - Can I join only one club
+    - can one apply for multiple clubs
+    - I want to join more than one clubs
+    - How many clubs can I join
+    - Can we join more than one club?
