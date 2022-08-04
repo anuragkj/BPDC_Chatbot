@@ -12,6 +12,7 @@ stories:
   - slot_was_set:
       - event_name
   - action: action_tell_event_info
+  - action: utter_basic_options
 
 - story: ask_events_directlu
   steps:
@@ -21,3 +22,4 @@ stories:
   - slot_was_set:
     - event_name: BSF
   - action: action_tell_event_info
+  - action: utter_basic_options

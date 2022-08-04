@@ -10,6 +10,7 @@ stories:
   - action: utter_ask_continue
   - intent: stop
   - action: utter_fine
+  - action: utter_basic_options
 
 - story: stud auth completes successfully
   steps:
@@ -27,6 +28,7 @@ stories:
   - slot_was_set:
     - stud_pwd
   - action: action_tell_stud_gpa
+  - action: utter_basic_options
 
 - story: stud auth stopped at pwd
   steps:
@@ -42,3 +44,4 @@ stories:
   - action: utter_ask_continue
   - intent: stop
   - action: utter_fine
+  - action: utter_basic_options

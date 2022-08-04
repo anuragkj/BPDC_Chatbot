@@ -1,6 +1,9 @@
 version: "3.1"
 nlu:
-
+- intent: ask_clubs_choice
+  examples: |
+    - I would like to know more about clubs
+    - I would like to select the clubs option
 - intent: ask_clubs
   examples: |
     - clubs?

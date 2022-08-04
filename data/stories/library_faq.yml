@@ -4,3 +4,4 @@ stories:
   steps:
   - intent: library_faq
   - action: utter_library_faq
+  - action: utter_basic_options

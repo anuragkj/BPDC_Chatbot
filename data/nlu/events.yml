@@ -1,5 +1,9 @@
 version: "3.1"
 nlu:
+- intent: ask_events_choice
+  examples: |
+    - I would like to know more about events
+    - I would like to select the events option
 - intent: ask_events
   examples: |
     - events?

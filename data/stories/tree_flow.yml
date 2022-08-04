@@ -12,7 +12,7 @@ stories:
   - slot_was_set:
     - feedback_name
   - action: action_get_feedback
-  - action: utter_options
+  - action: utter_basic_options
 
 - story: greet -> academic -> marks
   steps:
@@ -50,6 +50,8 @@ stories:
   - intent: ask_academics
   - action: utter_ask_academics
   - intent: ask_library
+  - action: utter_library_options
+  - intent: ask_faq
   - action: utter_ask_library
   - intent: library_faq
   - action: utter_library_faq
@@ -66,6 +68,7 @@ stories:
   - action: utter_ask_academics
   - intent: ask_others
   - action: utter_ask_others
+  - action: utter_basic_options
 
 - story: greet -> non academic -> others
   steps:
@@ -79,8 +82,9 @@ stories:
   - action: utter_ask_non_academics
   - intent: ask_others
   - action: utter_ask_others
+  - action: utter_basic_options
 
-- story: greet -> non academic -> events
+- story: greet -> non academic -> events(details)
   steps:
   - intent: greet
   - action: utter_greet
@@ -90,6 +94,8 @@ stories:
   - action: utter_options
   - intent: ask_non_academics
   - action: utter_ask_non_academics
+  - intent: ask_events_choice
+  - action: utter_events_options
   - intent: ask_events
   - action: action_tell_event_choices
   - intent: event_choice
@@ -98,8 +104,9 @@ stories:
   - slot_was_set:
       - event_name
   - action: action_tell_event_info
+  - action: utter_basic_options
 
-- story: greet -> non academic -> clubs
+- story: greet -> non academic -> clubs(details)
   steps:
   - intent: greet
   - action: utter_greet
@@ -108,7 +115,9 @@ stories:
 #  - action: utter_greet_name
   - action: utter_options
   - intent: ask_non_academics
-  - action: utter_ask_non_academics
+  - action: utter_ask_non_academics  
+  - intent: ask_clubs_choice
+  - action: utter_clubs_options
   - intent: ask_clubs
   - action: action_tell_club_choices
   - intent: club_choice
@@ -117,3 +126,22 @@ stories:
   - slot_was_set:
       - club_name
   - action: action_tell_club_info
+  - action: utter_basic_options
+
+- story: greet -> non academic -> clubs(faq)
+  steps:
+  - intent: greet
+  - action: utter_greet
+#  - action: utter_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
+  - action: utter_options
+  - intent: ask_non_academics
+  - action: utter_ask_non_academics  
+  - intent: ask_clubs_choice
+  - action: utter_clubs_options
+  - intent: ask_faq
+  - action: utter_ask_faq
+  - intent: clubs_faq
+  - action: utter_clubs_faq
+  - action: utter_basic_options

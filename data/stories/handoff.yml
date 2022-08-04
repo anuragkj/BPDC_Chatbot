@@ -4,13 +4,16 @@ stories:
   steps:
   - intent: human_handoff
   - action: utter_contact_email
+  - action: utter_basic_options
 - story: greet + handoff
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_basic_options
 #  - action: utter_name
 #  - intent: enter_name_data
 #  - action: utter_greet_name
   - action: utter_options
   - intent: human_handoff
   - action: utter_contact_email
+  - action: utter_basic_options

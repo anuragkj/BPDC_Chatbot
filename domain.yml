@@ -194,6 +194,8 @@ responses:
   #   - payload: '/feedback{{"feedback_value": "negative"}}'
   #     title: 👎
   #   text: How is this conversation going?
+  utter_ask_faq:
+  - text: Please ask your question!
   utter_ask_feedback_choice:
   - buttons:
     - payload: '/feedback_choice{{"feedback_name": "Chatbot"}}'
@@ -313,9 +315,9 @@ responses:
 
   utter_ask_non_academics:
   - buttons:
-    - payload: '/ask_events'
+    - payload: '/ask_events_choice'
       title: Events
-    - payload: '/ask_clubs'
+    - payload: '/ask_clubs_choice'
       title: Clubs
     - payload: '/ask_others'
       title: Other Queries
