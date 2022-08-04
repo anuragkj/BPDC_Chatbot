@@ -7,6 +7,7 @@ stories:
   steps:
   - intent: clubs_faq
   - action: clubs_library_faq
+  - action: utter_basic_options
 
 # - story: choice_yes_for _club_info
 #   steps:
@@ -59,6 +60,7 @@ stories:
   - slot_was_set:
       - club_name
   - action: action_tell_club_info
+  - action: utter_basic_options
 
 - story: ask_clubs_directlu
   steps:
@@ -68,3 +70,4 @@ stories:
   - slot_was_set:
     - club_name: Shades
   - action: action_tell_club_info
+  - action: utter_basic_options

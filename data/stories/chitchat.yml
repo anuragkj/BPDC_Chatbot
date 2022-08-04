@@ -4,6 +4,7 @@ stories:
   steps:
   - intent: chitchat
   - action: utter_chitchat
+  - action: utter_basic_options
 - story: more chitchat
   steps:
   - intent: greet
@@ -16,6 +17,7 @@ stories:
   - action: utter_chitchat
   - intent: chitchat
   - action: utter_chitchat
+  - action: utter_basic_options
 - story: greet chitchat
   steps:
   - intent: greet
@@ -26,3 +28,4 @@ stories:
   - action: utter_options
   - intent: chitchat
   - action: utter_chitchat
+  - action: utter_basic_options
