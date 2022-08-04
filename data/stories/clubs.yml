@@ -6,7 +6,7 @@ stories:
 - story: clubs_faq
   steps:
   - intent: clubs_faq
-  - action: clubs_library_faq
+  - action: utter_clubs_faq
   - action: utter_basic_options
 
 # - story: choice_yes_for _club_info
