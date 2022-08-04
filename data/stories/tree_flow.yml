@@ -18,7 +18,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_name
+#  - action: utter_name
 #  - intent: enter_name_data
 #  - action: utter_greet_name
   - action: utter_options
@@ -43,7 +43,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_name
+#  - action: utter_name
 #  - intent: enter_name_data
 #  - action: utter_greet_name
   - action: utter_options
@@ -58,7 +58,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_name
+#  - action: utter_name
 #  - intent: enter_name_data
 #  - action: utter_greet_name
   - action: utter_options
@@ -71,7 +71,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_name
+#  - action: utter_name
 #  - intent: enter_name_data
 #  - action: utter_greet_name
   - action: utter_options
@@ -84,7 +84,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_name
+#  - action: utter_name
 #  - intent: enter_name_data
 #  - action: utter_greet_name
   - action: utter_options
@@ -103,7 +103,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_name
+#  - action: utter_name
 #  - intent: enter_name_data
 #  - action: utter_greet_name
   - action: utter_options
