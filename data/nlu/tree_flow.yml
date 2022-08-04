@@ -17,6 +17,13 @@ nlu:
 
 - intent: ask_others
   examples: |
-    - WHat are the other features in this branch
+    - What are the other features in this branch
     - Is that it?
     - Where are the other options?
+
+- intent: ask_faq
+  examples: |
+    - I have some questions
+    - I have some doubts
+    - Have some faq's to ask
+    - FAQ
