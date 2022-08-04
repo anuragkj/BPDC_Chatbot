@@ -207,3 +207,22 @@ responses:
       Fridays: 7.15AM to 12Noon & 5.00PM to 7.00PM
       Sundays: 1.00PM to 6.00PM
       Closed on Saturdays, Institute and National Holidays.
+
+
+  utter_clubs_faq/total_clubs:
+  - text: You can join multiple clubs. So feel free to join as many clubs as you like
+  utter_clubs_faq/total_clubs:
+  - text: |-
+      For creating your own club:
+      a. Criteria: - Uniqueness, written proposal to Dean of Student Welfare. Evaluated based on activities in one semester prior to application of becoming a club. 
+      b.Procedure:-
+      1. Submit proposal to Associate Dean of Student Welfare. 
+      2. Panel of three, consisting of the Dean of Student Welfare, Faculty in charge proposing the club and any other faculty excelling in the respective field, will evaluate the proposal.
+  utter_clubs_faq/club_desgignations:
+  - text: |-
+      The following designations apply to all Clubs in BITS Pilani Dubai Campus
+      A. President - 4 th Year Student 
+      B. Vice President - 3 rd Year Student
+      C. General Secretary - 3 rd or 2nd year Student 3
+      D. Treasurer - 2 nd Year Student
+      There are several other creative, marketing, sponsorship and design roles as well, which vary from club to club.

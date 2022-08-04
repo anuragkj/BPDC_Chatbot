@@ -147,23 +147,7 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-  utter_total_club_join:
-  - text: You can join multiple clubs. So feel free to join as many clubs as you like
-  utter_how_to_create_clubs_reply:
-  - text: |-
-      For creating your own club:
-      a. Criteria: - Uniqueness, written proposal to Dean of Student Welfare. Evaluated based on activities in one semester prior to application of becoming a club. 
-      b.Procedure:-
-      1. Submit proposal to Associate Dean of Student Welfare. 
-      2. Panel of three, consisting of the Dean of Student Welfare, Faculty in charge proposing the club and any other faculty excelling in the respective field, will evaluate the proposal.
-  utter_designations_reply:
-  - text: |-
-      The following designations apply to all Clubs in BITS Pilani Dubai Campus
-      A. President - 4 th Year Student 
-      B. Vice President - 3 rd Year Student
-      C. General Secretary - 3 rd or 2nd year Student 3
-      D. Treasurer - 2 nd Year Student
-      There are several other creative, marketing, sponsorship and design roles as well, which vary from club to club.
+
   utter_club_name_details:
   - text: |-
       There are multiple clubs in our University:
