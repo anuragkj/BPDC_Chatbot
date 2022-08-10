@@ -54,9 +54,7 @@ responses:
   - text: "Believe it or not, I actually am not spying on your personal information."
   - text: "You're the second person now to ask me that. Rihanna was the first."
   utter_chitchat/ask_whatisrasa:
-  - text: "Rasa Open Source is a conversational AI framework for that provides machine learning tools for
-  building contextual assistants. You can read more about it here in the docs or on our
-  [website](https://rasa.com/)."
+  - text: "Rasa Open Source is a conversational AI framework for that provides machine learning tools for building contextual assistants. You can read more about it here in the docs or on our [website](https://rasa.com/)."
   utter_chitchat/ask_whatspossible:
   - text: "You can ask about BPDC stuffs."
   utter_chitchat/ask_wherefrom:
@@ -101,6 +99,7 @@ responses:
 
   utter_clubsfaq/total_clubs:
   - text: "You can join multiple clubs. So feel free to join as many clubs as you like"
+  
   utter_clubsfaq/create_club:
   - text: "For creating your own club:\na. Criteria: - Uniqueness, written proposal to Dean of Student Welfare. Evaluated based on activities in one semester prior to application of becoming a club. \nb.Procedure:-\n1. Submit proposal to Associate Dean of Student Welfare. \n2. Panel of three, consisting of the Dean of Student Welfare, Faculty in charge proposing the club and any other faculty excelling in the respective field, will evaluate the proposal."
   
@@ -111,7 +110,7 @@ responses:
   - text: "I only understand English, I'm sorry."
   utter_out_of_scope/other:
   - text: "I can't help you with that, I'm sorry."
-  
+
   utter_libraryfaq/sign_in_details:
   - text: 'A unique username(eg.f20210021) and password used for wifi will be used to login to the PCs(which have been provided during registration for first year courses). '
   utter_libraryfaq/book_search:
@@ -218,20 +217,3 @@ responses:
       Closed on Saturdays, Institute and National Holidays.
 
 
-  utter_clubsfaq/total_clubs:
-  - text: You can join multiple clubs. So feel free to join as many clubs as you like
-  utter_clubsfaq/create_club:
-  - text: |-
-      For creating your own club:
-      a. Criteria: - Uniqueness, written proposal to Dean of Student Welfare. Evaluated based on activities in one semester prior to application of becoming a club. 
-      b.Procedure:-
-      1. Submit proposal to Associate Dean of Student Welfare. 
-      2. Panel of three, consisting of the Dean of Student Welfare, Faculty in charge proposing the club and any other faculty excelling in the respective field, will evaluate the proposal.
-  utter_clubsfaq/club_desgignations:
-  - text: |-
-      The following designations apply to all Clubs in BITS Pilani Dubai Campus
-      A. President - 4 th Year Student 
-      B. Vice President - 3 rd Year Student
-      C. General Secretary - 3 rd or 2nd year Student 3
-      D. Treasurer - 2 nd Year Student
-      There are several other creative, marketing, sponsorship and design roles as well, which vary from club to club.
