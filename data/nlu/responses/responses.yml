@@ -99,10 +99,19 @@ responses:
   - text: "BITS Pilani Dubai Campus"
   - text: "It stands for BITS Pilani Dubai Campus"
 
+  utter_clubsfaq/total_clubs:
+  - text: "You can join multiple clubs. So feel free to join as many clubs as you like"
+  utter_clubsfaq/create_club:
+  - text: "For creating your own club:\na. Criteria: - Uniqueness, written proposal to Dean of Student Welfare. Evaluated based on activities in one semester prior to application of becoming a club. \nb.Procedure:-\n1. Submit proposal to Associate Dean of Student Welfare. \n2. Panel of three, consisting of the Dean of Student Welfare, Faculty in charge proposing the club and any other faculty excelling in the respective field, will evaluate the proposal."
+  
+  utter_clubsfaq/club_desgignations:
+  - text: "The following designations apply to all Clubs in BITS Pilani Dubai Campus\nA. President - 4 th Year Student\nB. Vice President - 3 rd Year Student\nC. General Secretary - 3 rd or 2nd year Student 3\nD. Treasurer - 2 nd Year Student\nThere are several other creative, marketing, sponsorship and design roles as well, which vary from club to club."
+
   utter_out_of_scope/non_english:
   - text: "I only understand English, I'm sorry."
   utter_out_of_scope/other:
   - text: "I can't help you with that, I'm sorry."
+  
   utter_libraryfaq/sign_in_details:
   - text: 'A unique username(eg.f20210021) and password used for wifi will be used to login to the PCs(which have been provided during registration for first year courses). '
   utter_libraryfaq/book_search:
