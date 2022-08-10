@@ -19,10 +19,10 @@ intents:
 - faq:
     used_entities: []
     is_retrieval_intent: true
-- library_faq:
+- libraryfaq:
     used_entities: []
     is_retrieval_intent: true
-- clubs_faq:
+- clubsfaq:
     used_entities: []
     is_retrieval_intent: true
 - out_of_scope:

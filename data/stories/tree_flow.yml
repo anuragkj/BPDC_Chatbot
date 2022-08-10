@@ -53,8 +53,8 @@ stories:
   - action: utter_library_options
   - intent: ask_faq
   - action: utter_ask_library
-  - intent: library_faq
-  - action: utter_library_faq
+  - intent: libraryfaq
+  - action: utter_libraryfaq
 
 - story: greet -> academic -> others
   steps:
@@ -142,6 +142,6 @@ stories:
   - action: utter_clubs_options
   - intent: ask_faq
   - action: utter_ask_faq
-  - intent: clubs_faq
-  - action: utter_clubs_faq
+  - intent: clubsfaq
+  - action: utter_clubsfaq
   - action: utter_basic_options
