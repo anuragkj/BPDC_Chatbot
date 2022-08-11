@@ -142,6 +142,6 @@ stories:
   - action: utter_clubs_options
   - intent: ask_faq
   - action: utter_ask_faq
-  - intent: clubsfaq
-  - action: utter_clubsfaq
+  - intent: faq
+  - action: utter_faq
   - action: utter_basic_options
