@@ -1,6 +1,6 @@
 version: "3.1"
 nlu:
-- intent: library_faq/sign_in_details
+- intent: libraryfaq/sign_in_details
   examples:
     -What are the user id credentials to access the PCs in the library? 
     -How can I access the computers in the library? 
@@ -18,7 +18,7 @@ nlu:
     -What is the username for the library computers? 
     -Is the wifi details the same as the sign in details of the computers?
 
-- intent: library_faq/book_search
+- intent: libraryfaq/book_search
   examples: |
     -Where is the book located? 
     -Where can I find books on x topic? 
@@ -34,7 +34,7 @@ nlu:
     -Is there a faster way to search for books?
     -how to find books quickly
 
-- intent: library_faq/library_resources
+- intent: libraryfaq/library_resources
   examples: |
     - What books / resources are available in the library? 
     -What facilities does the library offer? 
@@ -50,7 +50,7 @@ nlu:
     -Can I get e-books and e-journals? 
     -Can I get print newspapers in the library?
 
-- intent: library_faq/return_books
+- intent: libraryfaq/return_books
   examples: |
     - Where can I check out books? 
     -How to check out books?  
@@ -64,7 +64,7 @@ nlu:
     -Requirements for returning books 
     -Do I need an ID card to return the books as well?
 
-- intent: library_faq/search_books
+- intent: libraryfaq/search_books
   examples: |
     -How are the books arranged in the library? 
     -How can I find the books in the library? 
@@ -75,7 +75,7 @@ nlu:
     -What are the subsections for the different classifications of books?
     -how are the books classified
 
-- intent: library_faq/ill
+- intent: libraryfaq/ill
   examples: |
     -Can we request for books not available in the BPDC library but available in the other library?
     -Can we access the libraries of other universities? 
@@ -92,7 +92,7 @@ nlu:
     -How to request books from other universities?
     -inter library loan
 
-- intent: library_faq/course_tb
+- intent: libraryfaq/course_tb
   examples:
     -Can I get the course textbooks? 
     -Where to find course textbooks? 
@@ -110,7 +110,7 @@ nlu:
     -I want to issue first-degree textbooks
     -are all textbooks available in the library
 
-- intent: library_faq/report_area
+- intent: libraryfaq/report_area
   examples: |
     - Where are the thesis and report areas in the library? 
     -Where can I find the thesis and report areas? 
@@ -128,7 +128,7 @@ nlu:
     -where are the dissertations located
     -where are the PS reports kept
 
-- intent: library_faq/contact
+- intent: libraryfaq/contact
   examples: |
     -Who should I contact for queries on the Library? 
     -What is the library email? 
@@ -138,7 +138,7 @@ nlu:
     -I have some doubts regarding issuing of books, who should I contact?
     -i have a concern who should I contact
 
-- intent: library_faq/book_issue_end
+- intent: libraryfaq/book_issue_end
   examples: |
     -Can I issue a book at the end of the semester? 
     -How to issue a book end sem? 
@@ -149,7 +149,7 @@ nlu:
     -Are there any ways to issue a book at the end of the semester?
     -issuing books end sem
 
-- intent: library_faq/bind
+- intent: libraryfaq/bind
   examples: |
     -Binding Procedure 
     -I want to bind a book -Binding guidelines 
@@ -162,7 +162,7 @@ nlu:
     -binding
     -photocopying instruction manual
 
-- intent: library_faq/photocopy
+- intent: libraryfaq/photocopy
   examples: |
     -How to photocopy?
     -How to photocopy in the library? 
@@ -178,7 +178,7 @@ nlu:
     -Photocopying cost
     -photocopy
 
-- intent: library_faq/print
+- intent: libraryfaq/print
   examples: |
     -How to print? 
     -How to print materials and resources from the library? 
@@ -195,7 +195,7 @@ nlu:
     -Printing procedure
     -printing
 
-- intent: library_faq/damaged_book
+- intent: libraryfaq/damaged_book
   examples: |
     -What if the book is damaged before I have issued it? 
     -What to do if a book is already damaged before issuing it? 
@@ -204,7 +204,7 @@ nlu:
     -I found a damaged book in the library before issuing it, what should I do?
     -damage to books
 
-- intent: library_faq/fine_book
+- intent: libraryfaq/fine_book
   examples: |
     - What if there is some damage to the book that I have issued?  
     -What to do if the damage is done to a book? 
@@ -220,7 +220,7 @@ nlu:
     -how much should i pay if lose the book
     -are there fines for late submission
 
-- intent: library_faq/renewal
+- intent: libraryfaq/renewal
   examples: |
     - Can I renew a borrowed book? 
     -How to reissue a book? 
@@ -241,7 +241,7 @@ nlu:
     -renewal of books
     -reissuing books
 
-- intent: library_faq/rules_issue
+- intent: libraryfaq/rules_issue
   examples: |
     -Return policy of the Library 
     -Can I lend a book to my friend? 
@@ -263,7 +263,7 @@ nlu:
     -What is the issue time for CD-ROMs?
     -overdue cost
 
-- intent: library_faq/rules_library
+- intent: libraryfaq/rules_library
   examples: |
     - Rules of the library 
     -What should I keep in mind when in the library? 
@@ -277,7 +277,7 @@ nlu:
     -what are the library rules
     -can i group study with my friends in the library
 
-- intent: library_faq/discussion_room
+- intent: libraryfaq/discussion_room
   examples: |
     -Are there any discussion rooms in the BPDC library? 
     -Can the discussion rooms be used now? 
@@ -288,7 +288,7 @@ nlu:
     -number of discussion rooms in library
     -no of discussion rooms in library
 
-- intent: library_faq/pc
+- intent: libraryfaq/pc
   examples: |
     -How many PCs are there?
     -How many computers are there?
@@ -300,7 +300,7 @@ nlu:
     -no of pcs in library
     -no of computers in the library
 
-- intent: library_faq/pc_rules
+- intent: libraryfaq/pc_rules
   examples: |
     -What can I use the PCs for? 
     -Uses of the PCs 
@@ -321,7 +321,7 @@ nlu:
     -rules for using pcs
     -use of computers
 
-- intent: library_faq/stickers
+- intent: libraryfaq/stickers
   examples: |
     -Can I issue all the textbooks in the library? 
     -Are all the textbooks allowed for issuing? 
@@ -342,7 +342,7 @@ nlu:
     -what do they stickers indicate
     -can i issue all books in the library
 
-- intent: library_faq/copyright
+- intent: libraryfaq/copyright
   examples: |
     -Are there any copyright guidelines that I should take care of? 
     -Can I photocopy the entire book? 
@@ -355,7 +355,7 @@ nlu:
     -What are the copyright guidelines? 
     -What is illegal while issuing books?
 
-- intent: library_faq/pilani_library
+- intent: libraryfaq/pilani_library
   examples: |
     -Can I access the library of Pilani Campus? 
     -How to access the library of BITS Pilani Campus? 
@@ -370,7 +370,7 @@ nlu:
     -what if the book I want is not available here
     -can i get books from pilani campus
 
-- intent: library_faq/elibrary
+- intent: libraryfaq/elibrary
   examples: |
     -E-journals and e-books available in BPDC e-library? 
     -Can I find some e-journals in the BPDC e-library? 
@@ -403,7 +403,7 @@ nlu:
     -How to find textbooks in the e-library? 
     -How to find textbooks in bits e-library?
 
-- intent: library_faq/eresources
+- intent: libraryfaq/eresources
   examples: |
     -What are the library e-resources? 
     -Learning resources 
@@ -451,7 +451,7 @@ nlu:
     -I want Press-reader library link
     -acm library link
 
-- intent: library_faq/webopac
+- intent: libraryfaq/webopac
   examples: |
     -Features of WEBOPAC 
     -Uses of webopac 
@@ -481,7 +481,7 @@ nlu:
     -what are the features of autolib
     -how can I check my fines?
 
-- intent: library_faq/sign_in_webopac
+- intent: libraryfaq/sign_in_webopac
   examples: |
     -What are the sign-in credentials for the library WEBOPAC? 
     -Password for old papers? 
@@ -503,7 +503,7 @@ nlu:
     -How to find my password for webopac?
     -sign in webopac
 
-- intent: library_faq/old_papers
+- intent: libraryfaq/old_papers
   examples: |
     -How to find the previous year's papers? 
     -Where can you find the previous year papers? 
@@ -528,7 +528,7 @@ nlu:
     -old papers
     -where can I find past year papers
 
-- intent: library_faq/sign_in_elibrary
+- intent: libraryfaq/sign_in_elibrary
   examples: |
     -What are the sign-in credentials for the online library access? 
     -How can I sign in to the off-campus library access? 
@@ -544,7 +544,7 @@ nlu:
     -How can I know my password for off campus library?
     -sign in online library
 
-- intent: library_faq/access_online_library
+- intent: libraryfaq/access_online_library
   examples: |
     -off-campus library access link 
     -Can I access the library online? 
@@ -559,7 +559,7 @@ nlu:
     -Which books are available in the library? 
     -What is the off-campus library link?
 
-- intent: library_faq/things_inside_library
+- intent: libraryfaq/things_inside_library
   examples: |
     -What can I take inside the library? 
     -Do I need a student ID to enter the library? 
@@ -577,7 +577,7 @@ nlu:
     -Library what to take inside
     -what can I take inside the library
 
-- intent: library_faq/timings
+- intent: libraryfaq/timings
   examples: |
     -When does the library open? 
     -When does the library close? 

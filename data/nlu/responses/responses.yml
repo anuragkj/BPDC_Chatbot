@@ -54,9 +54,7 @@ responses:
   - text: "Believe it or not, I actually am not spying on your personal information."
   - text: "You're the second person now to ask me that. Rihanna was the first."
   utter_chitchat/ask_whatisrasa:
-  - text: "Rasa Open Source is a conversational AI framework for that provides machine learning tools for
-  building contextual assistants. You can read more about it here in the docs or on our
-  [website](https://rasa.com/)."
+  - text: "Rasa Open Source is a conversational AI framework for that provides machine learning tools for building contextual assistants. You can read more about it here in the docs or on our [website](https://rasa.com/)."
   utter_chitchat/ask_whatspossible:
   - text: "You can ask about BPDC stuffs."
   utter_chitchat/ask_wherefrom:
@@ -99,76 +97,86 @@ responses:
   - text: "BITS Pilani Dubai Campus"
   - text: "It stands for BITS Pilani Dubai Campus"
 
+  utter_faq/total_clubs:
+  - text: "You can join multiple clubs. So feel free to join as many clubs as you like"
+  
+  utter_faq/create_club:
+  - text: "For creating your own club:\na. Criteria: - Uniqueness, written proposal to Dean of Student Welfare. Evaluated based on activities in one semester prior to application of becoming a club. \nb.Procedure:-\n1. Submit proposal to Associate Dean of Student Welfare. \n2. Panel of three, consisting of the Dean of Student Welfare, Faculty in charge proposing the club and any other faculty excelling in the respective field, will evaluate the proposal."
+  
+  utter_faq/club_desgignations:
+  - text: "The following designations apply to all Clubs in BITS Pilani Dubai Campus\nA. President - 4 th Year Student\nB. Vice President - 3 rd Year Student\nC. General Secretary - 3 rd or 2nd year Student 3\nD. Treasurer - 2 nd Year Student\nThere are several other creative, marketing, sponsorship and design roles as well, which vary from club to club."
+
   utter_out_of_scope/non_english:
   - text: "I only understand English, I'm sorry."
   utter_out_of_scope/other:
   - text: "I can't help you with that, I'm sorry."
-  utter_library_faq/sign_in_details:
+
+  utter_libraryfaq/sign_in_details:
   - text: 'A unique username(eg.f20210021) and password used for wifi will be used to login to the PCs(which have been provided during registration for first year courses). '
-  utter_library_faq/book_search:
+  utter_libraryfaq/book_search:
   - text: 'You may visit the http://webopac.bits-dubai.ac.ae/AutoLib site and sign in with your BITS ID Ex. Login : 2021A3PS0184 Password : 2021A3PS0184U Here you can navigate to Shelf Guides and enter your book / topic. '
-  utter_library_faq/library_resources:
+  utter_libraryfaq/library_resources:
   - text: "
        You can find: 1. Books (Print) 2. Book Bank (Print) 3. Online Databases : e-journals from 4. databases: IEEE, ASME, ACM, JSTOR, EBSCO Engineering Source 5. Individual e-journals 6. e-Books MIT Press e-Books / IEEE-Wiley e-Books 7. e-Books of BPDC Course Text and Reference books 8. PressReader e-newspapers and e-magazines and has access to over 7000 titles from 120+ countries in 60+ languages (Indian regional language newspapers are also available) 9. Print Newspapers – Gulf News, Khaleej Times, Gulf Today & The National 10. CD ROMs 11. Back volumes - Journals (bound year wise) 12. PS / Project / Thesis Reports
       For further information you may visit the http://webopac.bits-dubai.ac.ae/AutoLib site and sign in with your BITS ID Ex.Login : 2021A3PS0184U Password : 2021A3PS0184U This will provide you with a detailed list of all the available facilities."
-  utter_library_faq/return_books:
+  utter_libraryfaq/return_books:
   - text: You may use the Self Service Kiosk to checkout or return books with the help of your ID card.
-  utter_library_faq/search_books:
+  utter_libraryfaq/search_books:
   - text: 'They are arranged based on the Dewey Decimal System of Classification. These are the 10 major divisions of the book categories: 000 – 099 Generalities 100 – 199 Philosophy and Psychology 200 – 299 Religion 300 – 399 Social Science 400 – 499 Language 500 – 599 Natural Science and Mathematics 600 – 699 Technology (Applied Sciences) 700 – 799 Arts 800 – 899 Literature 900 – 999 Geography and History '
-  utter_library_faq/ill:
+  utter_libraryfaq/ill:
   - text: 'BPDC Library has the MoU with Al Ain University of Science & Technology Library, Al Ain, UAE Al Ain University of Science & Tech, Al Ain Website : http://www.aau.ac.ae/ Request for books /online resources required from The above library can be posted to BPDC library staff. The request form for the inter library loan can be found here: https://docs.google.com/document/d/1iYZ2mOlSgASdSkS23jd2tq7F3JCAV9Z3/edit '
-  utter_library_faq/course_tb:
+  utter_libraryfaq/course_tb:
   - text: 'Yes,for first degree students on the first floor You can issue 2 books for 30 days. '
-  utter_library_faq/report_area:
+  utter_libraryfaq/report_area:
   - text: 'First floor, Which include: PhD Thesis First Degree and Higher Degree Dissertations Project Reports PS – Practice School Reports (Industrial Training) '
-  utter_library_faq/contact:
+  utter_libraryfaq/contact:
   - text: 'For any clarifications meet the Library Staff or email to library@dubai.bits-pilani.ac.in '
-  utter_library_faq/book_issue_end:
+  utter_libraryfaq/book_issue_end:
   - text: 'No,all books borrowed from the library have to be returned on the due date specified before leaving for vacation. Failing which the students will not be issued books for the next semester. The students with Book dues must get no-dues from Library before the registration for the next semester. At the end or discontinuation of the course, all the resources borrowed from the Library have to be surrendered, and outstanding dues have to be cleared before getting No-Dues Certificate. '
-  utter_library_faq/bind:
+  utter_libraryfaq/bind:
   - text: 'It will be done using your BITS ID card. Binding charges will be sent to the Accounts department at the end of every month. Students can clear the charges in the Accounts. An instruction manual has also been places in the computer section on the ground floor,another next to the printer and another on the first floor next to the computers. '
-  utter_library_faq/photocopy:
+  utter_libraryfaq/photocopy:
   - text: 'It will be done using your BITS ID card.Photocopying of the Library Books are subject to the Copyright Law ( a maximum of 10% of the pages of book).The cost will be debited from the ID Card of an initial sum of AED 25.Overdue and Binding charges will be sent to the Accounts department at the end of every month. Students can clear the charges in the Accounts. An instruction manual has also been placed in the computer section on the ground floor,another next to the printer and another on the first floor next to the computers. '
-  utter_library_faq/print:
+  utter_libraryfaq/print:
   - text: 'It will be done using your ID card.Printing can be done directly from any system in the Library by selecting default printer \BITSDXBCAMPUS      rint-Student and the same can be collected at photocopying section by using your Student ID Card (Detailed printing guidelines is available in the printing section).The cost will be debited from the ID Card of an initial sum of AED 25.Overdue and Binding charges will be sent to the Accounts department at the end of every month. Students can clear the charges in the Accounts. An instruction manual has also been places in the computer section on the ground floor,another next to the printer and another on the first floor next to the computers. '
-  utter_library_faq/damaged_book:
+  utter_libraryfaq/damaged_book:
   - text: 'Please contact the library staff immediately and let them know. '
-  utter_library_faq/fine_book:
+  utter_libraryfaq/fine_book:
   - text: |-
       Any book that is lost by the borrower must be brought to the notice of the Library staff immediately.
       1,Borrower is liable to replace the books which are lost or damaged. If unable to replace the lost book, recovery of cost of the book will be made on the following basis:
       2.Three times the cost of the book with overdue charges, if the borrower has reported the loss after the due date.
       3. Three times the cost of the book, if the borrower has reported the loss before the due date.
       4. If the book lost is rare in nature (i.e. not available in the market or out of print) then five times of the book cost will be recovered from the borrower. 
-  utter_library_faq/renewal:
+  utter_libraryfaq/renewal:
   - text: |-
       Renewal of books is done for those books that are not demanded by others.
       Books must be brought physically for renewal, without which books cannot be renewed.
       Books can be renewed once if there is no demand from others.
       Course Text Books can not be renewed.
       In case the book is in demand and reserved by others, then its renewal is not possible, it has to be returned. 
-  utter_library_faq/rules_issue:
+  utter_libraryfaq/rules_issue:
   - text: |
       Lending of books will be done only upon producing the Identity card. Identity cards are not transferable. Library staff may refuse to issue books to anyone who uses cards of others. Books should not be sub-lent to others.
       Five books for a period of 7 days each, Two books from Book Bank for a period of 30 days each and Two CD-ROMs for a period of 2 days each, will be issued. Books borrowed should be returned on or before the date mentioned in the issue receipt. Overdue charges of AED 1/- per day, including holidays if any, will be levied for books returned after the due date. Books have to be returned to the Library as and when they are called back by the Librarian. Check the condition of the books before borrowing, books found in a damaged condition will not be issued. Please bring to the notice of the Librarian or the Library staff immediately if any defect is found. The Borrower is fully responsible for the books borrowed upon his/her card. Any damage to the book or unwanted marking found in the book will lead to the replacement of the book by the student.
-  utter_library_faq/finding_books:
+  utter_libraryfaq/finding_books:
   - text: 'Use Shelf guides on the sides of each shelf to narrow down. For more queries, contact the library staff. B: <Code in the book sections based on topic> '
-  utter_library_faq/rules_library:
+  utter_libraryfaq/rules_library:
   - text: Silence must be maintained throughout. Students are encouraged to maintain decorum and to only discuss in a soft tone if the need arises in order to not disturb others.
-  utter_library_faq/discussion_room:
+  utter_libraryfaq/discussion_room:
   - text: Two discussion rooms are present but out of bounds due to COVID regulations.
-  utter_library_faq/pc:
+  utter_libraryfaq/pc:
   - text: 'There are 25 PCs available for data browsing. '
-  utter_library_faq/pc_rules:
+  utter_libraryfaq/pc_rules:
   - text: 'PC strictly for academic purposes only. If used for other means would lead to fines and penalties. Please do not install any new program. Please do not change settings like screen saver etc. '
-  utter_library_faq/stickers:
+  utter_libraryfaq/stickers:
   - text: 'On each book, there will be attached a sticker on the sides with the two designated colours: Green: For issue Yellow: For reference only '
-  utter_library_faq/copyright:
+  utter_libraryfaq/copyright:
   - text: |
       Copyright Guidelines: Kindly note that the attached document(s) is/are being sent to you and are meant to be used for your own academic and research purposes only. Under no circumstances, this/these document(s) is/are circulated in print, electronic form or host on a public system. All these documents are copyrighted, hence we request compliance. All the users of ILDRS need to abide by copyright laws.
-  utter_library_faq/pilani_library:
+  utter_libraryfaq/pilani_library:
   - text: 'The library can be found near the canteen to go in person. You may also access its facilities from the online website. To get the full-text articles which are not available in our Dubai Campus Library, you may make a request to our Pilani Campus Library through ILDRS. To know more about the databases available in Pilani Campus Library, kindly follow the web link http://www.bits-pilani.ac.in:12354/services/databases.php '
-  utter_library_faq/elibrary:
+  utter_libraryfaq/elibrary:
   - text: |
       General form: <name> <link> A:1. IEEE Xplore Digital library https://ieeexplore-ieee-org-bpdc.new.knimbus.com/ 2.American Society of Mechanical Engineers (ASME)online journals https://asmedigitalcollection-asme-org- bpdc.new.knimbus.com/
       3.ACM Digital Library https://dl-acm-org-bpdc.new.knimbus.com/ 4.JSTOR (Sustainability, Life Sciences, Business and Economics, Arts & Sciences X , Mathematics & Statistics) https://www-jstor-org-bpdc.new.knimbus.com/
@@ -182,26 +190,26 @@ responses:
       9.BPDC Course Text and Reference E-books.
       To access, Sign in to your account
       in bpdc.new.knimbus.com , On the home page, the course e- books can be accessed
-  utter_library_faq/eresources:
+  utter_libraryfaq/eresources:
   - text: |
       General form: <name> - <explanation> <link to home page> 1. IEEE Xplore Digital Library -All IEEE Journals, Magazines, Transactions, Conference Proceeding, MIT Press eBooks and Wiley-IEEE Press eBooks https://ieeexplore.ieee.org/Xplore/home.jsp 2. Science Direct (4 subject collections- Engineering, Computer Science, Material Science & Biochemistry, Genetics and Molecular Biology) https://www.sciencedirect.com 3. ASME - American Society of Mechanical Engineers E-journals https://asmedigitalcollection.asme.org 4. ACM - Association for Computing Machinery: digital library https://dl.acm.org 5. JSTOR – 5 Packages ((Mathematics & Statistics, Life Sciences, Sustainability, Business & Economics and Arts & Sciences X) https://www.jstor.org 6. Press Reader -E-Magazines and E-Newspapers https://www.pressreader.com
       They can be accessed within the campus without any sign-in credentials.
-  utter_library_faq/webopac:
+  utter_libraryfaq/webopac:
   - text: 'Users can check their accounts such as issued books, returned books, their library charges, search for resources, question banks and see the new arrivals. '
-  utter_library_faq/sign_in_webopac:
+  utter_libraryfaq/sign_in_webopac:
   - text: 'Your ID(20XXAXXXXXU) will be the password and username for you to sign in. '
-  utter_library_faq/old_papers:
+  utter_libraryfaq/old_papers:
   - text: |-
       From First Semester 2014-2015 onwards http://webopac.bits-dubai.ac.ae/AutoLib Login Username and password is: Your Institute ID.No ( Ex. 2021AXPS0XXXU) Click on→ Search → Question Bank
 
       From 2003 to Second Semester 2013 -2014 http://library.bits-dubai.ac.ae/lib/quest.htm 
-  utter_library_faq/sign_in_elibrary:
+  utter_libraryfaq/sign_in_elibrary:
   - text: 'Login: BITSemail f20200008@dubai.bits-pilani.ac.in Password: user@knimbus '
-  utter_library_faq/access_online_library:
+  utter_libraryfaq/access_online_library:
   - text: 'https://bpdc.knimbus.com/user#/home '
-  utter_library_faq/things_inside_library:
+  utter_libraryfaq/things_inside_library:
   - text: 'Books and learning materials only. Bags are not allowed and will be kept safe outside the library on shelves. Ensure you have your Student ID to access the library. '
-  utter_library_faq/timings:
+  utter_libraryfaq/timings:
   - text: |-
       Monday to Thursday: 7.15AM to 7.00PM
       Fridays: 7.15AM to 12Noon & 5.00PM to 7.00PM
@@ -209,20 +217,3 @@ responses:
       Closed on Saturdays, Institute and National Holidays.
 
 
-  utter_clubs_faq/total_clubs:
-  - text: You can join multiple clubs. So feel free to join as many clubs as you like
-  utter_clubs_faq/create_club:
-  - text: |-
-      For creating your own club:
-      a. Criteria: - Uniqueness, written proposal to Dean of Student Welfare. Evaluated based on activities in one semester prior to application of becoming a club. 
-      b.Procedure:-
-      1. Submit proposal to Associate Dean of Student Welfare. 
-      2. Panel of three, consisting of the Dean of Student Welfare, Faculty in charge proposing the club and any other faculty excelling in the respective field, will evaluate the proposal.
-  utter_clubs_faq/club_desgignations:
-  - text: |-
-      The following designations apply to all Clubs in BITS Pilani Dubai Campus
-      A. President - 4 th Year Student 
-      B. Vice President - 3 rd Year Student
-      C. General Secretary - 3 rd or 2nd year Student 3
-      D. Treasurer - 2 nd Year Student
-      There are several other creative, marketing, sponsorship and design roles as well, which vary from club to club.

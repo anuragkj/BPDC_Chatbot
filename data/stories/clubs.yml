@@ -1,11 +1,11 @@
 version: "3.1"
 
-stories:
-- story: clubs_faq
-  steps:
-  - intent: clubs_faq
-  - action: utter_clubs_faq
-  - action: utter_basic_options
+# stories:
+# - story: clubsfaq
+#   steps:
+#   - intent: clubsfaq
+#   - action: utter_clubsfaq
+#   - action: utter_basic_options
 
 # - story: choice_yes_for _club_info
 #   steps:
