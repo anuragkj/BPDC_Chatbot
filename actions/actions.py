@@ -284,7 +284,7 @@ class ActionTellEventChoices(Action):
 
 class ActionTellSpecificEventChoices(Action):
     def name(self) -> Text:
-        return "action_tell_event_choices"
+        return "action_tell_specific_event_choices"
 
     def run(
         self,
@@ -294,21 +294,39 @@ class ActionTellSpecificEventChoices(Action):
     ) -> None:
         sp_event_name = next(tracker.get_latest_entity_values("event_name"), None)
         if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers", "stem"]:
-            
-            buttons = []
-            loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/event_details.json"))
-            data = pd.read_json(loc)  
-            data = pd.DataFrame(data)
-            entity_name = "event_name"
-            for i in range(len(data["Event_Name"])):
-                #############################################
-                e_name = "event_name"
-                e_value = data["Event_Name"][i]
-                buttons.append(
-                            {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
-                        )
-                
-            dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
+            if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers"]:
+                buttons = []
+                loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/ice_breakers_details.json"))
+                data = pd.read_json(loc)  
+                data = pd.DataFrame(data)
+                entity_name = "ice_breaker_club_name"
+                for i in range(len(data["Club_Name"])):
+                    #############################################
+                    e_name = "ice_breaker_club_name_name"
+                    e_value = data["Event_Name"][i]
+                    buttons.append(
+                                {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
+                            )
+                    
+                dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
+
+            if sp_event_name.lower() in ["stem"]:
+                buttons = []
+                loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/stem_details.json"))
+                data = pd.read_json(loc)  
+                data = pd.DataFrame(data)
+                entity_name = "stem_club_name"
+                for i in range(len(data["Club_Name"])):
+                    #############################################
+                    e_name = "stem_club_name_name"
+                    e_value = data["Stem_Event_Name"][i]
+                    buttons.append(
+                                {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
+                            )
+                    
+                dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
+        else:
+            dispatcher.utter_message(response="utter_basic_options")
 
 class ActionDefaultAskAffirmation(Action):
     """Asks for an affirmation of the intent if NLU threshold is not met."""
