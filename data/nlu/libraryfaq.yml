@@ -577,19 +577,19 @@ nlu:
     -Library what to take inside
     -what can I take inside the library
 
-- intent: libraryfaq/timings
-  examples: |
-    -When does the library open? 
-    -When does the library close? 
-    -Is the library open everyday? 
-    -What days is the library closed? 
-    -Library timing 
-    -Is the library open during the holidays? 
-    -Is the library open on weekends? 
-    -Library open timing 
-    -Library time table 
-    -Library timing weekly
-    -is the library open on weekends
+# - intent: libraryfaq/timings
+#   examples: |
+#     -When does the library open? 
+#     -When does the library close? 
+#     -Is the library open everyday? 
+#     -What days is the library closed? 
+#     -Library timing 
+#     -Is the library open during the holidays? 
+#     -Is the library open on weekends? 
+#     -Library open timing 
+#     -Library time table 
+#     -Library timing weekly
+#     -is the library open on weekends
 
 
 

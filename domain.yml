@@ -77,15 +77,31 @@ intents:
 - ask_clubs_choice
 - ask_events_choice
 - ask_faq
+- ask_ice_breakers
+- ask_stem
 
 entities:
 - club_name
+- ice_breaker_club_name
+- stem_club_name
 - event_name
 - stud_id
 - stud_pwd
 - name
 - feedback_name
 slots:
+  ice_breaker_club_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: ice_breaker_club_name
+  stem_club_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: stem_club_name
   club_name:
     type: text
     influence_conversation: false
@@ -356,3 +372,4 @@ actions:
 - action_tell_club_choices
 - action_tell_event_choices
 - action_get_feedback
+- action_tell_specific_event_choices

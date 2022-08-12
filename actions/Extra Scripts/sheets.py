@@ -21,3 +21,17 @@ event_details_display_record = event_details_sheet.get_all_records()
 
 with open("Resources/event_details.json", "w") as ef:
     json.dump(event_details_display_record, ef)      
+
+ice_breakers_details_sheet = client.open(sheet_to_display).worksheet("IceBreakers")
+ice_breakers_details_display_record = ice_breakers_details_sheet.get_all_records()
+# print(type(display_record))
+
+with open("Resources/ice_breakers_details.json", "w") as ef:
+    json.dump(ice_breakers_details_display_record, ef)  
+
+stem_details_sheet = client.open(sheet_to_display).worksheet("STEM")
+stem_details_display_record = stem_details_sheet.get_all_records()
+# print(type(display_record))
+
+with open("Resources/stem_details.json", "w") as ef:
+    json.dump(stem_details_display_record, ef)  
