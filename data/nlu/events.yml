@@ -19,3 +19,10 @@ nlu:
     - [Technofest](event_name)
     - [Recharge](event_name)
     - I want to more about [BSF](event_name)
+
+- intent: ask_ice_breakers
+  examples: |
+    - Ice Breaker
+    - what are the evnts at ice breakers
+    - what are the clubs at ice breakers
+    - events at ice breaker
