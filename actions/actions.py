@@ -303,9 +303,9 @@ class ActionTellSpecificEventChoices(Action):
                 for i in range(len(data["Club_Name"])):
                     #############################################
                     e_name = "ice_breaker_club_name_name"
-                    e_value = data["Event_Name"][i]
+                    e_value = data["Club_Name"][i]
                     buttons.append(
-                                {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
+                                {"title": e_value, "payload": "/ice_breaker_club_name "+json.dumps({e_name:e_value})}
                             )
                     
                 dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
@@ -321,7 +321,7 @@ class ActionTellSpecificEventChoices(Action):
                     e_name = "stem_club_name_name"
                     e_value = data["Stem_Event_Name"][i]
                     buttons.append(
-                                {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
+                                {"title": e_value, "payload": "/stem_club_name "+json.dumps({e_name:e_value})}
                             )
                     
                 dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
