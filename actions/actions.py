@@ -282,6 +282,31 @@ class ActionTellEventChoices(Action):
             
         dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
 
+class ActionTellSpecificEventChoices(Action):
+    def name(self) -> Text:
+        return "action_tell_event_choices"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> None:
+        buttons = []
+        loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/event_details.json"))
+        data = pd.read_json(loc)  
+        data = pd.DataFrame(data)
+        entity_name = "event_name"
+        for i in range(len(data["Event_Name"])):
+            #############################################
+            e_name = "event_name"
+            e_value = data["Event_Name"][i]
+            buttons.append(
+                        {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
+                    )
+            
+        dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
+
 class ActionDefaultAskAffirmation(Action):
     """Asks for an affirmation of the intent if NLU threshold is not met."""
 

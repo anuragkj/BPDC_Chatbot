@@ -78,6 +78,7 @@ intents:
 - ask_events_choice
 - ask_faq
 - ask_ice_breakers
+- ask_stem
 
 entities:
 - club_name

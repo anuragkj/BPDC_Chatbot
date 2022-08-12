@@ -22,7 +22,14 @@ nlu:
 
 - intent: ask_ice_breakers
   examples: |
-    - Ice Breaker
-    - what are the evnts at ice breakers
-    - what are the clubs at ice breakers
-    - events at ice breaker
+    - [Ice Breakers](event_name)
+    - what are the evnts at [Ice Breakers](event_name)
+    - what are the clubs at [ice breakers](event_name)
+    - events at [ice breakers](event_name)
+
+- intent: ask_stem
+  examples: |
+    - [STEM](event_name)
+    - what are the evnts at [stem](event_name)
+    - what are the clubs at [stem](event_name)
+    - events at [STEM](event_name)
