@@ -30,7 +30,7 @@ class ActionGetFeedback(Action):
         # user_name = tracker.get_slot('name')
         # print(user_name)
         cat = tracker.get_slot("feedback_name")
-        if(cat == "General"):
+        if(cat == "Chatbot"):
             dispatcher.utter_message(text="Please fill the form at this [link](https://docs.google.com/forms/d/e/1FAIpQLSf2mX_PTth-HYCHuWuHLWBSiWJZxh5SpLRgPnBI7_OZr5o5uQ/viewform?usp=sf_link). Thanks for your feedback😊 !!")
         elif(cat == "College"):
             dispatcher.utter_message(text="Please fill the form at this [link](https://docs.google.com/forms/d/e/1FAIpQLSf2mX_PTth-HYCHuWuHLWBSiWJZxh5SpLRgPnBI7_OZr5o5uQ/viewform?usp=sf_link). Thanks for your feedback😊 !!")
