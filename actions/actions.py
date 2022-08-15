@@ -328,6 +328,66 @@ class ActionTellSpecificEventChoices(Action):
         else:
             dispatcher.utter_message(response="utter_basic_options")
 
+class ActionTellSpecificClubInfo(Action):
+
+    def name(self) -> Text:
+        return "action_tell_specific_club_info"
+
+    async def run(
+        self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        sp_event_name = next(tracker.get_latest_entity_values("event_name"), None)
+        # club_name = next(tracker.get_latest_entity_values("club_name"), None)
+        
+        # loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/club_details.json"))
+
+        # data = pd.read_json(loc)  
+        # data = pd.DataFrame(data)
+        # result_data = data.query("Name == @club_name")
+        # if not result_data.empty:
+        #     msg = "Club Name : "+club_name+"\nClub Lead : "+result_data["Club_Lead"].iloc[0]+ "\nClub President : "+result_data["Club_President"].iloc[0]+"\nClub Description : "+result_data["Club_Description"].iloc[0]+"\nInstagram Handle : https://instagram.com/"+result_data["Insta_handle"].iloc[0]
+        # else:
+        #     msg = f"The club you are looking for doesn't seem to exist. Could you please check again"
+          
+        # dispatcher.utter_message(text=msg)
+        
+        # return []
+        if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers", "stem"]:
+            if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers"]:
+                club_name = next(tracker.get_latest_entity_values("ice_breaker_club_name"), None)
+        
+                loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/ice_breakers_details.json"))
+
+                data = pd.read_json(loc)  
+                data = pd.DataFrame(data)
+                result_data = data.query("Club_Name == @club_name")
+                if not result_data.empty:
+                    msg = "Club Name : "+club_name+"\nFaculty in charge : "+result_data["Faculty_in_charge "].iloc[0]+ "\nClub President : "+result_data["Club_President"].iloc[0]+"\nClub Description : "+result_data["What_is_the_club"].iloc[0]+"\nIce breakers event : " +result_data["Activity_at_event"].iloc[0]
+                else:
+                    msg = f"The club you are looking for doesn't seem to exist. Could you please check again"
+                
+                dispatcher.utter_message(text=msg)
+                
+                return []
+
+            elif sp_event_name.lower() in ["stem"]:
+                club_name = next(tracker.get_latest_entity_values("stem_club_name"), None)
+        
+                loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/ice_breakers_details.json"))
+
+                data = pd.read_json(loc)  
+                data = pd.DataFrame(data)
+                result_data = data.query("Club_Name == @club_name")
+                if not result_data.empty:
+                    msg = "Club Name : "+club_name+"\nContact : "+result_data["Who_to_contact"].iloc[0]+ "\nEvent details : "+result_data["What_is_the_event"].iloc[0]+"\nWhat's in the event: : "+result_data["Included_in_event"].iloc[0]+"\nTransport : "+result_data["Transport_after_event"].iloc[0]
+                else:
+                    msg = f"The club you are looking for doesn't seem to exist. Could you please check again"
+                
+                dispatcher.utter_message(text=msg)
+                
+                return []
+        
+
 class ActionDefaultAskAffirmation(Action):
     """Asks for an affirmation of the intent if NLU threshold is not met."""
 
