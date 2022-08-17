@@ -105,6 +105,23 @@ stories:
       - event_name
   - action: action_tell_event_info
   - action: action_tell_specific_event_choices
+
+- story: reply for ice breakers
+  steps:
+  - intent: ask_ice_breakers
+    entities:
+    - ice_breaker_club_name
+  - slot_was_set:
+    - ice_breaker_club_name
+  - action: action_tell_specific_club_info
+
+- story: reply for stem
+  steps:
+  - intent: ask_stem
+    entities:
+    - stem_club_name
+  - slot_was_set:
+    - stem_club_name
   - action: action_tell_specific_club_info
 
 - story: greet -> non academic -> clubs(details)

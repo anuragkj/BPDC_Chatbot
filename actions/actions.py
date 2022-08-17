@@ -1,3 +1,4 @@
+from cgitb import text
 from typing import Any, Text, Dict, List
 import json
 
@@ -99,7 +100,7 @@ class ActionTellClubInfo(Action):
     async def run(
         self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        club_name = next(tracker.get_latest_entity_values("club_name"), None)
+        club_name = tracker.get_slot("club_name")
         
         loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/club_details.json"))
 
@@ -123,7 +124,7 @@ class ActionTellEventInfo(Action):
     async def run(
         self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        event_name = next(tracker.get_latest_entity_values("event_name"), None)
+        event_name = tracker.get_slot("event_name")
         
         loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/event_details.json"))
 
@@ -279,7 +280,7 @@ class ActionTellEventChoices(Action):
             buttons.append(
                         {"title": e_value, "payload": "/event_choice "+json.dumps({e_name:e_value})}
                     )
-            
+        
         dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
 
 class ActionTellSpecificEventChoices(Action):
@@ -292,38 +293,40 @@ class ActionTellSpecificEventChoices(Action):
         tracker: Tracker,
         domain: DomainDict,
     ) -> None:
-        sp_event_name = next(tracker.get_latest_entity_values("event_name"), None)
+        sp_event_name = tracker.get_slot("event_name")
+        buttons = []
         if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers", "stem"]:
             if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers"]:
-                buttons = []
+                
                 loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/ice_breakers_details.json"))
                 data = pd.read_json(loc)  
                 data = pd.DataFrame(data)
                 entity_name = "ice_breaker_club_name"
                 for i in range(len(data["Club_Name"])):
                     #############################################
-                    e_name = "ice_breaker_club_name_name"
+                    e_name = "ice_breaker_club_name"
                     e_value = data["Club_Name"][i]
                     buttons.append(
-                                {"title": e_value, "payload": "/ice_breaker_club_name "+json.dumps({e_name:e_value})}
+                                {"title": e_value, "payload": "/ask_ice_breakers "+json.dumps({e_name:e_value})}
                             )
                     
+                
                 dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
 
             if sp_event_name.lower() in ["stem"]:
-                buttons = []
+                
                 loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/stem_details.json"))
                 data = pd.read_json(loc)  
                 data = pd.DataFrame(data)
                 entity_name = "stem_club_name"
-                for i in range(len(data["Club_Name"])):
+                for i in range(len(data["Stem_Event_Name"])):
                     #############################################
-                    e_name = "stem_club_name_name"
+                    e_name = "stem_club_name"
                     e_value = data["Stem_Event_Name"][i]
                     buttons.append(
-                                {"title": e_value, "payload": "/stem_club_name "+json.dumps({e_name:e_value})}
+                                {"title": e_value, "payload": "/ask_stem "+json.dumps({e_name:e_value})}
                             )
-                    
+                 
                 dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
         else:
             dispatcher.utter_message(response="utter_basic_options")
@@ -336,7 +339,7 @@ class ActionTellSpecificClubInfo(Action):
     async def run(
         self, dispatcher, tracker: Tracker, domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        sp_event_name = next(tracker.get_latest_entity_values("event_name"), None)
+        sp_event_name = tracker.get_slot("event_name")
         # club_name = next(tracker.get_latest_entity_values("club_name"), None)
         
         # loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/club_details.json"))
@@ -354,7 +357,7 @@ class ActionTellSpecificClubInfo(Action):
         # return []
         if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers", "stem"]:
             if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers"]:
-                club_name = next(tracker.get_latest_entity_values("ice_breaker_club_name"), None)
+                club_name = tracker.get_slot("ice_breaker_club_name")
         
                 loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/ice_breakers_details.json"))
 
@@ -371,7 +374,7 @@ class ActionTellSpecificClubInfo(Action):
                 return []
 
             elif sp_event_name.lower() in ["stem"]:
-                club_name = next(tracker.get_latest_entity_values("stem_club_name"), None)
+                club_name = tracker.get_slot("stem_club_name")
         
                 loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/ice_breakers_details.json"))
 
