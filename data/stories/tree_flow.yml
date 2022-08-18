@@ -114,6 +114,7 @@ stories:
   - slot_was_set:
     - ice_breaker_club_name
   - action: action_tell_specific_club_info
+  - action: utter_basic_options
 
 - story: reply for stem
   steps:
@@ -123,6 +124,7 @@ stories:
   - slot_was_set:
     - stem_club_name
   - action: action_tell_specific_club_info
+  - action: utter_basic_options
 
 - story: greet -> non academic -> clubs(details)
   steps:

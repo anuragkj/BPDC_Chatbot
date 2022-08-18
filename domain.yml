@@ -300,6 +300,8 @@ responses:
     button_type: vertical
   utter_options:
   - buttons:
+    - payload: /ask_ice_breakers
+      title: Ice Breakers
     - payload: /ask_academics
       title: Academics
     - payload: /ask_non_academics
