@@ -61,6 +61,7 @@ intents:
     - club_name
     - event_name
     - feedback_name
+    # - ibc_name  It stands for ice breakers club name but telegram api supports only 64 b of transfer trhough api
     - ibc_name
     - name
     - stem_club_name
