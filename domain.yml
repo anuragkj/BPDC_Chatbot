@@ -23,7 +23,7 @@ intents:
     - club_name
     - event_name
     - feedback_name
-    - ice_breaker_club_name
+    - ibc_name
     - name
     - stem_club_name
     - stud_id
@@ -44,7 +44,7 @@ intents:
     - club_name
     - event_name
     - feedback_name
-    - ice_breaker_club_name
+    - ibc_name
     - name
     - stem_club_name
     - stud_id
@@ -61,7 +61,7 @@ intents:
     - club_name
     - event_name
     - feedback_name
-    - ice_breaker_club_name
+    - ibc_name
     - name
     - stem_club_name
     - stud_id
@@ -75,7 +75,7 @@ intents:
     - club_name
     - event_name
     - feedback_name
-    - ice_breaker_club_name
+    - ibc_name
     - name
     - stem_club_name
     - stud_id
@@ -92,7 +92,7 @@ intents:
     use_entities: []
 entities:
 - event_name
-- ice_breaker_club_name
+- ibc_name
 - club_name
 - stem_club_name
 - stud_id
@@ -100,12 +100,12 @@ entities:
 - name
 - feedback_name
 slots:
-  ice_breaker_club_name:
+  ibc_name:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
-      entity: ice_breaker_club_name
+      entity: ibc_name
   stem_club_name:
     type: text
     influence_conversation: false

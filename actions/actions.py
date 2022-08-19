@@ -301,10 +301,10 @@ class ActionTellSpecificEventChoices(Action):
                 loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/ice_breakers_details.json"))
                 data = pd.read_json(loc)  
                 data = pd.DataFrame(data)
-                entity_name = "ice_breaker_club_name"
+                entity_name = "ibc_name"
                 for i in range(len(data["Club_Name"])):
                     #############################################
-                    e_name = "ice_breaker_club_name"
+                    e_name = "ibc_name"
                     e_value = data["Club_Name"][i]
                     buttons.append(
                                 {"title": e_value, "payload": "/ask_ice_breakers "+json.dumps({e_name:e_value})}
@@ -357,7 +357,7 @@ class ActionTellSpecificClubInfo(Action):
         # return []
         if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers", "stem"]:
             if sp_event_name.lower() in ["icebreaker","icebreakers","ice breaker", "ice breakers"]:
-                club_name = tracker.get_slot("ice_breaker_club_name")
+                club_name = tracker.get_slot("ibc_name")
         
                 loc = os.path.join(os.getcwd(), os.path.relpath("actions/Resources/ice_breakers_details.json"))
 

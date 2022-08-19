@@ -110,9 +110,9 @@ stories:
   steps:
   - intent: ask_ice_breakers
     entities:
-    - ice_breaker_club_name
+    - ibc_name
   - slot_was_set:
-    - ice_breaker_club_name
+    - ibc_name
   - action: action_tell_specific_club_info
   - action: utter_basic_options
 
@@ -180,8 +180,8 @@ stories:
   - action: action_tell_specific_event_choices
   - intent: ask_ice_breakers
     entities:
-    - ice_breaker_club_name
+    - ibc_name
   - slot_was_set:
-    - ice_breaker_club_name
+    - ibc_name
   - action: action_tell_specific_club_info
   - action: utter_basic_options
