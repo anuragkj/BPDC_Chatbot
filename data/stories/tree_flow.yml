@@ -165,3 +165,23 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: utter_basic_options
+
+- story: start at ice breaker
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_options
+  - intent: event_choice
+    entities:
+      - event_name
+  - slot_was_set:
+      - event_name
+  - action: action_tell_event_info
+  - action: action_tell_specific_event_choices
+  - intent: ask_ice_breakers
+    entities:
+    - ice_breaker_club_name
+  - slot_was_set:
+    - ice_breaker_club_name
+  - action: action_tell_specific_club_info
+  - action: utter_basic_options

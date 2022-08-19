@@ -91,8 +91,8 @@ intents:
 - trigger_response_selector:
     use_entities: []
 entities:
-- ice_breaker_club_name
 - event_name
+- ice_breaker_club_name
 - club_name
 - stem_club_name
 - stud_id
@@ -300,7 +300,7 @@ responses:
     button_type: vertical
   utter_options:
   - buttons:
-    - payload: /ask_ice_breakers
+    - payload: '/event_choice{{"event_name": "Ice Breakers"}}'
       title: Ice Breakers
     - payload: /ask_academics
       title: Academics
@@ -577,6 +577,7 @@ actions:
 - action_tell_stud_gpa
 - action_trigger_response_selector
 - utter_ask_non_academics
+- utter_basic_options
 - utter_chitchat
 - utter_events_options
 - utter_faq
