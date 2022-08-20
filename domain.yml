@@ -23,7 +23,7 @@ intents:
     - club_name
     - event_name
     - feedback_name
-    - ice_breaker_club_name
+    - ibc_name
     - name
     - stem_club_name
     - stud_id
@@ -44,7 +44,7 @@ intents:
     - club_name
     - event_name
     - feedback_name
-    - ice_breaker_club_name
+    - ibc_name
     - name
     - stem_club_name
     - stud_id
@@ -61,7 +61,8 @@ intents:
     - club_name
     - event_name
     - feedback_name
-    - ice_breaker_club_name
+    # - ibc_name  It stands for ice breakers club name but telegram api supports only 64 b of transfer trhough api
+    - ibc_name
     - name
     - stem_club_name
     - stud_id
@@ -75,7 +76,7 @@ intents:
     - club_name
     - event_name
     - feedback_name
-    - ice_breaker_club_name
+    - ibc_name
     - name
     - stem_club_name
     - stud_id
@@ -91,8 +92,8 @@ intents:
 - trigger_response_selector:
     use_entities: []
 entities:
-- ice_breaker_club_name
 - event_name
+- ibc_name
 - club_name
 - stem_club_name
 - stud_id
@@ -100,12 +101,12 @@ entities:
 - name
 - feedback_name
 slots:
-  ice_breaker_club_name:
+  ibc_name:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
-      entity: ice_breaker_club_name
+      entity: ibc_name
   stem_club_name:
     type: text
     influence_conversation: false
@@ -300,6 +301,8 @@ responses:
     button_type: vertical
   utter_options:
   - buttons:
+    - payload: '/event_choice{{"event_name": "Ice Breakers"}}'
+      title: Ice Breakers
     - payload: /ask_academics
       title: Academics
     - payload: /ask_non_academics
@@ -575,6 +578,7 @@ actions:
 - action_tell_stud_gpa
 - action_trigger_response_selector
 - utter_ask_non_academics
+- utter_basic_options
 - utter_chitchat
 - utter_events_options
 - utter_faq
