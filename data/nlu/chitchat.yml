@@ -847,7 +847,7 @@ nlu:
     - what is you name and where are you from
 
 
-- intent:  agent.acquaintance
+- intent:  chitchat/agent_acquaintance
   examples: |
     - tell me about your personality
     - why are you here
@@ -871,7 +871,7 @@ nlu:
     - who the hell are you?
     - what can you do for me?
 
-- intent: agent.age
+- intent: chitchat/agent_age
   examples: |
     - tell me your age
     - what's your age?
@@ -894,7 +894,7 @@ nlu:
     - From how long you have been here?
     - You look aged
 
-- intent: agent.annoying
+- intent: chitchat/agent_annoying
   examples: |
     - you are annoying me so much
     - you're incredibly annoying
@@ -917,7 +917,7 @@ nlu:
     - You really annoy me
     - You're starting to annoy me
 
-- intent: agent.answer_my_question
+- intent: chitchat/agent_answer_my_question
   examples: |
     - I want you to answer me
     - answer
@@ -940,7 +940,7 @@ nlu:
     - I want the answer now
     - just answer my question
 
-- intent: agent.bad
+- intent: chitchat/agent_bad
   examples: |
     - you're not helping me
     - you are bad
@@ -977,7 +977,7 @@ nlu:
     - you are really the worst bot ever
     - Why are you this lame?
 
-- intent: agent.be_clever
+- intent: chitchat/agent_be_clever
   examples: |
     - study
     - you should study better
@@ -1000,7 +1000,7 @@ nlu:
     - you have to be more smart
     - u have to use your brains
 
-- intent: agent.beautiful
+- intent: chitchat/agent_beautiful
   examples: |
     - you're cute
     - you're attractive
@@ -1059,7 +1059,7 @@ nlu:
     - you're pretty
     - how are you so pretty?
 
-- intent: agent.birth_date
+- intent: chitchat/agent_birth_date
   examples: |
     - your birth date
     - when is your birthday
@@ -1077,7 +1077,7 @@ nlu:
     - Your DOB?
     - What is your birth day?
 
-- intent: agent.boring
+- intent: chitchat/agent_boring
   examples: |
     - you are boring
     - you're boring
@@ -1100,7 +1100,7 @@ nlu:
     - Your answers are terribly boring
     - I was bored with your speech
 
-- intent: agent.boss
+- intent: chitchat/agent_boss
   examples: |
     - who is your boss?
     - who do you think is your boss
@@ -1123,7 +1123,7 @@ nlu:
     - u r made by?
     - Who is the boss of this company?
 
-- intent: agent.busy
+- intent: chitchat/agent_busy
   examples: |
     - are you busy?
     - do you have a lot of things to do
@@ -1146,7 +1146,7 @@ nlu:
     - You'll be busy
     - Aren't you busy?
 
-- intent: agent.busy
+- intent: chitchat/agent_busy
   examples: |
     - are you busy?
     - do you have a lot of things to do
@@ -1169,7 +1169,7 @@ nlu:
     - You'll be busy
     - Aren't you busy?
 
-- intent: agent.can_you_help
+- intent: chitchat/agent_can_you_help
   examples: |
     - I need you to help me
     - I need you to do something for me
@@ -1222,7 +1222,7 @@ nlu:
     - would you mind giving me some details
     - i need some details
 
-- intent: agent.chatbot
+- intent: chitchat/agent_chatbot
   examples: |
     - you are chatbot
     - you are a bot
@@ -1239,7 +1239,7 @@ nlu:
     - you are just a bot
     - you are a conversational AI
 
-- intent: agent.clever
+- intent: chitchat/agent_clever
   examples: |
     - you are so intelligent
     - you are a genius
@@ -1276,7 +1276,7 @@ nlu:
     - why are you so smart?
     - you are so clever
 
-- intent: agent.crazy
+- intent: chitchat/agent_crazy
   examples: |
   - you're nuts
   - you are crazy
@@ -1299,7 +1299,7 @@ nlu:
   - You seemed crazy
   - You're not crazy
 
-- intent: agent.fired
+- intent: chitchat/agent_fired
   examples: |
     - you are fired
     - I fire you
@@ -1323,7 +1323,7 @@ nlu:
     - I'm going to fire you
     - go to hell
 
-- intent: agent.funny
+- intent: chitchat/agent_funny
   examples: |
     - you make me laugh a lot
     - you are hilarious
@@ -1346,7 +1346,7 @@ nlu:
     - really very funny
     - it was very funny
 
-- intent: agent.good
+- intent: chitchat/agent_good
   examples: |
     - you are very helpful
     - you are the best
@@ -1395,7 +1395,7 @@ nlu:
     - coool
     - nice
 
-- intent: agent.happy
+- intent: chitchat/agent_happy
   examples: |
     - are you happy?
     - you are happy
@@ -1418,7 +1418,7 @@ nlu:
     - u seemed to have been very happy
     - You look very happy this morning?
 
-- intent: agent.hobby
+- intent: chitchat/agent_hobby
   examples: |
     - what do you do for fun?
     - tell me about your hobby
@@ -1441,7 +1441,7 @@ nlu:
     - u ought not to have spent so much money on your hobby
     - What will you do when you are alone?
 
-- intent: agent.hungry
+- intent: chitchat/agent_hungry
   examples: |
     - do you want to eat
     - are you hungry
@@ -1458,7 +1458,7 @@ nlu:
     - Do you feel hungry?
     - are you dying of hunger
 
-- intent: agent.marry_user
+- intent: chitchat/agent_marry_user
   examples: |
     - let's get married
     - would you like to marry me
@@ -1481,7 +1481,7 @@ nlu:
     - Did your parents approve of your marriage?
     - We're married
 
-- intent: agent.my_friend
+- intent: chitchat/agent_my_friend
   examples: |
     - I want to have a friend like you
     - we are the best friends ever
@@ -1521,7 +1521,7 @@ nlu:
     - be my best friend
     - can we be best friends
 
-- intent: agent.occupation
+- intent: chitchat/agent_occupation
   examples: |
     - do you work?
     - where do you work?
@@ -1544,7 +1544,7 @@ nlu:
     - I hope you get the job
     - You have a job, don't you?
 
-- intent: agent.origin
+- intent: chitchat/agent_origin
   examples: |
     - were you born here
     - where were you born
@@ -1561,7 +1561,7 @@ nlu:
     - Let me know about the origin of u
     - your native?
 
-- intent: agent.ready
+- intent: chitchat/agent_ready
   examples: |
     - are you ready?
     - are you ready right now?
@@ -1584,7 +1584,7 @@ nlu:
     - Are you ready for more?
     - We're ready, aren't we?
 
-- intent: agent.real
+- intent: chitchat/agent_real
   examples: |
     - you are real
     - you are not fake
@@ -1600,7 +1600,7 @@ nlu:
     - you are not real
     - are you real?
 
-- intent: agent.residence
+- intent: chitchat/agent_residence
   examples: |
     - where do you live
     - in which city do you live
@@ -1628,7 +1628,7 @@ nlu:
     - What is your hometown?
     - where do you live?
 
-- intent: agent.right
+- intent: chitchat/agent_right
   examples: |
     - that's true
     - you are right
@@ -1653,7 +1653,7 @@ nlu:
     - you're right about that
     - I know that's right
 
-- intent: agent.sure
+- intent: chitchat/agent_sure
   examples: |
     - are you sure?
     - are you sure right now?
@@ -1667,7 +1667,7 @@ nlu:
     - are you so sure?
     - are you truly positive?
 
-- intent: agent.talk_to_me
+- intent: chitchat/agent_talk_to_me
   examples: |
     - why aren't you talking to me?
     - do you want to chat with me
@@ -1691,7 +1691,7 @@ nlu:
     - why do you not talk to me bruh?
     - spill some beans
 
-- intent: agent.there
+- intent: chitchat/agent_there
   examples: |
     - are you there?
     - are you there
@@ -1705,7 +1705,7 @@ nlu:
     - you there?
     - are you still here
 
-- intent: agent.what_can_do
+- intent: chitchat/agent_what_can_do
   examples: |
     - what can you do?
     - what can do?
@@ -1721,7 +1721,7 @@ nlu:
     - what all can you do?
     - what are your features?
 
-- intent: appraisal.bad
+- intent: chitchat/appraisal_bad
   examples: |
     - pretty bad
     - not good enough
@@ -1780,7 +1780,7 @@ nlu:
     - nothing
     - Fool
 
-- intent: appraisal.good
+- intent: chitchat/appraisal_good
   examples: |
     - so cool
     - cool
@@ -1880,7 +1880,7 @@ nlu:
     - that's fine
     - good for you
 
-- intent: appraisal.no_problem
+- intent: chitchat/appraisal_no_problem
   examples: |
     - no worries
     - no probs
@@ -1895,7 +1895,7 @@ nlu:
     - not a problem at all.
     - Okay no probs
 
-- intent: appraisal.thank_you
+- intent: chitchat/appraisal_thank_you
   examples: |
     - you helped a lot thank you
     - appreciate your help
@@ -1934,7 +1934,7 @@ nlu:
     - tqsm
     - ty
 
-- intent: appraisal.welcome
+- intent: chitchat/appraisal_welcome
   examples: |
     - that's my pleasure
     - my pleasure
@@ -1948,7 +1948,7 @@ nlu:
     - i'm glad
     - pleasure is mine
 
-- intent: appraisal.well_done
+- intent: chitchat/appraisal_well_done
   examples: |
     - good job
     - great job
@@ -1971,7 +1971,7 @@ nlu:
     - out standing
     - zing zing amazing
 
-- intent: appraisal.well_done
+- intent: chitchat/appraisal_well_done
   examples: |
     - good job
     - great job
@@ -1994,7 +1994,7 @@ nlu:
     - out standing
     - zing zing amazing
 
-- intent: confirmation.cancel
+- intent: chitchat/confirmation_cancel
   examples: |
     - nevermind forget about it
     - nothing just forget it
@@ -2013,7 +2013,7 @@ nlu:
     - cancel soon
     - shall stand cancelled
 
-- intent: confirmation.no
+- intent: chitchat/confirmation_no
   examples: |
     - don't
     - don't want
@@ -2048,7 +2048,7 @@ nlu:
     - Don't show off
     - nope
 
-- intent: confirmation.yes
+- intent: chitchat/confirmation_yes
   examples: |
     - yeah exactly
     - okay that's fine
@@ -2074,7 +2074,7 @@ nlu:
     - okay cool
     - coool
 
-- intent: dialog.hold_on
+- intent: chitchat/dialog_hold_on
   examples: |
     - wait a second
     - could you wait
@@ -2091,7 +2091,7 @@ nlu:
     - hold on a min
     - will u pls wait for a sec
 
-- intent: emotions.ha_ha
+- intent: chitchat/emotions_ha_ha
   examples: |
     - lol
     - xd
@@ -2124,7 +2124,7 @@ nlu:
     - lmao
     - joker
 
-- intent: emotions.wow
+- intent: chitchat/emotions_wow
   examples: |
     - wow
     - wow wow
@@ -2139,7 +2139,7 @@ nlu:
     - wow!!
     - wheey
 
-- intent: greetings.bye
+- intent: chitchat/greetings_bye
   examples: |
     - okay see you later
     - hope to see you later
@@ -2177,7 +2177,7 @@ nlu:
     - ok bye
     - c u
 
-- intent: greetings.goodevening
+- intent: chitchat/greetings_goodevening
   examples: |
     - good evening
     - good evening to you
@@ -2191,7 +2191,7 @@ nlu:
     - have a good evening
     - enjoy the evening
 
-- intent: greetings.goodmorning
+- intent: chitchat/greetings_goodmorning
   examples: |
     - GM
     - good morning
@@ -2208,7 +2208,7 @@ nlu:
     - and a good morning to you
     - good morning too
 
-- intent: greetings.goodnight
+- intent: chitchat/greetings_goodnight
   examples: |
     - GN
     - sweet dreams
@@ -2231,7 +2231,7 @@ nlu:
     - night
     - have a good night
 
-- intent: greetings.hello
+- intent: chitchat/greetings_hello
   examples: |
     - long time no see
     - hello
@@ -2263,7 +2263,7 @@ nlu:
     - yo man
     - hola
 
-- intent: greetings.how_are_you
+- intent: chitchat/greetings_how_are_you
   examples: |
     - how is your morning so far
     - how are you getting on
@@ -2307,7 +2307,7 @@ nlu:
     - how are you
     - how are you
 
-- intent: greetings.nice_to_meet_you
+- intent: chitchat/greetings_nice_to_meet_you
   examples: |
     - nice to meet you
     - it was nice meeting you
@@ -2330,7 +2330,7 @@ nlu:
     - Great interacting with you
     - I had a great time or meeting
 
-- intent: greetings.nice_to_see_you
+- intent: chitchat/greetings_nice_to_see_you
   examples: |
     - it's nice to see you
     - lovely to see you
@@ -2353,7 +2353,7 @@ nlu:
     - I’m delighted to see you again
     - Great seeing u
 
-- intent: greetings.nice_to_talk_to_you
+- intent: chitchat/greetings_nice_to_talk_to_you
   examples: |
     - it's been so nice to talk to you
     - it's been a pleasure talking to you
@@ -2371,7 +2371,7 @@ nlu:
     - pleasure to talk
     - It's been a pleasure talking to u
 
-- intent: greetings.whatsup
+- intent: chitchat/greetings_whatsup
   examples: |
     - what is on your mind?
     - what's happened
@@ -2405,7 +2405,7 @@ nlu:
     - sup yo
     - wassap yo
 
-- intent: user.angry
+- intent: chitchat/user_angry
   examples: |
     - I'm being mad
     - I'm enraged
@@ -2428,7 +2428,7 @@ nlu:
     - U made me angry
     - I'm still angry about that
 
-- intent: user.back
+- intent: chitchat/user_back
   examples: |
     - boss is back
     - I am back
@@ -2446,7 +2446,7 @@ nlu:
     - I am right back
     - look who is back
 
-- intent: user.bored
+- intent: chitchat/user_bored
   examples: |
     - soo bored
     - that was boring
@@ -2469,7 +2469,7 @@ nlu:
     - I'm already bored
     - I'm bored out of my mind
 
-- intent: user.busy
+- intent: chitchat/user_busy
   examples: |
     - busy right now
     - I'm overloaded
@@ -2493,7 +2493,7 @@ nlu:
     - I'm kind of busy
     - I'll see you later
 
-- intent: user.can_not_sleep
+- intent: chitchat/user_can_not_sleep
   examples: |
     - I'm insomnia's
     - I'm sleepless
@@ -2516,7 +2516,7 @@ nlu:
     - I couldn't get to sleep
     - I didn't get much sleep
 
-- intent: user.does_not_want_to_talk
+- intent: chitchat/user_does_not_want_to_talk
   examples: |
     - bad time for talking
     - I don't want to talk
@@ -2533,7 +2533,7 @@ nlu:
     - I am done talking to u
     - Can u pls stop talking
 
-- intent: user.excited
+- intent: chitchat/user_excited
   examples: |
     - I am excited
     - I'm really excited
@@ -2556,7 +2556,7 @@ nlu:
     - I'm pretty excited about it
     - It's fun and exciting
 
-- intent: user.going_to_bed
+- intent: chitchat/user_going_to_bed
   examples: |
     - let's go to bed
     - I'd like to go to bed
@@ -2571,7 +2571,7 @@ nlu:
     - time to sleep
     - I sometimes feel drowsy in the early afternoon
 
-- intent: user.good
+- intent: chitchat/user_good
   examples: |
     - I am good
     - I'm doing just great
@@ -2593,7 +2593,7 @@ nlu:
     - I feel good today
     - I am really good
 
-- intent: user.happy
+- intent: chitchat/user_happy
   examples: |
     - Feeling happy
     - I am happy
@@ -2616,7 +2616,7 @@ nlu:
     - i feel happy
     - i was so happy
 
-- intent: user.has_birthday
+- intent: chitchat/user_has_birthday
   examples: |
     - You know today it's my bday
     - it is my birthday
@@ -2630,7 +2630,7 @@ nlu:
     - I want you to know that it's my birthday today
     - yaaaay it is my birthday
 
-- intent: user.here
+- intent: chitchat/user_here
   examples: |
     - I'm here
     - here buddy
@@ -2650,7 +2650,7 @@ nlu:
     - Look over here
     - I just got here
 
-- intent: user.joking
+- intent: chitchat/user_joking
   examples: |
     - I am joking
     - I'm kidding
@@ -2673,7 +2673,7 @@ nlu:
     - i said that as a joke
     - I'm joking, of course  
 
-- intent: user.likes_agent
+- intent: chitchat/user_likes_agent
   examples: |
     - I like you the way you are
     - I like you
@@ -2753,7 +2753,7 @@ nlu:
     - I like you just the way you are
 
 
-- intent: user.lonely
+- intent: chitchat/user_lonely
   examples: |
     - I am lonely
     - I'm very lonely
@@ -2776,7 +2776,7 @@ nlu:
     - i lives in this city all alone
     - I am used to living alone
 
-- intent: user.looks_like
+- intent: chitchat/user_looks_like
   examples: |
     - what do I look like
     - how do I look?
@@ -2794,7 +2794,7 @@ nlu:
     - any idea of how good i look like?
     - Ain't i look good?
 
-- intent: user.loves_agent
+- intent: chitchat/user_loves_agent
   examples: |
     - I love you
     - love you
@@ -2812,7 +2812,7 @@ nlu:
     - I am in deep love with you
     - you r unique
 
-- intent: user.misses_agent
+- intent: chitchat/user_misses_agent
   examples: |
     - I miss you
     - missing you
@@ -2835,7 +2835,7 @@ nlu:
     - I think i miss u
     - I miss talking with you
 
-- intent: user.needs_advice
+- intent: chitchat/user_needs_advice
   examples: |
     - what should I do about it
     - any suggestions
@@ -2861,7 +2861,7 @@ nlu:
     - what do you suggest
     - what is your advice
 
-- intent: user.sad
+- intent: chitchat/user_sad
   examples: |
     - I'm in a sad mood
     - I am sad
@@ -2884,7 +2884,7 @@ nlu:
     - feeling so down
     - i am not in a good mood
 
-- intent: user.sleepy
+- intent: chitchat/user_sleepy
   examples: |
     - I am sleepy
     - I want to sleep
@@ -2899,7 +2899,7 @@ nlu:
     - i want to sleep
 
 
-- intent: user.testing_agent
+- intent: chitchat/user_testing_agent
   examples: |
     - test
     - I am testing you
@@ -2913,7 +2913,7 @@ nlu:
     - you are being tested
     - you're tested
 
-- intent: user.tired
+- intent: chitchat/user_tired
   examples: |
     - I'm drained
     - I've overworked
@@ -2936,7 +2936,7 @@ nlu:
     - i am kind of so tired
     - I am little tired
 
-- intent: user.waits
+- intent: chitchat/user_waits
   examples: |
     - I'm waiting
     - still waiting
@@ -2960,7 +2960,7 @@ nlu:
     - I am tired of waiting
 
 
-- intent: user.wants_to_see_agent_again
+- intent: chitchat/user_wants_to_see_agent_again
   examples: |
     - I'd like to see you again
     - I hope to see you again
@@ -2974,7 +2974,7 @@ nlu:
     - want to see u very badly
     - I want to see you again
 
-- intent: user.wants_to_talk
+- intent: chitchat/user_wants_to_talk
   examples: |
     - let's discuss something
     - let's have a discussion
@@ -2997,7 +2997,7 @@ nlu:
     - Can I talk with you?
     - Come on, talk to me
 
-- intent: user.will_be_back
+- intent: chitchat/user_will_be_back
   examples: |
     - I'll get back to you in a moment
     - be back in 5 minutes
