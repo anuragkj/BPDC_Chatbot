@@ -311,7 +311,7 @@ class ActionTellSpecificEventChoices(Action):
                             )
                     
                 
-                dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
+                dispatcher.utter_message(response="utter_icb_event_name_details", buttons=buttons, button_type = "vertical")
 
             if sp_event_name.lower() in ["stem"]:
                 
@@ -327,7 +327,7 @@ class ActionTellSpecificEventChoices(Action):
                                 {"title": e_value, "payload": "/ask_stem "+json.dumps({e_name:e_value})}
                             )
                  
-                dispatcher.utter_message(response="utter_event_name_details", buttons=buttons, button_type = "vertical")
+                dispatcher.utter_message(response="utter_stem_event_name_details", buttons=buttons, button_type = "vertical")
         else:
             dispatcher.utter_message(response="utter_basic_options")
 

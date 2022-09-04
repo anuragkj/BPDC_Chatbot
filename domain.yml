@@ -187,6 +187,13 @@ responses:
   - text: |-
       There are multiple events held in our University:
       To know more about a specific club choose the button or type its name.
+  utter_icb_event_name_details:
+  - text: |-
+      Ice Breakers is the day where freshers are introduced to the clubs of our university for the first time.
+      So if you are a fresher enjoy your entry into college life😁
+  utter_stem_event_name_details:
+  - text: |-
+      STEM is an event of clubs of our university. Following are the clubs taking part in it:
   utter_button_for_club_info:
   - buttons:
     - payload: /affirm
