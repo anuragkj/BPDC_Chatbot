@@ -89,7 +89,7 @@ responses:
   - text: "What do you call a pirate droid? - Arrrr-2-D2"
   - text: "Why did the robot cross the road? - Because he was programmed to."
 
-    utter_chitchat/agent_acquaintance:
+  utter_chitchat/agent_acquaintance:
   - text: "I'm a virtual agent"
   - text: "Think of me as a virtual agent."
   - text: "Well, I'm not a person, I'm a virtual agent."
