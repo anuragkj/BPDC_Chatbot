@@ -1,595 +1,595 @@
-version: "3.1"
-nlu:
-- intent: libraryfaq/sign_in_details
-  examples:
-    -What are the user id credentials to access the PCs in the library? 
-    -How can I access the computers in the library? 
-    -What are the sign in details to access the PCs? 
-    -What are the sign in details to access the library computers? 
-    -How to sign in to the library computers? 
-    -How to use the library PCs -How to use library computers 
-    -Authorization for library computers 
-    -I want to sign in the library PCs 
-    -I want to sign in the library computers 
-    -I want to know my username to sign into the library computers 
-    -I want to know the password to sign into the library computers 
-    -I want to know the username to sign into the library PCs
-    -I want to know the password to sign into the library computers 
-    -What is the username for the library computers? 
-    -Is the wifi details the same as the sign in details of the computers?
+# version: "3.1"
+# nlu:
+# - intent: libraryfaq/sign_in_details
+#   examples:
+#     - What are the user id credentials to access the PCs in the library? 
+#     - How can I access the computers in the library? 
+#     - What are the sign in details to access the PCs? 
+#     - What are the sign in details to access the library computers? 
+#     - How to sign in to the library computers? 
+#     -  How to use the library PCs - How to use library computers 
+#     - Authorization for library computers 
+#     - I want to sign in the library PCs 
+#     - I want to sign in the library computers 
+#     - I want to know my username to sign into the library computers 
+#     - I want to know the password to sign into the library computers 
+#     - I want to know the username to sign into the library PCs
+#     - I want to know the password to sign into the library computers 
+#     - What is the username for the library computers? 
+#     - Is the wifi details the same as the sign in details of the computers?
 
-- intent: libraryfaq/book_search
-  examples: |
-    -Where is the book located? 
-    -Where can I find books on x topic? 
-    -Faster way to search books 
-    -How to search for books of a particular subject? 
-    -I can’t find the book 
-    -It is too difficult to search for the book I am looking for 
-    -Method to search for books quickly 
-    -Quick search of books
-    -Easy way to find books 
-    -Easy way to search for books 
-    -How to search for a book in a quicker way? 
-    -Is there a faster way to search for books?
-    -how to find books quickly
-
-- intent: libraryfaq/library_resources
-  examples: |
-    - What books / resources are available in the library? 
-    -What facilities does the library offer? 
-    -Resources available in the library 
-    -E-journals in the library 
-    -Can I find book e-books through the library? 
-    -What are the databases available through the library? 
-    -What are the different e journal portals available in the library? 
-    -Can I access other external resources in the library? 
-    -What are the external resources available in the library 
-    -I want to access other external resources 
-    -Are there only physical books provided? 
-    -Can I get e-books and e-journals? 
-    -Can I get print newspapers in the library?
-
-- intent: libraryfaq/return_books
-  examples: |
-    - Where can I check out books? 
-    -How to check out books?  
-    -How to use the kiosk to check out books? 
-    -Is an ID card necessary for returning issued books? 
-    -How does the check out kiosk work? 
-    -Where can I return the books? 
-    -How to return books? 
-    -Do I have to use the kiosk only to return the books as well? 
-    -Self-service kiosk 
-    -Requirements for returning books 
-    -Do I need an ID card to return the books as well?
-
-- intent: libraryfaq/search_books
-  examples: |
-    -How are the books arranged in the library? 
-    -How can I find the books in the library? 
-    -Book arrangement in the library 
-    -Searching for books in libraries 
-    -Books codes for different topics 
-    -How to find books for a certain topic? 
-    -What are the subsections for the different classifications of books?
-    -how are the books classified
-
-- intent: libraryfaq/ill
-  examples: |
-    -Can we request for books not available in the BPDC library but available in the other library?
-    -Can we access the libraries of other universities? 
-    -Where to find the form for requesting books from other libraries? 
-    -Can I request books from other libraries? 
-    -How to get the Inter-Library Loan form? 
-    -How to obtain books from other libraries? 
-    -What is the website for the Al Ain University library? 
-    -Where can I find the Al Ain university website link? 
-    -Inter Library Loan form link 
-    -What to do if the book you want is not available in BPDC library? 
-    -What should I do if I want books from other libraries? 
-    -How to request books from other libraries? 
-    -How to request books from other universities?
-    -inter library loan
-
-- intent: libraryfaq/course_tb
-  examples:
-    -Can I get the course textbooks? 
-    -Where to find course textbooks? 
-    -How many days can I issue course textbooks for? 
-    -Issue period for course textbooks? 
-    -Where to find course textbooks for fd? 
-    -First degrees text books 
-    -Can I get first degree textbooks 
-    -Can I get BE textbooks? 
-    -Can I issue BE textbooks? 
-    -Can I issue first degree textbooks? 
-    -How long can I issue first degree textbooks? 
-    -Where to find BE textbooks? 
-    -Where to find first-degree textbooks? 
-    -I want to issue first-degree textbooks
-    -are all textbooks available in the library
-
-- intent: libraryfaq/report_area
-  examples: |
-    - Where are the thesis and report areas in the library? 
-    -Where can I find the thesis and report areas? 
-    -Where can I find project reports? 
-    -Where to find dissertations? 
-    -Where are the thesis and report areas located? 
-    -Where can I find dissertations? 
-    -Thesis location library 
-    -Reports location library 
-    -I want to find the thesis, where are they located? 
-    -Dissertations location library 
-    -PS reports library 
-    -Project reports library 
-    -PhD reports library
-    -where are the dissertations located
-    -where are the PS reports kept
-
-- intent: libraryfaq/contact
-  examples: |
-    -Who should I contact for queries on the Library? 
-    -What is the library email? 
-    -Library contact? 
-    -Who will address my queries? 
-    -Library contact email? 
-    -I have some doubts regarding issuing of books, who should I contact?
-    -i have a concern who should I contact
-
-- intent: libraryfaq/book_issue_end
-  examples: |
-    -Can I issue a book at the end of the semester? 
-    -How to issue a book end sem? 
-    -Issuing books end sem 
-    -I want to issue a book but it is the end of the semester 
-    -Am I allowed to issue a book end sem? 
-    -Is there any way to issue a book end semester 
-    -Are there any ways to issue a book at the end of the semester?
-    -issuing books end sem
-
-- intent: libraryfaq/bind
-  examples: |
-    -Binding Procedure 
-    -I want to bind a book -Binding guidelines 
-    -How can I bind my book? 
-    -Where will the money be debited from? 
-    -How will I be charged for binding? 
-    -Do I need my BITS ID for binding? 
-    -Where is the instruction manual kept for binding? 
-    -How to bind? -Instruction manual for binding
-    -binding
-    -photocopying instruction manual
-
-- intent: libraryfaq/photocopy
-  examples: |
-    -How to photocopy?
-    -How to photocopy in the library? 
-    -How much of a book can I photocopy? 
-    -Is 10% the maximum I can photocopy? 
-    -Can I photocopy the entire book? 
-    -What to keep in mind while photocopying? 
-    -Where will the money be debited from? 
-    -Do I need to get my ID for photocopying? 
-    -How will I be charged for photocopying? 
-    -Photocopying guidelines 
-    -I want to photocopy a book 
-    -Photocopying cost
-    -photocopy
-
-- intent: libraryfaq/print
-  examples: |
-    -How to print? 
-    -How to print materials and resources from the library? 
-    -Are there any things to keep in mind while printing? 
-    -Where will the money be debited from? 
-    -Do I need to get my ID for photocopying? 
-    -How will I be charged for printing? 
-    -How to access the printer? 
-    -What should I do if I want to print something from the library? 
-    -Cost for printing? 
-    -What is the procedure for printing? 
-    -Procedure for printing? 
-    -Printing guidelines 
-    -Printing procedure
-    -printing
-
-- intent: libraryfaq/damaged_book
-  examples: |
-    -What if the book is damaged before I have issued it? 
-    -What to do if a book is already damaged before issuing it? 
-    -What if there is a damaged book in the library?  
-    -Damaged book before itself 
-    -I found a damaged book in the library before issuing it, what should I do?
-    -damage to books
-
-- intent: libraryfaq/fine_book
-  examples: |
-    - What if there is some damage to the book that I have issued?  
-    -What to do if the damage is done to a book? 
-    -What happens if there is some damage done to the book? 
-    -Fines for damaged books 
-    -Are there any fines for damaged books? 
-    -What if I lose the book? 
-    -Cost of losing book 
-    -How much should I pay if I lose the book issued? 
-    -Fines for losing books? 
-    -What if the issued book is lost?
-    -what if i lose the book I issued
-    -how much should i pay if lose the book
-    -are there fines for late submission
-
-- intent: libraryfaq/renewal
-  examples: |
-    - Can I renew a borrowed book? 
-    -How to reissue a book? 
-    -Reissuing a book 
-    -Can I reissue a textbook? 
-    -What to keep in mind while reissuing? 
-    -Rules for re-issuing books 
-    -Can I renew books? 
-    -Rules for renewing 
-    -What to do if I want to re-issue a book? 
-    -What to do if I want to renew a book? 
-    -Can I renew course textbooks? 
-    -I want to renew course text-books 
-    -What if the book is demanded by others? 
-    -Can I reissue it if the book is demanded by others? 
-    -Can all books be reissued? 
-    -Can all books be renewed?
-    -renewal of books
-    -reissuing books
-
-- intent: libraryfaq/rules_issue
-  examples: |
-    -Return policy of the Library 
-    -Can I lend a book to my friend? 
-    -When should I return the books? 
-    -What are the fines if I have lost a book? 
-    -What are the charges for lost books? 
-    -Do I need an ID card for issuing books? 
-    -Can I lend my issued books to others? 
-    -What happens if I lose the book issued? 
-    -What happens if I do not return the book within the stipulated time? 
-    -Are there any fines for the late return of books? 
-    -What to keep in mind when reissuing? 
-    -Fines for non-returns 
-    -What to do if I want to re-issue books? 
-    -Fines for the lost book 
-    -What should I do if I lose the book? 
-    -How long can I keep issued books? 
-    -Issue time for books? 
-    -What is the issue time for CD-ROMs?
-    -overdue cost
-
-- intent: libraryfaq/rules_library
-  examples: |
-    - Rules of the library 
-    -What should I keep in mind when in the library? 
-    -What should I do in the library? 
-    -Can I have a group study session in the library? 
-    -Do’s and dont’s of library 
-    -Library etiquette 
-    -Can I discuss something there? 
-    -Is group study sessions allowed there? 
-    -Can I ask doubts from my friends there?
-    -what are the library rules
-    -can i group study with my friends in the library
-
-- intent: libraryfaq/discussion_room
-  examples: |
-    -Are there any discussion rooms in the BPDC library? 
-    -Can the discussion rooms be used now? 
-    -How many discussion rooms are there? 
-    -Discussion rooms 
-    -Can I use the discussion room now?
-    -discussion rooms
-    -number of discussion rooms in library
-    -no of discussion rooms in library
-
-- intent: libraryfaq/pc
-  examples: |
-    -How many PCs are there?
-    -How many computers are there?
-    - how many computers does the library have?
-    -the library has how many computers?
-    -the library has how many pcs
-    -number of computers in library
-    -number of pcs in library
-    -no of pcs in library
-    -no of computers in the library
-
-- intent: libraryfaq/pc_rules
-  examples: |
-    -What can I use the PCs for? 
-    -Uses of the PCs 
-    -What are the PCs for in the library? 
-    -What should I use the PCs for? 
-    -Can I use the PCs for my course-work? 
-    -Can I use the PCs for homework? 
-    -Can I use the PCs to surf the net? 
-    -Can I use the PCs to play games? 
-    -Can I use the PCs for online meets? 
-    -What can I do on the Computer? 
-    -Can I use the computers for games? 
-    -Can I use the computers for online meets? 
-    -Can I use the computers to surf the net? 
-    -Can I install some programs in the library computers? 
-    -What should I keep in mind while using the PCs in the library? 
-    -Use of PCs
-    -rules for using pcs
-    -use of computers
-
-- intent: libraryfaq/stickers
-  examples: |
-    -Can I issue all the textbooks in the library? 
-    -Are all the textbooks allowed for issuing? 
-    -How to differentiate between the reference books and books for issue? 
-    -Which books are for issue? 
-    -What do the stickers of different colours on the book mean? 
-    -Which books are for reference only? 
-    -Yellow sticker on the book 
-    -Green sticker on the book 
-    -Why are there different colour stickers for different books? 
-    -What do the green and yellow stickers imply? 
-    -What does the green sticker mean? 
-    -What does the yellow sticker mean? 
-    -Why is there a green sticker on my book? 
-    -Can I issue the green sticker books? 
-    -Can I issue the yellow and green sticker books? 
-    -Is there a difference between the yellow sticker and green sticker books?
-    -what do they stickers indicate
-    -can i issue all books in the library
-
-- intent: libraryfaq/copyright
-  examples: |
-    -Are there any copyright guidelines that I should take care of? 
-    -Can I photocopy the entire book? 
-    -Should I photocopy the entire book? 
-    -How much is the maximum I can photocopy? 
-    -What happens if I’m caught photocopying more? 
-    -Copyright guidelines 
-    -Copyright laws 
-    -How to stay safe during copying? 
-    -What are the copyright guidelines? 
-    -What is illegal while issuing books?
-
-- intent: libraryfaq/pilani_library
-  examples: |
-    -Can I access the library of Pilani Campus? 
-    -How to access the library of BITS Pilani Campus? 
-    -I want to access the library of Pilani Campus 
-    -What if the book I need is not available here? 
-    -Can I request books from Pilani Campus? 
-    -How to access Pilani Campus library? 
-    -I want to access Pilani Campus Library? 
-    -What if the book I need is not available in BPDC? 
-    -How can I access the Pilani Campus library? 
-    -Is there a way to get resources from the Pilani Campus Library?
-    -what if the book I want is not available here
-    -can i get books from pilani campus
-
-- intent: libraryfaq/elibrary
-  examples: |
-    -E-journals and e-books available in BPDC e-library? 
-    -Can I find some e-journals in the BPDC e-library? 
-    -What are the resources found in the BPDC e-library? 
-    -resources in the BPDC e-library? 
-    -BPDC e-library resources 
-    -BPDC e-library e-books available 
-    -Can I find e-books in BPDC e-library? 
-    -College e-library resources 
-    -University e-library resources 
-    -BITS e-library resources 
-    -BITS Dubai e-library resources 
-    -BITS dxb e-library resources 
-    -E-books in bits e-library 
-    -E-journals in bits e-library 
-    -BPDC e-library 
-    -e-journals 
-    -BPDC e-library 
-    -e-books 
-    -Links for e-books 
-    -Links for e-journals 
-    -How to access e-journals? 
-    -How to access e-books? 
-    -Can I find e-books? 
-    -Can I find e-journals? 
-    -What resources are available in BPDC e-library? 
-    -Can I find ACM digital library in BPDC e-library? 
-    -Can I find course-related books in BPDC library? 
-    -How to find textbooks in the BPDC e-library? 
-    -How to find textbooks in the e-library? 
-    -How to find textbooks in bits e-library?
-
-- intent: libraryfaq/eresources
-  examples: |
-    -What are the library e-resources? 
-    -Learning resources 
-    -How to access the Research papers portal? 
-    -I want to access research papers 
-    -How can I access the Research papers portal? 
-    -How to access the E-journals portal? 
-    -How to access Press e-books? 
-    -I want to read e-journals 
-    -I want to see e-journals 
-    -I want to read e-books 
-    -Can I access the Research papers portal? 
-    -Can I access the E-journals portal? 
-    -I want to access the e-journals portal 
-    -Can I access the Press e-books? 
-    -I want to read press e-books 
-    -How to find press e-books 
-    -Can I access the conference papers portal? 
-    -Which sites have research paper portals? 
-    -Which sites have e-magazines? 
-    -Can I read some e-newspapers? 
-    -I want to read e-newspapers 
-    -How to find e-newspapers 
-    -Press e-books 
-    -E-newspapers 
-    -Are there any research paper portals? 
-    -I want to read e-magazines 
-    -Are there any e-magazine portals? 
-    -Are there any external digital libraries I have access to? 
-    -I want to access other universities libraries 
-    -Can I access other digital libraries? 
-    -What are the digital libraries' links? 
-    -Links for other digital libraries 
-    -I want other digital libraries links 
-    -Acm digital library link 
-    -Asme digital library link 
-    -IEEE link 
-    -Science-direct library link 
-    -Accessing ACM digital library 
-    -Accessing ASME digital library 
-    -Accessing Science-direct digital library 
-    -Press-reader library link 
-    -JSTOR library link 
-    -I want the JSTOR library link 
-    -I want Press-reader library link
-    -acm library link
-
-- intent: libraryfaq/webopac
-  examples: |
-    -Features of WEBOPAC 
-    -Uses of webopac 
-    -Facilities of webopac 
-    -What can I do in webopac 
-    -What are the features of WEBOPAC? 
-    -What can I use the WEBOPAC site for? 
-    -What facilities does webopac offer? 
-    -Can I search for Online papers on webopac? 
-    -How to check fines for books? 
-    -How to know my pending dues? 
-    -How to know my fines? 
-    -How can I find out my fines? 
-    -Are there new arrivals in the library? 
-    -How to check if there are new arrivals in the library? 
-    -What can I use AutoLib for? 
-    -What can I use WEBOPAC for? 
-    -What can I do in AutoLib? 
-    -How to use WEBOPAC? 
-    -How will webopac benefit me? 
-    -How will the library portal benefit me? 
-    -What can I do in the library portal? 
-    -How can I use the library portal in a beneficial way? 
-    -Uses of WEBOPAC 
-    -Uses of the library portal 
-    -Uses of AutoLib
-    -what are the features of autolib
-    -how can I check my fines?
-
-- intent: libraryfaq/sign_in_webopac
-  examples: |
-    -What are the sign-in credentials for the library WEBOPAC? 
-    -Password for old papers? 
-    -Username and password for AutoLib? 
-    -Sign-in credentials for past year papers? 
-    -Authorization for past year papers 
-    -Password for past year papers 
-    -How to know the password for AutoLib? 
-    -How to know the password for WEBOPAC? 
-    -How to know the username for WEBOPAC? 
-    -Username to access old papers 
-    -Password to access old papers 
-    -Username to access previous year papers 
-    -Password to access previous year papers 
-    -What is my password for AutoLib? 
-    -What is my password for WEBOPAC? 
-    -How to sign in to webopac? 
-    -What is my password for webopac? 
-    -How to find my password for webopac?
-    -sign in webopac
-
-- intent: libraryfaq/old_papers
-  examples: |
-    -How to find the previous year's papers? 
-    -Where can you find the previous year papers? 
-    -Where to find past papers? 
-    -Last 10 year papers? 
-    -Portal for last 10 year papers? 
-    -Portal for past papers? 
-    -Where to find old papers? 
-    -Link for old question papers 
-    -Where to find old question papers 
-    -I want the link for old question papers 
-    -Can I have the link for old question papers 
-    -Previous years question papers link 
-    -What is the link for previous years' question papers? 
-    -How can I find previous year question papers? 
-    -Portal for previous year papers 
-    -Portal for old papers 
-    -How can I get old papers? 
-    -How can I get the previous year's question papers? 
-    -Link for question papers 
-    -How can I get past years' question papers?
-    -old papers
-    -where can I find past year papers
-
-- intent: libraryfaq/sign_in_elibrary
-  examples: |
-    -What are the sign-in credentials for the online library access? 
-    -How can I sign in to the off-campus library access? 
-    -What are the sign-in credentials for the off-campus library access? 
-    -Sign-in credentials for online library 
-    -Online library sign in 
-    -Username and password online library 
-    -Online library authorization 
-    -Username for online library 
-    -password for online library 
-    -What is my password for bpdc knimbus? 
-    -What is my password for the off campus library? 
-    -How can I know my password for off campus library?
-    -sign in online library
-
-- intent: libraryfaq/access_online_library
-  examples: |
-    -off-campus library access link 
-    -Can I access the library online? 
-    -I want to access the library from home 
-    -Library online link 
-    -Accessing library materials from home 
-    -Accessing library books from home 
-    -How to access the library from home 
-    -Link for online library 
-    -What is the online library link? 
-    -Can I access the library off-campus? 
-    -Which books are available in the library? 
-    -What is the off-campus library link?
-
-- intent: libraryfaq/things_inside_library
-  examples: |
-    -What can I take inside the library? 
-    -Do I need a student ID to enter the library? 
-    -Can I take my bag inside the library? 
-    -Can I take the books inside the library? 
-    -Is student ID compulsory in the library? 
-    -What to take inside the library? 
-    -What should  I not take to the library? 
-    -Is there anything I can take to the library? 
-    -Are books the only thing I can take to the library? 
-    -Are bags allowed in the library? 
-    -Bags library 
-    -Library ID 
-    -Library check-in 
-    -Library what to take inside
-    -what can I take inside the library
-
-# - intent: libraryfaq/timings
+# - intent: libraryfaq/book_search
 #   examples: |
-#     -When does the library open? 
-#     -When does the library close? 
-#     -Is the library open everyday? 
-#     -What days is the library closed? 
-#     -Library timing 
-#     -Is the library open during the holidays? 
-#     -Is the library open on weekends? 
-#     -Library open timing 
-#     -Library time table 
-#     -Library timing weekly
-#     -is the library open on weekends
+#     - Where is the book located? 
+#     - Where can I find books on x topic? 
+#     - Faster way to search books 
+#     - How to search for books of a particular subject? 
+#     - I can’t find the book 
+#     - It is too difficult to search for the book I am looking for 
+#     - Method to search for books quickly 
+#     - Quick search of books
+#     - Easy way to find books 
+#     - Easy way to search for books 
+#     - How to search for a book in a quicker way? 
+#     - Is there a faster way to search for books?
+#     - how to find books quickly
+
+# - intent: libraryfaq/library_resources
+#   examples: |
+#     -  What books / resources are available in the library? 
+#     - What facilities does the library offer? 
+#     - Resources available in the library 
+#     - E- journals in the library 
+#     - Can I find book e- books through the library? 
+#     - What are the databases available through the library? 
+#     - What are the different e journal portals available in the library? 
+#     - Can I access other external resources in the library? 
+#     - What are the external resources available in the library 
+#     - I want to access other external resources 
+#     - Are there only physical books provided? 
+#     - Can I get e- books and e- journals? 
+#     - Can I get print newspapers in the library?
+
+# - intent: libraryfaq/return_books
+#   examples: |
+#     -  Where can I check out books? 
+#     - How to check out books?  
+#     - How to use the kiosk to check out books? 
+#     - Is an ID card necessary for returning issued books? 
+#     - How does the check out kiosk work? 
+#     - Where can I return the books? 
+#     - How to return books? 
+#     - Do I have to use the kiosk only to return the books as well? 
+#     - Self- service kiosk 
+#     - Requirements for returning books 
+#     - Do I need an ID card to return the books as well?
+
+# - intent: libraryfaq/search_books
+#   examples: |
+#     - How are the books arranged in the library? 
+#     - How can I find the books in the library? 
+#     - Book arrangement in the library 
+#     - Searching for books in libraries 
+#     - Books codes for different topics 
+#     - How to find books for a certain topic? 
+#     - What are the subsections for the different classifications of books?
+#     - how are the books classified
+
+# - intent: libraryfaq/ill
+#   examples: |
+#     - Can we request for books not available in the BPDC library but available in the other library?
+#     - Can we access the libraries of other universities? 
+#     - Where to find the form for requesting books from other libraries? 
+#     - Can I request books from other libraries? 
+#     - How to get the Inter- Library Loan form? 
+#     - How to obtain books from other libraries? 
+#     - What is the website for the Al Ain University library? 
+#     - Where can I find the Al Ain university website link? 
+#     - Inter Library Loan form link 
+#     - What to do if the book you want is not available in BPDC library? 
+#     - What should I do if I want books from other libraries? 
+#     - How to request books from other libraries? 
+#     - How to request books from other universities?
+#     - inter library loan
+
+# - intent: libraryfaq/course_tb
+#   examples:
+#     - Can I get the course textbooks? 
+#     - Where to find course textbooks? 
+#     - How many days can I issue course textbooks for? 
+#     - Issue period for course textbooks? 
+#     - Where to find course textbooks for fd? 
+#     - First degrees text books 
+#     - Can I get first degree textbooks 
+#     - Can I get BE textbooks? 
+#     - Can I issue BE textbooks? 
+#     - Can I issue first degree textbooks? 
+#     - How long can I issue first degree textbooks? 
+#     - Where to find BE textbooks? 
+#     - Where to find first- degree textbooks? 
+#     - I want to issue first- degree textbooks
+#     - are all textbooks available in the library
+
+# - intent: libraryfaq/report_area
+#   examples: |
+#     -  Where are the thesis and report areas in the library? 
+#     - Where can I find the thesis and report areas? 
+#     - Where can I find project reports? 
+#     - Where to find dissertations? 
+#     - Where are the thesis and report areas located? 
+#     - Where can I find dissertations? 
+#     - Thesis location library 
+#     - Reports location library 
+#     - I want to find the thesis, where are they located? 
+#     - Dissertations location library 
+#     - PS reports library 
+#     - Project reports library 
+#     - PhD reports library
+#     - where are the dissertations located
+#     - where are the PS reports kept
+
+# - intent: libraryfaq/contact
+#   examples: |
+#     - Who should I contact for queries on the Library? 
+#     - What is the library email? 
+#     - Library contact? 
+#     - Who will address my queries? 
+#     - Library contact email? 
+#     - I have some doubts regarding issuing of books, who should I contact?
+#     - i have a concern who should I contact
+
+# - intent: libraryfaq/book_issue_end
+#   examples: |
+#     - Can I issue a book at the end of the semester? 
+#     - How to issue a book end sem? 
+#     - Issuing books end sem 
+#     - I want to issue a book but it is the end of the semester 
+#     - Am I allowed to issue a book end sem? 
+#     - Is there any way to issue a book end semester 
+#     - Are there any ways to issue a book at the end of the semester?
+#     - issuing books end sem
+
+# - intent: libraryfaq/bind
+#   examples: |
+#     - Binding Procedure 
+#     - I want to bind a book - Binding guidelines 
+#     - How can I bind my book? 
+#     - Where will the money be debited from? 
+#     - How will I be charged for binding? 
+#     - Do I need my BITS ID for binding? 
+#     - Where is the instruction manual kept for binding? 
+#     - How to bind? - Instruction manual for binding
+#     - binding
+#     - photocopying instruction manual
+
+# - intent: libraryfaq/photocopy
+#   examples: |
+#     - How to photocopy?
+#     - How to photocopy in the library? 
+#     - How much of a book can I photocopy? 
+#     - Is 10% the maximum I can photocopy? 
+#     - Can I photocopy the entire book? 
+#     - What to keep in mind while photocopying? 
+#     - Where will the money be debited from? 
+#     - Do I need to get my ID for photocopying? 
+#     - How will I be charged for photocopying? 
+#     - Photocopying guidelines 
+#     - I want to photocopy a book 
+#     - Photocopying cost
+#     - photocopy
+
+# - intent: libraryfaq/print
+#   examples: |
+#     - How to print? 
+#     - How to print materials and resources from the library? 
+#     - Are there any things to keep in mind while printing? 
+#     - Where will the money be debited from? 
+#     - Do I need to get my ID for photocopying? 
+#     - How will I be charged for printing? 
+#     - How to access the printer? 
+#     - What should I do if I want to print something from the library? 
+#     - Cost for printing? 
+#     - What is the procedure for printing? 
+#     - Procedure for printing? 
+#     - Printing guidelines 
+#     - Printing procedure
+#     - printing
+
+# - intent: libraryfaq/damaged_book
+#   examples: |
+#     - What if the book is damaged before I have issued it? 
+#     - What to do if a book is already damaged before issuing it? 
+#     - What if there is a damaged book in the library?  
+#     - Damaged book before itself 
+#     - I found a damaged book in the library before issuing it, what should I do?
+#     - damage to books
+
+# - intent: libraryfaq/fine_book
+#   examples: |
+#     -  What if there is some damage to the book that I have issued?  
+#     - What to do if the damage is done to a book? 
+#     - What happens if there is some damage done to the book? 
+#     - Fines for damaged books 
+#     - Are there any fines for damaged books? 
+#     - What if I lose the book? 
+#     - Cost of losing book 
+#     - How much should I pay if I lose the book issued? 
+#     - Fines for losing books? 
+#     - What if the issued book is lost?
+#     - what if i lose the book I issued
+#     - how much should i pay if lose the book
+#     - are there fines for late submission
+
+# - intent: libraryfaq/renewal
+#   examples: |
+#     -  Can I renew a borrowed book? 
+#     - How to reissue a book? 
+#     - Reissuing a book 
+#     - Can I reissue a textbook? 
+#     - What to keep in mind while reissuing? 
+#     - Rules for re- issuing books 
+#     - Can I renew books? 
+#     - Rules for renewing 
+#     - What to do if I want to re- issue a book? 
+#     - What to do if I want to renew a book? 
+#     - Can I renew course textbooks? 
+#     - I want to renew course text- books 
+#     - What if the book is demanded by others? 
+#     - Can I reissue it if the book is demanded by others? 
+#     - Can all books be reissued? 
+#     - Can all books be renewed?
+#     - renewal of books
+#     - reissuing books
+
+# - intent: libraryfaq/rules_issue
+#   examples: |
+#     - Return policy of the Library 
+#     - Can I lend a book to my friend? 
+#     - When should I return the books? 
+#     - What are the fines if I have lost a book? 
+#     - What are the charges for lost books? 
+#     - Do I need an ID card for issuing books? 
+#     - Can I lend my issued books to others? 
+#     - What happens if I lose the book issued? 
+#     - What happens if I do not return the book within the stipulated time? 
+#     - Are there any fines for the late return of books? 
+#     - What to keep in mind when reissuing? 
+#     - Fines for non- returns 
+#     - What to do if I want to re- issue books? 
+#     - Fines for the lost book 
+#     - What should I do if I lose the book? 
+#     - How long can I keep issued books? 
+#     - Issue time for books? 
+#     - What is the issue time for CD- ROMs?
+#     - overdue cost
+
+# - intent: libraryfaq/rules_library
+#   examples: |
+#     -  Rules of the library 
+#     - What should I keep in mind when in the library? 
+#     - What should I do in the library? 
+#     - Can I have a group study session in the library? 
+#     - Do’s and dont’s of library 
+#     - Library etiquette 
+#     - Can I discuss something there? 
+#     - Is group study sessions allowed there? 
+#     - Can I ask doubts from my friends there?
+#     - what are the library rules
+#     - can i group study with my friends in the library
+
+# - intent: libraryfaq/discussion_room
+#   examples: |
+#     - Are there any discussion rooms in the BPDC library? 
+#     - Can the discussion rooms be used now? 
+#     - How many discussion rooms are there? 
+#     - Discussion rooms 
+#     - Can I use the discussion room now?
+#     - discussion rooms
+#     - number of discussion rooms in library
+#     - no of discussion rooms in library
+
+# - intent: libraryfaq/pc
+#   examples: |
+#     - How many PCs are there?
+#     - How many computers are there?
+#     -  how many computers does the library have?
+#     - the library has how many computers?
+#     - the library has how many pcs
+#     - number of computers in library
+#     - number of pcs in library
+#     - no of pcs in library
+#     - no of computers in the library
+
+# - intent: libraryfaq/pc_rules
+#   examples: |
+#     - What can I use the PCs for? 
+#     - Uses of the PCs 
+#     - What are the PCs for in the library? 
+#     - What should I use the PCs for? 
+#     - Can I use the PCs for my course- work? 
+#     - Can I use the PCs for homework? 
+#     - Can I use the PCs to surf the net? 
+#     - Can I use the PCs to play games? 
+#     - Can I use the PCs for online meets? 
+#     - What can I do on the Computer? 
+#     - Can I use the computers for games? 
+#     - Can I use the computers for online meets? 
+#     - Can I use the computers to surf the net? 
+#     - Can I install some programs in the library computers? 
+#     - What should I keep in mind while using the PCs in the library? 
+#     - Use of PCs
+#     - rules for using pcs
+#     - use of computers
+
+# - intent: libraryfaq/stickers
+#   examples: |
+#     - Can I issue all the textbooks in the library? 
+#     - Are all the textbooks allowed for issuing? 
+#     - How to differentiate between the reference books and books for issue? 
+#     - Which books are for issue? 
+#     - What do the stickers of different colours on the book mean? 
+#     - Which books are for reference only? 
+#     - Yellow sticker on the book 
+#     - Green sticker on the book 
+#     - Why are there different colour stickers for different books? 
+#     - What do the green and yellow stickers imply? 
+#     - What does the green sticker mean? 
+#     - What does the yellow sticker mean? 
+#     - Why is there a green sticker on my book? 
+#     - Can I issue the green sticker books? 
+#     - Can I issue the yellow and green sticker books? 
+#     - Is there a difference between the yellow sticker and green sticker books?
+#     - what do they stickers indicate
+#     - can i issue all books in the library
+
+# - intent: libraryfaq/copyright
+#   examples: |
+#     - Are there any copyright guidelines that I should take care of? 
+#     - Can I photocopy the entire book? 
+#     - Should I photocopy the entire book? 
+#     - How much is the maximum I can photocopy? 
+#     - What happens if I’m caught photocopying more? 
+#     - Copyright guidelines 
+#     - Copyright laws 
+#     - How to stay safe during copying? 
+#     - What are the copyright guidelines? 
+#     - What is illegal while issuing books?
+
+# - intent: libraryfaq/pilani_library
+#   examples: |
+#     - Can I access the library of Pilani Campus? 
+#     - How to access the library of BITS Pilani Campus? 
+#     - I want to access the library of Pilani Campus 
+#     - What if the book I need is not available here? 
+#     - Can I request books from Pilani Campus? 
+#     - How to access Pilani Campus library? 
+#     - I want to access Pilani Campus Library? 
+#     - What if the book I need is not available in BPDC? 
+#     - How can I access the Pilani Campus library? 
+#     - Is there a way to get resources from the Pilani Campus Library?
+#     - what if the book I want is not available here
+#     - can i get books from pilani campus
+
+# - intent: libraryfaq/elibrary
+#   examples: |
+#     - E- journals and e- books available in BPDC e- library? 
+#     - Can I find some e- journals in the BPDC e- library? 
+#     - What are the resources found in the BPDC e- library? 
+#     - resources in the BPDC e- library? 
+#     - BPDC e- library resources 
+#     - BPDC e- library e- books available 
+#     - Can I find e- books in BPDC e- library? 
+#     - College e- library resources 
+#     - University e- library resources 
+#     - BITS e- library resources 
+#     - BITS Dubai e- library resources 
+#     - BITS dxb e- library resources 
+#     - E- books in bits e- library 
+#     - E- journals in bits e- library 
+#     - BPDC e- library 
+#     - e- journals 
+#     - BPDC e- library 
+#     - e- books 
+#     - Links for e- books 
+#     - Links for e- journals 
+#     - How to access e- journals? 
+#     - How to access e- books? 
+#     - Can I find e- books? 
+#     - Can I find e- journals? 
+#     - What resources are available in BPDC e- library? 
+#     - Can I find ACM digital library in BPDC e- library? 
+#     - Can I find course- related books in BPDC library? 
+#     - How to find textbooks in the BPDC e- library? 
+#     - How to find textbooks in the e- library? 
+#     - How to find textbooks in bits e- library?
+
+# - intent: libraryfaq/eresources
+#   examples: |
+#     - What are the library e- resources? 
+#     - Learning resources 
+#     - How to access the Research papers portal? 
+#     - I want to access research papers 
+#     - How can I access the Research papers portal? 
+#     - How to access the E- journals portal? 
+#     - How to access Press e- books? 
+#     - I want to read e- journals 
+#     - I want to see e- journals 
+#     - I want to read e- books 
+#     - Can I access the Research papers portal? 
+#     - Can I access the E- journals portal? 
+#     - I want to access the e- journals portal 
+#     - Can I access the Press e- books? 
+#     - I want to read press e- books 
+#     - How to find press e- books 
+#     - Can I access the conference papers portal? 
+#     - Which sites have research paper portals? 
+#     - Which sites have e- magazines? 
+#     - Can I read some e- newspapers? 
+#     - I want to read e- newspapers 
+#     - How to find e- newspapers 
+#     - Press e- books 
+#     - E- newspapers 
+#     - Are there any research paper portals? 
+#     - I want to read e- magazines 
+#     - Are there any e- magazine portals? 
+#     - Are there any external digital libraries I have access to? 
+#     - I want to access other universities libraries 
+#     - Can I access other digital libraries? 
+#     - What are the digital libraries' links? 
+#     - Links for other digital libraries 
+#     - I want other digital libraries links 
+#     - Acm digital library link 
+#     - Asme digital library link 
+#     - IEEE link 
+#     - Science- direct library link 
+#     - Accessing ACM digital library 
+#     - Accessing ASME digital library 
+#     - Accessing Science- direct digital library 
+#     - Press- reader library link 
+#     - JSTOR library link 
+#     - I want the JSTOR library link 
+#     - I want Press- reader library link
+#     - acm library link
+
+# - intent: libraryfaq/webopac
+#   examples: |
+#     - Features of WEBOPAC 
+#     - Uses of webopac 
+#     - Facilities of webopac 
+#     - What can I do in webopac 
+#     - What are the features of WEBOPAC? 
+#     - What can I use the WEBOPAC site for? 
+#     - What facilities does webopac offer? 
+#     - Can I search for Online papers on webopac? 
+#     - How to check fines for books? 
+#     - How to know my pending dues? 
+#     - How to know my fines? 
+#     - How can I find out my fines? 
+#     - Are there new arrivals in the library? 
+#     - How to check if there are new arrivals in the library? 
+#     - What can I use AutoLib for? 
+#     - What can I use WEBOPAC for? 
+#     - What can I do in AutoLib? 
+#     - How to use WEBOPAC? 
+#     - How will webopac benefit me? 
+#     - How will the library portal benefit me? 
+#     - What can I do in the library portal? 
+#     - How can I use the library portal in a beneficial way? 
+#     - Uses of WEBOPAC 
+#     - Uses of the library portal 
+#     - Uses of AutoLib
+#     - what are the features of autolib
+#     - how can I check my fines?
+
+# - intent: libraryfaq/sign_in_webopac
+#   examples: |
+#     - What are the sign- in credentials for the library WEBOPAC? 
+#     - Password for old papers? 
+#     - Username and password for AutoLib? 
+#     - Sign- in credentials for past year papers? 
+#     - Authorization for past year papers 
+#     - Password for past year papers 
+#     - How to know the password for AutoLib? 
+#     - How to know the password for WEBOPAC? 
+#     - How to know the username for WEBOPAC? 
+#     - Username to access old papers 
+#     - Password to access old papers 
+#     - Username to access previous year papers 
+#     - Password to access previous year papers 
+#     - What is my password for AutoLib? 
+#     - What is my password for WEBOPAC? 
+#     - How to sign in to webopac? 
+#     - What is my password for webopac? 
+#     - How to find my password for webopac?
+#     - sign in webopac
+
+# - intent: libraryfaq/old_papers
+#   examples: |
+#     - How to find the previous year's papers? 
+#     - Where can you find the previous year papers? 
+#     - Where to find past papers? 
+#     - Last 10 year papers? 
+#     - Portal for last 10 year papers? 
+#     - Portal for past papers? 
+#     - Where to find old papers? 
+#     - Link for old question papers 
+#     - Where to find old question papers 
+#     - I want the link for old question papers 
+#     - Can I have the link for old question papers 
+#     - Previous years question papers link 
+#     - What is the link for previous years' question papers? 
+#     - How can I find previous year question papers? 
+#     - Portal for previous year papers 
+#     - Portal for old papers 
+#     - How can I get old papers? 
+#     - How can I get the previous year's question papers? 
+#     - Link for question papers 
+#     - How can I get past years' question papers?
+#     - old papers
+#     - where can I find past year papers
+
+# - intent: libraryfaq/sign_in_elibrary
+#   examples: |
+#     - What are the sign- in credentials for the online library access? 
+#     - How can I sign in to the off- campus library access? 
+#     - What are the sign- in credentials for the off- campus library access? 
+#     - Sign- in credentials for online library 
+#     - Online library sign in 
+#     - Username and password online library 
+#     - Online library authorization 
+#     - Username for online library 
+#     - password for online library 
+#     - What is my password for bpdc knimbus? 
+#     - What is my password for the off campus library? 
+#     - How can I know my password for off campus library?
+#     - sign in online library
+
+# - intent: libraryfaq/access_online_library
+#   examples: |
+#     - off- campus library access link 
+#     - Can I access the library online? 
+#     - I want to access the library from home 
+#     - Library online link 
+#     - Accessing library materials from home 
+#     - Accessing library books from home 
+#     - How to access the library from home 
+#     - Link for online library 
+#     - What is the online library link? 
+#     - Can I access the library off- campus? 
+#     - Which books are available in the library? 
+#     - What is the off- campus library link?
+
+# # - intent: libraryfaq/things_inside_library
+# #   examples: |
+# #     - What can I take inside the library? 
+# #     - Do I need a student ID to enter the library? 
+# #     - Can I take my bag inside the library? 
+# #     - Can I take the books inside the library? 
+# #     - Is student ID compulsory in the library? 
+# #     - What to take inside the library? 
+# #     - What should  I not take to the library? 
+# #     - Is there anything I can take to the library? 
+# #     - Are books the only thing I can take to the library? 
+# #     - Are bags allowed in the library? 
+# #     - Bags library 
+# #     - Library ID 
+# #     - Library check- in 
+# #     - Library what to take inside
+# #     - what can I take inside the library
+
+# # - intent: libraryfaq/timings
+# #   examples: |
+# #     - When does the library open? 
+# #     - When does the library close? 
+# #     - Is the library open everyday? 
+# #     - What days is the library closed? 
+# #     - Library timing 
+# #     - Is the library open during the holidays? 
+# #     - Is the library open on weekends? 
+# #     - Library open timing 
+# #     - Library time table 
+# #     - Library timing weekly
+# #     - is the library open on weekends
 
 
 
