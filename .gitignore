@@ -23,3 +23,5 @@ rasa.*
 terms
 docker-local
 .pytype/
+credentials.yml
+creds.json
