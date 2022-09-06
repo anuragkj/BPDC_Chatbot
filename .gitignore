@@ -15,8 +15,6 @@ failed_stories.txt
 failed_stories.md
 story_confmat.pdf
 demo/index.html
-credentials.yml
-creds.json
 .idea
 test_train_split
 results
