@@ -487,6 +487,7 @@ nlu:
     - how come?
 - intent: greet
   examples: |
+    - hey
     - Bom dia
     - Bonjour
     - Good Morning

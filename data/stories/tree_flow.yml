@@ -53,8 +53,8 @@ stories:
   - action: utter_library_options
   - intent: ask_faq
   - action: utter_ask_library
-  - intent: libraryfaq
-  - action: utter_libraryfaq
+  - intent: chitchat
+  - action: utter_chitchat
 
 - story: greet -> academic -> others
   steps:

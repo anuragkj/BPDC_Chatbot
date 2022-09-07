@@ -30,11 +30,6 @@ intents:
     - stud_pwd
     is_retrieval_intent: true
 - club_choice
-- club_desgignations
-- clubsfaq:
-    used_entities: []
-    is_retrieval_intent: true
-- create_club
 - deny
 - enter_name_data
 - event_choice
@@ -56,18 +51,6 @@ intents:
 - greet
 - human_handoff
 - id_intake
-- libraryfaq:
-    used_entities:
-    - club_name
-    - event_name
-    - feedback_name
-    # - ibc_name  It stands for ice breakers club name but telegram api supports only 64 b of transfer trhough api
-    - ibc_name
-    - name
-    - stem_club_name
-    - stud_id
-    - stud_pwd
-    is_retrieval_intent: true
 - mood_great
 - mood_unhappy
 - nlu_fallback
@@ -88,9 +71,6 @@ intents:
 - start
 - stop
 - thank
-- total_clubs
-- trigger_response_selector:
-    use_entities: []
 entities:
 - event_name
 - ibc_name
@@ -157,7 +137,7 @@ slots:
       entity: feedback_name
 responses:
   utter_start_reply:
-  - text: Wlecome! I am BPDC bot!!
+  - text: Welcome! I am BPDC bot!!
   utter_fine:
   - text: Okay. Anything else I can help with?
   utter_greet_name:
@@ -223,7 +203,7 @@ responses:
       title: Restart
     text: Click the button below if you want to start over.
   utter_contact_email:
-  - text: You can’t speak to a human directly in this chat, but you can email us at abc@dubai.bits-pilani.ac.in
+  - text: You can't speak to a human directly in this chat, but you can email us at nileshgoel@dubai.bits-pilani.ac.in
   utter_ask_faq:
   - text: Please ask your question!
   utter_ask_feedback_choice:
@@ -255,11 +235,13 @@ responses:
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_default:
   - buttons:
-    - payload: /restart
-      title: Restart
+    - payload: /give_feedback
+      title: Give Feedback/Complaint
     - payload: /ask_options
       title: Back to options page
-    text: I'm sorry, I can't help you.
+    text: You got us 😅!! We don't know that YET!! Please register these queries via feedback and help us improve the chatbot.
+    button_type: vertical
+
   utter_greet:
   - text: Hi😁!! Welcome to the BPDC Chatbot.
   utter_name:
@@ -309,11 +291,11 @@ responses:
   utter_options:
   - buttons:
     - payload: '/event_choice{{"event_name": "Ice Breakers"}}'
-      title: Ice Breakers
-    - payload: /ask_academics
-      title: Academics
+      title: Freshmen Orientation
+    - payload: /ask_library
+      title: Library
     - payload: /ask_non_academics
-      title: Non Academics
+      title: Clubs and events
     - payload: /give_feedback
       title: Give Feedback/Complaint
     - payload: /restart
