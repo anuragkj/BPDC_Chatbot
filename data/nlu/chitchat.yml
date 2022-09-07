@@ -3550,6 +3550,8 @@ nlu:
 
 - intent: chitchat/sign_in_elibrary
   examples: |
+    - What are the sign in credentials
+    - how to login into the library
     - What are the sign- in credentials for the online library access? 
     - How can I sign in to the off- campus library access? 
     - What are the sign- in credentials for the off- campus library access? 
