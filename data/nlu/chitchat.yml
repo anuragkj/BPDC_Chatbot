@@ -3578,3 +3578,99 @@ nlu:
     - Can I access the library off- campus? 
     - Which books are available in the library? 
     - What is the off- campus library link?
+    
+- intent: event_faq/number_of_events #new 
+  examples: |
+    - How many events take place on campus?
+    - Tell me the number of events held at BPDC
+    - How many events occur throughout the year?
+    - Are events organized at BITS Dubai?
+    - Do you have a count of the events that are conducted?
+    - Number of events at BPDC
+    - Are there many events held?
+    - Could you list out the events held at BITS?
+    - Please list the events that take place.
+    - I wonder if you could list the names of the events organized here.
+    - Name the events held throughout the year
+    - Give the list of events held
+    - What all events are there?
+    - Do you have the list of events taking place at the campus?
+    - List the names of the events
+
+- intent: event_faq/transportation_after_event #new
+  examples: |
+    - Is transportation provided after the event?
+    - Are transport facilities available after the event?
+    - Will transportation be provided for the event?
+    - What are the bus schedules for the days of events?
+    - At what time does the bus leave on the event days?
+
+- intent: event_faq/what_is_icebreakers #new
+  examples: |
+    - What is ice breakers?
+    - Could you give more details about ice breakers?
+    - What are different segments in ice breakers?
+    - Can I enroll in the clubs on the day of ice breakers?
+    - Why is ice breakers conducted?
+    - What are the different activities organized in ice breakers?
+    - Are all clubs introduced during ice breakers?
+    - What is ice breakers all about?
+    - What is the purpose of conducting ice breakers?
+
+- intent: event_faq/who_is_a_part_of_icebreakers
+  examples: |
+    - What all clubs participate in ice breakers?
+    - Who organizes ice breakers?
+    - Who is in charge of ice breakers?
+    - Do all clubs participate in ice breakers?
+   
+- intent: event_faq/transport_after_icebreakers #new
+  examples: |
+    - Is transportation provided after icebreakers?
+    - Are transport facilities available after icebreakers?
+    - Will transportation be provided for icebreakers?
+    - What are the bus schedules for icebreakers?
+    - At what time does the bus leave on icebreakers?
+    
+- intent: event_faq/compulsory_icebreakers #new
+  examples: |
+    - Is it compulsory to attend icebreakers?
+    - Required to attend icebreakers?
+    - I don't want to attend icebreakers
+    - boring, don't want to go to icebreakers
+    - Do I really have to attend icebreakers?
+
+- intent: event_faq/what_is_BSF #new
+  examples: |
+    - What is BSF?
+    - Could you give more details about BSF?
+    - What are different segments in BSF?
+    - Why is BSF conducted?
+    - What are the different activities organized in BSF?
+    - What is BSF all about?
+    - What is the purpose of conducting BSF?
+    - Sports included in BSF?
+    - what sports events are held at college?
+
+- intent: event_faq/where_is_BSF #new
+  examples: |
+    - Where does BSF happen?
+    - Event venue for BSF?
+    - Location of BSF?
+    - Where do I go for BSF?
+
+- intent: event_faq/transport_after_BSF #new
+  examples: |
+    - Is transportation provided after BSF?
+    - Are transport facilities available after BSF?
+    - Will transportation be provided for BSF?
+    - What are the bus schedules for BSF?
+    - At what time does the bus leave on BSF?  
+
+- intent: event_faq/compulsory_BSF #new
+  examples: |
+    - Is it compulsory to attend BSF?
+    - Required to attend BSF?
+    - I don't want to attend BSF
+    - boring, don't want to go to BSF
+    - Do I really have to attend BSF?
