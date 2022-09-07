@@ -663,4 +663,23 @@ responses:
 #       Sundays: 1.00PM to 6.00PM
 #       Closed on Saturdays, Institute and National Holidays.
 
+utter_chitchat/transportation_after_event:
+- text: Usually transport is provided after the event depending on when it occurs.
+utter_chitchat/what_is_icebreakers:
+- text: It familiarizes freshers with the various clubs and year-long activities at the campus. You can get information about each club, events and have the opportunity to enroll into clubs.
+utter_chitchat/who_is_a_part_of_icebreakers:
+- text: The following clubs take part in Icebreakers - Sports Club, Trebel, ACM, MTC, WSC Groove, CIIED, WIE, Toastmasters, Chimera, Creative Lab, Shades, The Editorial Board, Allure, Flummoxed Quizzing Club, AIChE, Paribhasha, MAD Club, Reflections, IFOR, EMC, Guild
+utter_chitchat/transport_after_icebreakers:
+- text: Often buses leave late at 4:30pm for the event. Refer to transport notices for any new changes.
+utter_chitchat/compulsory_icebreakers:
+- text: Icebreakers familiarizes freshers with the various clubs. So it is recommended that you attend.
+utter_chitchat/what_is_BSF: #new
+  - text: BSF is an inter-college Sports Festival. Competitions involving basketball, badminton, table tennis, chess, tennis, cricket, athletics, boxing, volleyball, football, throwball are held.
+utter_chitchat/where_is_BSF: #new
+  - text: BSF is a sport-oriented event so there are multiple venues (Sports Complex, Basketball Court, Tennis Court, Auditorium... ) based on the sport. 
+utter_chitchat/transport_after_BSF: #new
+  - text: Often buses leave late at 5pm for the event. Refer to transport notices for any new changes.  
+utter_chitchat/compulsory_BSF: #new
+  - text: BSF is an inter-college sport event so, it would be fun to watch players compete - all while cheering for the BITS team!
+
 

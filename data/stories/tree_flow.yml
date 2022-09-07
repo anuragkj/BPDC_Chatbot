@@ -185,3 +185,21 @@ stories:
     - ibc_name
   - action: action_tell_specific_club_info
   - action: utter_basic_options
+
+- story: greet -> non academic -> event(faq)
+  steps:
+  - intent: greet
+  - action: utter_greet
+#  - action: utter_name
+#  - intent: enter_name_data
+#  - action: utter_greet_name
+  - action: utter_options
+  - intent: ask_non_academics
+  - action: utter_ask_non_academics  
+  - intent: ask_events_choice
+  - action: utter_events_options
+  - intent: ask_faq
+  - action: utter_ask_faq
+  - intent: chitchat
+  - action: utter_chitchat
+  - action: utter_basic_options
