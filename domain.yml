@@ -292,7 +292,7 @@ responses:
   - buttons:
     - payload: '/event_choice{{"event_name": "Ice Breakers"}}'
       title: Freshmen Orientation
-    - payload: /ask_library
+    - payload: /ask_academics
       title: Library
     - payload: /ask_non_academics
       title: Clubs and events
@@ -304,8 +304,8 @@ responses:
     button_type: vertical
   utter_ask_academics:
   - buttons:
-    - payload: /request_stud_gpa
-      title: What is my GPA?
+    # - payload: /request_stud_gpa
+    #   title: What is my GPA?
     - payload: /ask_library
       title: Library at BPDC
     - payload: /ask_others

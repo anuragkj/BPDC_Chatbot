@@ -536,6 +536,23 @@ class ActionTriggerResponseSelector(Action):
 
         return [SlotSet("retrieval_intent", None)]
 
+class ActionDefaultFallback(Action):
+    """Executes the fallback action and goes back to the previous state
+    of the dialogue"""
+
+    def name(self) -> Text:
+        return "action_default_fallback"
+        
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(template="utter_default")
+
+        # Revert user message which led to fallback.
+        return [UserUtteranceReverted()]
 # class ActionTagFeedback(Action):
 #     """Tag a conversation in Rasa X as positive or negative feedback"""
 
