@@ -293,7 +293,7 @@ responses:
     - payload: '/event_choice{{"event_name": "Ice Breakers"}}'
       title: Freshmen Orientation
     - payload: /ask_academics
-      title: Library
+      title: Academics
     - payload: /ask_non_academics
       title: Clubs and events
     - payload: /give_feedback
