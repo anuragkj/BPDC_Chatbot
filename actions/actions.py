@@ -108,7 +108,7 @@ class ActionTellClubInfo(Action):
         data = pd.DataFrame(data)
         result_data = data.query("Name == @club_name")
         if not result_data.empty:
-            msg = "Club Name : "+club_name+"\nClub Lead : "+result_data["Club_Lead"].iloc[0]+ "\nClub President : "+result_data["Club_President"].iloc[0]+"\nClub Description : "+result_data["Club_Description"].iloc[0]+"\nInstagram Handle : https://instagram.com/"+result_data["Insta_handle"].iloc[0]
+            msg = "Club Name : "+club_name+"\nClub Lead : "+result_data["Club_Lead"].iloc[0]+ "\nClub President : "+result_data["Club_President"].iloc[0]+ "\nClub President Contact details: "+result_data["Club_President_Contact"].iloc[0]+ "\nClub Vice President : "+result_data["Club_VP"].iloc[0]+ "\nClub Vice President Contact: "+result_data["Club_VP_Contact"].iloc[0]+ "\nGeneral Secretary : "+result_data["Club_Gen_Sec"].iloc[0]+ "\nGeneral Secretary Contact: "+result_data["Club_Gen_Sec_Contact"].iloc[0]+ "\nClub Treasurer : "+result_data["Club_Treasurer"].iloc[0]+ "\nTreasurer Contact : "+result_data["Club_Treasurer_Contact"].iloc[0]+"\nClub Description : "+result_data["Club_Description"].iloc[0]+"\nInstagram Handle : https://instagram.com/"+result_data["Insta_handle"].iloc[0]+ "\nClub Full Form: "+result_data["Full_Form"].iloc[0]
         else:
             msg = f"The club you are looking for doesn't seem to exist. Could you please check again"
           
@@ -132,7 +132,7 @@ class ActionTellEventInfo(Action):
         data = pd.DataFrame(data)
         result_data = data.query("Event_Name == @event_name")
         if not result_data.empty:
-            msg = "Event Name : "+event_name+"\nWho to contact : "+result_data["Who_to_contact"].iloc[0]+ "\nEvent Details : "+result_data["What_is_the_event"].iloc[0]
+            msg = "Event Name : "+result_data["Full_Name"]+"\nWho to contact : "+result_data["Who_to_contact"].iloc[0]+ "\nEvent Details : "+result_data["What_is_the_event"].iloc[0]
         else:
             msg = f"The event you are looking for doesn't seem to exist. Could you please check again"
           
