@@ -132,7 +132,7 @@ class ActionTellEventInfo(Action):
         data = pd.DataFrame(data)
         result_data = data.query("Event_Name == @event_name")
         if not result_data.empty:
-            msg = "Event Name : "+result_data["Full_Name"]+"\nWho to contact : "+result_data["Who_to_contact"].iloc[0]+ "\nEvent Details : "+result_data["What_is_the_event"].iloc[0]
+            msg = "Event Name : "+result_data["Full_Name"].iloc[0]+"\nWho to contact : "+result_data["Who_to_contact"].iloc[0]+ "\nEvent Details : "+result_data["What_is_the_event"].iloc[0]
         else:
             msg = f"The event you are looking for doesn't seem to exist. Could you please check again"
           
